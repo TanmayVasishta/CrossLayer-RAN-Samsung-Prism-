@@ -1,0 +1,6407 @@
+{
+  "dataset_dir": "D:\\SamsungPrismCrosslayerRAN\\dataset",
+  "generated_at": "2026-03-24T09:40:22",
+  "folders": {
+    "cpu_data": {
+      "files_total": 115,
+      "files_scanned": 10,
+      "scans": [
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_0.csv.gz",
+          "file_name": "node_cpu_seconds_total_0.csv.gz",
+          "size_bytes": 181432449,
+          "rows": 15966720,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-19 04:59:59.940999936",
+          "cadence": {
+            "median_seconds": 0.12799987200000001,
+            "p05_seconds": 0.010999808,
+            "p95_seconds": 0.67299968
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 223532.61,
+            "mean": 26294.858501,
+            "std": 48697.028458,
+            "skewness": 1.6342,
+            "kurtosis": 1.3574,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 49.71,
+            "p75": 9939.1975,
+            "p95": 134292.60849999997,
+            "p99": 170354.68039999998,
+            "iqr": 9939.1975,
+            "iqr_outlier_rate": 0.24083
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15966720
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2320:9100",
+                "count": 116968
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 115480
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 114984
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 113656
+              },
+              {
+                "value": "farm2311:9100",
+                "count": 111568
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 109752
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 109432
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 109288
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 109240
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 107504
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 107440
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 107360
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 105864
+              },
+              {
+                "value": "farm2314:9100",
+                "count": 105376
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 105368
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 102072
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 100200
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 100120
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 98736
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 96272
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15966720
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1995840
+              },
+              {
+                "value": "iowait",
+                "count": 1995840
+              },
+              {
+                "value": "irq",
+                "count": 1995840
+              },
+              {
+                "value": "nice",
+                "count": 1995840
+              },
+              {
+                "value": "softirq",
+                "count": 1995840
+              },
+              {
+                "value": "steal",
+                "count": 1995840
+              },
+              {
+                "value": "system",
+                "count": 1995840
+              },
+              {
+                "value": "user",
+                "count": 1995840
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_1.csv.gz",
+          "file_name": "node_cpu_seconds_total_1.csv.gz",
+          "size_bytes": 181542829,
+          "rows": 15966720,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 05:00:00.099000064",
+          "timestamp_max": "2023-05-19 05:59:59.940999936",
+          "cadence": {
+            "median_seconds": 0.128,
+            "p05_seconds": 0.010999808,
+            "p95_seconds": 0.67299968
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 227132.47,
+            "mean": 26737.239956,
+            "std": 49344.161692,
+            "skewness": 1.6173,
+            "kurtosis": 1.2908,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 51.3,
+            "p75": 10006.5075,
+            "p95": 135368.10799999995,
+            "p99": 171745.91550000003,
+            "iqr": 10006.5075,
+            "iqr_outlier_rate": 0.241405
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15966720
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2320:9100",
+                "count": 116968
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 115480
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 114984
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 113656
+              },
+              {
+                "value": "farm2311:9100",
+                "count": 111568
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 109752
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 109432
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 109288
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 109240
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 107504
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 107440
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 107360
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 105864
+              },
+              {
+                "value": "farm2314:9100",
+                "count": 105376
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 105368
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 102072
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 100200
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 100120
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 98736
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 96272
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15966720
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1995840
+              },
+              {
+                "value": "iowait",
+                "count": 1995840
+              },
+              {
+                "value": "irq",
+                "count": 1995840
+              },
+              {
+                "value": "nice",
+                "count": 1995840
+              },
+              {
+                "value": "softirq",
+                "count": 1995840
+              },
+              {
+                "value": "steal",
+                "count": 1995840
+              },
+              {
+                "value": "system",
+                "count": 1995840
+              },
+              {
+                "value": "user",
+                "count": 1995840
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_100.csv.gz",
+          "file_name": "node_cpu_seconds_total_100.csv.gz",
+          "size_bytes": 186324548,
+          "rows": 15966720,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-23 08:00:00.099000064",
+          "timestamp_max": "2023-05-23 08:59:59.944000",
+          "cadence": {
+            "median_seconds": 0.128,
+            "p05_seconds": 0.010999808,
+            "p95_seconds": 0.67299968
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 583521.05,
+            "mean": 70354.438184,
+            "std": 127019.67617,
+            "skewness": 1.4989,
+            "kurtosis": 0.7869,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 153.74,
+            "p75": 20787.245000000003,
+            "p95": 338820.192,
+            "p99": 409477.756,
+            "iqr": 20787.245,
+            "iqr_outlier_rate": 0.24269
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15966720
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2320:9100",
+                "count": 116968
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 115480
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 114984
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 113656
+              },
+              {
+                "value": "farm2311:9100",
+                "count": 111568
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 109752
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 109432
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 109288
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 109240
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 107504
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 107440
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 107360
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 105864
+              },
+              {
+                "value": "farm2314:9100",
+                "count": 105376
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 105368
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 102072
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 100200
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 100120
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 98736
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 96272
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15966720
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1995840
+              },
+              {
+                "value": "iowait",
+                "count": 1995840
+              },
+              {
+                "value": "irq",
+                "count": 1995840
+              },
+              {
+                "value": "nice",
+                "count": 1995840
+              },
+              {
+                "value": "softirq",
+                "count": 1995840
+              },
+              {
+                "value": "steal",
+                "count": 1995840
+              },
+              {
+                "value": "system",
+                "count": 1995840
+              },
+              {
+                "value": "user",
+                "count": 1995840
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_101.csv.gz",
+          "file_name": "node_cpu_seconds_total_101.csv.gz",
+          "size_bytes": 186319273,
+          "rows": 15966720,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-23 09:00:00.099000064",
+          "timestamp_max": "2023-05-23 09:59:59.940999936",
+          "cadence": {
+            "median_seconds": 0.128,
+            "p05_seconds": 0.010999808,
+            "p95_seconds": 0.67299968
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 587120.96,
+            "mean": 70804.102713,
+            "std": 127843.648782,
+            "skewness": 1.4996,
+            "kurtosis": 0.7895,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 155.37,
+            "p75": 20787.8925,
+            "p95": 341099.21699999995,
+            "p99": 412301.6438000002,
+            "iqr": 20787.8925,
+            "iqr_outlier_rate": 0.242755
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15966720
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2320:9100",
+                "count": 116968
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 115480
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 114984
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 113656
+              },
+              {
+                "value": "farm2311:9100",
+                "count": 111568
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 109752
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 109432
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 109288
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 109240
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 107504
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 107440
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 107360
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 105864
+              },
+              {
+                "value": "farm2314:9100",
+                "count": 105376
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 105368
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 102072
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 100200
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 100120
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 98736
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 96272
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15966720
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1995840
+              },
+              {
+                "value": "iowait",
+                "count": 1995840
+              },
+              {
+                "value": "irq",
+                "count": 1995840
+              },
+              {
+                "value": "nice",
+                "count": 1995840
+              },
+              {
+                "value": "softirq",
+                "count": 1995840
+              },
+              {
+                "value": "steal",
+                "count": 1995840
+              },
+              {
+                "value": "system",
+                "count": 1995840
+              },
+              {
+                "value": "user",
+                "count": 1995840
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_102.csv.gz",
+          "file_name": "node_cpu_seconds_total_102.csv.gz",
+          "size_bytes": 186363001,
+          "rows": 15966720,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-23 10:00:00.099000064",
+          "timestamp_max": "2023-05-23 10:59:59.940999936",
+          "cadence": {
+            "median_seconds": 0.12699993599999998,
+            "p05_seconds": 0.011000064,
+            "p95_seconds": 0.67299968
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 590720.86,
+            "mean": 71254.765183,
+            "std": 128674.167604,
+            "skewness": 1.5003,
+            "kurtosis": 0.7922,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 155.905,
+            "p75": 20788.575,
+            "p95": 343426.69549999986,
+            "p99": 415304.3326000007,
+            "iqr": 20788.575,
+            "iqr_outlier_rate": 0.242775
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15966720
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2320:9100",
+                "count": 116968
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 115480
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 114984
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 113656
+              },
+              {
+                "value": "farm2311:9100",
+                "count": 111568
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 109752
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 109432
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 109288
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 109240
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 107504
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 107440
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 107360
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 105864
+              },
+              {
+                "value": "farm2314:9100",
+                "count": 105376
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 105368
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 102072
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 100200
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 100120
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 98736
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 96272
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15966720
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1995840
+              },
+              {
+                "value": "iowait",
+                "count": 1995840
+              },
+              {
+                "value": "irq",
+                "count": 1995840
+              },
+              {
+                "value": "nice",
+                "count": 1995840
+              },
+              {
+                "value": "softirq",
+                "count": 1995840
+              },
+              {
+                "value": "steal",
+                "count": 1995840
+              },
+              {
+                "value": "system",
+                "count": 1995840
+              },
+              {
+                "value": "user",
+                "count": 1995840
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_103.csv.gz",
+          "file_name": "node_cpu_seconds_total_103.csv.gz",
+          "size_bytes": 186353111,
+          "rows": 15966720,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-23 11:00:00.099000064",
+          "timestamp_max": "2023-05-23 11:59:59.947000064",
+          "cadence": {
+            "median_seconds": 0.127000064,
+            "p05_seconds": 0.011000064,
+            "p95_seconds": 0.67299968
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 594320.74,
+            "mean": 71707.919199,
+            "std": 129547.550882,
+            "skewness": 1.5024,
+            "kurtosis": 0.7998,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 156.365,
+            "p75": 20816.822500000002,
+            "p95": 346110.6475,
+            "p99": 418477.2984,
+            "iqr": 20816.8225,
+            "iqr_outlier_rate": 0.24279
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15966720
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2320:9100",
+                "count": 116968
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 115480
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 114984
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 113656
+              },
+              {
+                "value": "farm2311:9100",
+                "count": 111568
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 109752
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 109432
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 109288
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 109240
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 107504
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 107440
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 107360
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 105864
+              },
+              {
+                "value": "farm2314:9100",
+                "count": 105376
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 105368
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 102072
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 100200
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 100120
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 98736
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 96272
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15966720
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1995840
+              },
+              {
+                "value": "iowait",
+                "count": 1995840
+              },
+              {
+                "value": "irq",
+                "count": 1995840
+              },
+              {
+                "value": "nice",
+                "count": 1995840
+              },
+              {
+                "value": "softirq",
+                "count": 1995840
+              },
+              {
+                "value": "steal",
+                "count": 1995840
+              },
+              {
+                "value": "system",
+                "count": 1995840
+              },
+              {
+                "value": "user",
+                "count": 1995840
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_104.csv.gz",
+          "file_name": "node_cpu_seconds_total_104.csv.gz",
+          "size_bytes": 186371218,
+          "rows": 15966720,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-23 12:00:00.099000064",
+          "timestamp_max": "2023-05-23 12:59:59.940999936",
+          "cadence": {
+            "median_seconds": 0.128,
+            "p05_seconds": 0.010999808,
+            "p95_seconds": 0.67299968
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 597920.64,
+            "mean": 72161.831699,
+            "std": 130441.031112,
+            "skewness": 1.5052,
+            "kurtosis": 0.8096,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 156.55,
+            "p75": 20821.655,
+            "p95": 349072.12099999987,
+            "p99": 421446.9142000005,
+            "iqr": 20821.655,
+            "iqr_outlier_rate": 0.242815
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15966720
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2320:9100",
+                "count": 116968
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 115480
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 114984
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 113656
+              },
+              {
+                "value": "farm2311:9100",
+                "count": 111568
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 109752
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 109432
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 109288
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 109240
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 107504
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 107440
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 107360
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 105864
+              },
+              {
+                "value": "farm2314:9100",
+                "count": 105376
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 105368
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 102072
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 100200
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 100120
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 98736
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 96272
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15966720
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1995840
+              },
+              {
+                "value": "iowait",
+                "count": 1995840
+              },
+              {
+                "value": "irq",
+                "count": 1995840
+              },
+              {
+                "value": "nice",
+                "count": 1995840
+              },
+              {
+                "value": "softirq",
+                "count": 1995840
+              },
+              {
+                "value": "steal",
+                "count": 1995840
+              },
+              {
+                "value": "system",
+                "count": 1995840
+              },
+              {
+                "value": "user",
+                "count": 1995840
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_106.csv.gz",
+          "file_name": "node_cpu_seconds_total_106.csv.gz",
+          "size_bytes": 185022755,
+          "rows": 15845248,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-23 14:00:00.099000064",
+          "timestamp_max": "2023-05-23 14:59:59.943000064",
+          "cadence": {
+            "median_seconds": 0.128999936,
+            "p05_seconds": 0.011000064,
+            "p95_seconds": 0.67900032
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 605097.84,
+            "mean": 73180.495273,
+            "std": 132306.082062,
+            "skewness": 1.509,
+            "kurtosis": 0.831,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 161.995,
+            "p75": 23016.615,
+            "p95": 354571.295,
+            "p99": 425874.1054000011,
+            "iqr": 23016.615,
+            "iqr_outlier_rate": 0.242945
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15845248
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2314:9100",
+                "count": 117120
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 115568
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 115480
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 115056
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 111416
+              },
+              {
+                "value": "farm2320:9100",
+                "count": 111296
+              },
+              {
+                "value": "farm2311:9100",
+                "count": 111192
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 110984
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 109392
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 109064
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 107552
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 107392
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 107304
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 105304
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 103760
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 97936
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 97432
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 95672
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 92064
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 85656
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15845248
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1980656
+              },
+              {
+                "value": "iowait",
+                "count": 1980656
+              },
+              {
+                "value": "irq",
+                "count": 1980656
+              },
+              {
+                "value": "nice",
+                "count": 1980656
+              },
+              {
+                "value": "softirq",
+                "count": 1980656
+              },
+              {
+                "value": "steal",
+                "count": 1980656
+              },
+              {
+                "value": "system",
+                "count": 1980656
+              },
+              {
+                "value": "user",
+                "count": 1980656
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_105.csv.gz",
+          "file_name": "node_cpu_seconds_total_105.csv.gz",
+          "size_bytes": 183699037,
+          "rows": 15728448,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-23 13:00:00.099000064",
+          "timestamp_max": "2023-05-23 13:59:59.940999936",
+          "cadence": {
+            "median_seconds": 0.125000192,
+            "p05_seconds": 0.010999808,
+            "p95_seconds": 0.671199795199999
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 601512.29,
+            "mean": 72607.064414,
+            "std": 131315.78143,
+            "skewness": 1.5086,
+            "kurtosis": 0.8286,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 157.71499999999997,
+            "p75": 21298.754999999997,
+            "p95": 351103.3575,
+            "p99": 424688.35120000003,
+            "iqr": 21298.755,
+            "iqr_outlier_rate": 0.242795
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15728448
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2315:9100",
+                "count": 113352
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 113336
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 112064
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 111296
+              },
+              {
+                "value": "farm2320:9100",
+                "count": 109600
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 109216
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 108760
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 107872
+              },
+              {
+                "value": "farm2314:9100",
+                "count": 107496
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 106024
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 105832
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 105624
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 103848
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 103760
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 103520
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 101776
+              },
+              {
+                "value": "farm2311:9100",
+                "count": 101040
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 98816
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 96144
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 93784
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15728448
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1966056
+              },
+              {
+                "value": "iowait",
+                "count": 1966056
+              },
+              {
+                "value": "irq",
+                "count": 1966056
+              },
+              {
+                "value": "nice",
+                "count": 1966056
+              },
+              {
+                "value": "softirq",
+                "count": 1966056
+              },
+              {
+                "value": "steal",
+                "count": 1966056
+              },
+              {
+                "value": "system",
+                "count": 1966056
+              },
+              {
+                "value": "user",
+                "count": 1966056
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/cpu_data/node_cpu_seconds_total_10.csv.gz",
+          "file_name": "node_cpu_seconds_total_10.csv.gz",
+          "size_bytes": 174034803,
+          "rows": 15194240,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "cpu",
+            "instance",
+            "job",
+            "mode",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "cpu": 0,
+            "instance": 0,
+            "job": 0,
+            "mode": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "cpu": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "mode": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 14:00:00.099000064",
+          "timestamp_max": "2023-05-19 14:59:59.943000064",
+          "cadence": {
+            "median_seconds": 0.133000192,
+            "p05_seconds": 0.011000064,
+            "p95_seconds": 0.740999936
+          },
+          "value_stats": {
+            "count_sampled": 200000,
+            "min": 0.0,
+            "max": 259460.75,
+            "mean": 30938.409637,
+            "std": 56201.471432,
+            "skewness": 1.5334,
+            "kurtosis": 0.9579,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 63.325,
+            "p75": 11159.18,
+            "p95": 150590.04450000002,
+            "p99": 188738.0453000001,
+            "iqr": 11159.18,
+            "iqr_outlier_rate": 0.24316
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_cpu_seconds_total",
+                "count": 15194240
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm2311:9100",
+                "count": 116896
+              },
+              {
+                "value": "farm2310:9100",
+                "count": 110952
+              },
+              {
+                "value": "farm2318:9100",
+                "count": 110592
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 110584
+              },
+              {
+                "value": "farm2321:9100",
+                "count": 110536
+              },
+              {
+                "value": "farm2314:9100",
+                "count": 109384
+              },
+              {
+                "value": "farm2313:9100",
+                "count": 109160
+              },
+              {
+                "value": "farm2323:9100",
+                "count": 108456
+              },
+              {
+                "value": "farm2322:9100",
+                "count": 108456
+              },
+              {
+                "value": "farm2317:9100",
+                "count": 108456
+              },
+              {
+                "value": "farm2312:9100",
+                "count": 106920
+              },
+              {
+                "value": "farm2316:9100",
+                "count": 106464
+              },
+              {
+                "value": "farm2320:9100",
+                "count": 106368
+              },
+              {
+                "value": "farm2325:9100",
+                "count": 104648
+              },
+              {
+                "value": "farm2319:9100",
+                "count": 104416
+              },
+              {
+                "value": "farm2309:9100",
+                "count": 103224
+              },
+              {
+                "value": "farm2324:9100",
+                "count": 102824
+              },
+              {
+                "value": "farm2306:9100",
+                "count": 97304
+              },
+              {
+                "value": "farm2308:9100",
+                "count": 95584
+              },
+              {
+                "value": "farm2307:9100",
+                "count": 95208
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 15194240
+              }
+            ],
+            "mode": [
+              {
+                "value": "idle",
+                "count": 1899280
+              },
+              {
+                "value": "iowait",
+                "count": 1899280
+              },
+              {
+                "value": "irq",
+                "count": 1899280
+              },
+              {
+                "value": "nice",
+                "count": 1899280
+              },
+              {
+                "value": "softirq",
+                "count": 1899280
+              },
+              {
+                "value": "steal",
+                "count": 1899280
+              },
+              {
+                "value": "system",
+                "count": 1899280
+              },
+              {
+                "value": "user",
+                "count": 1899280
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "disk_data": {
+      "files_total": 44,
+      "files_scanned": 10,
+      "scans": [
+        {
+          "path": "dataset/disk_data/node_disk_io_now_3.csv.gz",
+          "file_name": "node_disk_io_now_3.csv.gz",
+          "size_bytes": 20499953,
+          "rows": 2435126,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-22 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 2.117999616,
+            "p05_seconds": 0.164,
+            "p95_seconds": 8.9850000896
+          },
+          "value_stats": {
+            "count_sampled": 50000,
+            "min": 0.0,
+            "max": 278.0,
+            "mean": 1.4316,
+            "std": 13.819027,
+            "skewness": 10.3324,
+            "kurtosis": 108.6883,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 0.0,
+            "p99": 36.0,
+            "iqr": 0.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_now",
+                "count": 2435126
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 773897
+              },
+              {
+                "value": "sdb",
+                "count": 249035
+              },
+              {
+                "value": "md127",
+                "count": 242019
+              },
+              {
+                "value": "md126",
+                "count": 184228
+              },
+              {
+                "value": "md126p1",
+                "count": 184228
+              },
+              {
+                "value": "md126p2",
+                "count": 184228
+              },
+              {
+                "value": "md126p3",
+                "count": 184228
+              },
+              {
+                "value": "md126p5",
+                "count": 184228
+              },
+              {
+                "value": "md126p4",
+                "count": 184228
+              },
+              {
+                "value": "sdc",
+                "count": 57791
+              },
+              {
+                "value": "sr0",
+                "count": 7016
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140155:9100",
+                "count": 12431
+              },
+              {
+                "value": "farm140235:9100",
+                "count": 10821
+              },
+              {
+                "value": "farm140154:9100",
+                "count": 10268
+              },
+              {
+                "value": "farm140125:9100",
+                "count": 10264
+              },
+              {
+                "value": "farm140219:9100",
+                "count": 10260
+              },
+              {
+                "value": "farm140163:9100",
+                "count": 10239
+              },
+              {
+                "value": "farm140236:9100",
+                "count": 10232
+              },
+              {
+                "value": "farm140160:9100",
+                "count": 10230
+              },
+              {
+                "value": "farm140233:9100",
+                "count": 8666
+              },
+              {
+                "value": "farm140133:9100",
+                "count": 8665
+              },
+              {
+                "value": "farm140224:9100",
+                "count": 8661
+              },
+              {
+                "value": "farm140110:9100",
+                "count": 8639
+              },
+              {
+                "value": "farm140126:9100",
+                "count": 8626
+              },
+              {
+                "value": "farm140221:9100",
+                "count": 8108
+              },
+              {
+                "value": "farm140162:9100",
+                "count": 8076
+              },
+              {
+                "value": "farm140161:9100",
+                "count": 8076
+              },
+              {
+                "value": "farm140158:9100",
+                "count": 8073
+              },
+              {
+                "value": "farm140231:9100",
+                "count": 6504
+              },
+              {
+                "value": "farm140211:9100",
+                "count": 6503
+              },
+              {
+                "value": "farm140225:9100",
+                "count": 6497
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2435126
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/disk_data/node_disk_io_time_seconds_total_3.csv.gz",
+          "file_name": "node_disk_io_time_seconds_total_3.csv.gz",
+          "size_bytes": 28613378,
+          "rows": 2435126,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-22 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 2.117999616,
+            "p05_seconds": 0.164,
+            "p95_seconds": 8.9850000896
+          },
+          "value_stats": {
+            "count_sampled": 50000,
+            "min": 0.0,
+            "max": 232189.373,
+            "mean": 21998.971169,
+            "std": 33684.233224,
+            "skewness": 1.8855,
+            "kurtosis": 4.2327,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 41296.17675,
+            "p95": 81395.8308999999,
+            "p99": 148219.40871000005,
+            "iqr": 41296.17675,
+            "iqr_outlier_rate": 0.00332
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_time_seconds_total",
+                "count": 2435126
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 773897
+              },
+              {
+                "value": "sdb",
+                "count": 249035
+              },
+              {
+                "value": "md127",
+                "count": 242019
+              },
+              {
+                "value": "md126",
+                "count": 184228
+              },
+              {
+                "value": "md126p1",
+                "count": 184228
+              },
+              {
+                "value": "md126p2",
+                "count": 184228
+              },
+              {
+                "value": "md126p3",
+                "count": 184228
+              },
+              {
+                "value": "md126p5",
+                "count": 184228
+              },
+              {
+                "value": "md126p4",
+                "count": 184228
+              },
+              {
+                "value": "sdc",
+                "count": 57791
+              },
+              {
+                "value": "sr0",
+                "count": 7016
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140155:9100",
+                "count": 12431
+              },
+              {
+                "value": "farm140235:9100",
+                "count": 10821
+              },
+              {
+                "value": "farm140154:9100",
+                "count": 10268
+              },
+              {
+                "value": "farm140125:9100",
+                "count": 10264
+              },
+              {
+                "value": "farm140219:9100",
+                "count": 10260
+              },
+              {
+                "value": "farm140163:9100",
+                "count": 10239
+              },
+              {
+                "value": "farm140236:9100",
+                "count": 10232
+              },
+              {
+                "value": "farm140160:9100",
+                "count": 10230
+              },
+              {
+                "value": "farm140233:9100",
+                "count": 8666
+              },
+              {
+                "value": "farm140133:9100",
+                "count": 8665
+              },
+              {
+                "value": "farm140224:9100",
+                "count": 8661
+              },
+              {
+                "value": "farm140110:9100",
+                "count": 8639
+              },
+              {
+                "value": "farm140126:9100",
+                "count": 8626
+              },
+              {
+                "value": "farm140221:9100",
+                "count": 8108
+              },
+              {
+                "value": "farm140162:9100",
+                "count": 8076
+              },
+              {
+                "value": "farm140161:9100",
+                "count": 8076
+              },
+              {
+                "value": "farm140158:9100",
+                "count": 8073
+              },
+              {
+                "value": "farm140231:9100",
+                "count": 6504
+              },
+              {
+                "value": "farm140211:9100",
+                "count": 6503
+              },
+              {
+                "value": "farm140225:9100",
+                "count": 6497
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2435126
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/disk_data/node_disk_io_now_0.csv.gz",
+          "file_name": "node_disk_io_now_0.csv.gz",
+          "size_bytes": 12688173,
+          "rows": 1503057,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-20 03:59:59.940999936",
+          "cadence": {
+            "median_seconds": 1.997999872,
+            "p05_seconds": 0.092,
+            "p95_seconds": 9.26
+          },
+          "value_stats": {
+            "count_sampled": 33057,
+            "min": 0.0,
+            "max": 224.0,
+            "mean": 1.823093,
+            "std": 15.26155,
+            "skewness": 8.9929,
+            "kurtosis": 81.0002,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 0.0,
+            "p99": 129.0,
+            "iqr": 0.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_now",
+                "count": 1503057
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 477094
+              },
+              {
+                "value": "sdb",
+                "count": 153803
+              },
+              {
+                "value": "md127",
+                "count": 149567
+              },
+              {
+                "value": "md126p2",
+                "count": 113758
+              },
+              {
+                "value": "md126p1",
+                "count": 113758
+              },
+              {
+                "value": "md126",
+                "count": 113758
+              },
+              {
+                "value": "md126p3",
+                "count": 113758
+              },
+              {
+                "value": "md126p5",
+                "count": 113758
+              },
+              {
+                "value": "md126p4",
+                "count": 113758
+              },
+              {
+                "value": "sdc",
+                "count": 35809
+              },
+              {
+                "value": "sr0",
+                "count": 4236
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140162:9100",
+                "count": 8627
+              },
+              {
+                "value": "farm140166:9100",
+                "count": 6476
+              },
+              {
+                "value": "farm140164:9100",
+                "count": 6476
+              },
+              {
+                "value": "farm140215:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140214:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140212:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140211:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140161:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140160:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140158:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140157:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140115:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140114:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140118:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140116:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140218:9100",
+                "count": 4322
+              },
+              {
+                "value": "farm140217:9100",
+                "count": 4322
+              },
+              {
+                "value": "farm140216:9100",
+                "count": 4322
+              },
+              {
+                "value": "farm140163:9100",
+                "count": 4316
+              },
+              {
+                "value": "farm140210:9100",
+                "count": 4314
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 1503057
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/disk_data/node_disk_io_time_seconds_total_0.csv.gz",
+          "file_name": "node_disk_io_time_seconds_total_0.csv.gz",
+          "size_bytes": 17483712,
+          "rows": 1503057,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-20 03:59:59.940999936",
+          "cadence": {
+            "median_seconds": 1.997999872,
+            "p05_seconds": 0.092,
+            "p95_seconds": 9.26
+          },
+          "value_stats": {
+            "count_sampled": 33057,
+            "min": 0.0,
+            "max": 86633.428,
+            "mean": 8217.074561,
+            "std": 13138.037237,
+            "skewness": 2.2265,
+            "kurtosis": 6.1203,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 14383.666,
+            "p95": 30915.93899999999,
+            "p99": 61210.93191999996,
+            "iqr": 14383.666,
+            "iqr_outlier_rate": 0.014672
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_time_seconds_total",
+                "count": 1503057
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 477094
+              },
+              {
+                "value": "sdb",
+                "count": 153803
+              },
+              {
+                "value": "md127",
+                "count": 149567
+              },
+              {
+                "value": "md126p2",
+                "count": 113758
+              },
+              {
+                "value": "md126p1",
+                "count": 113758
+              },
+              {
+                "value": "md126",
+                "count": 113758
+              },
+              {
+                "value": "md126p3",
+                "count": 113758
+              },
+              {
+                "value": "md126p5",
+                "count": 113758
+              },
+              {
+                "value": "md126p4",
+                "count": 113758
+              },
+              {
+                "value": "sdc",
+                "count": 35809
+              },
+              {
+                "value": "sr0",
+                "count": 4236
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140162:9100",
+                "count": 8627
+              },
+              {
+                "value": "farm140166:9100",
+                "count": 6476
+              },
+              {
+                "value": "farm140164:9100",
+                "count": 6476
+              },
+              {
+                "value": "farm140215:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140214:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140212:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140211:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140161:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140160:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140158:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140157:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140115:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140114:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140118:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140116:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140218:9100",
+                "count": 4322
+              },
+              {
+                "value": "farm140217:9100",
+                "count": 4322
+              },
+              {
+                "value": "farm140216:9100",
+                "count": 4322
+              },
+              {
+                "value": "farm140163:9100",
+                "count": 4316
+              },
+              {
+                "value": "farm140210:9100",
+                "count": 4314
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 1503057
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/disk_data/node_disk_io_time_weighted_seconds_total_0.csv.gz",
+          "file_name": "node_disk_io_time_weighted_seconds_total_0.csv.gz",
+          "size_bytes": 18134710,
+          "rows": 1503057,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-20 03:59:59.940999936",
+          "cadence": {
+            "median_seconds": 1.997999872,
+            "p05_seconds": 0.092,
+            "p95_seconds": 9.26
+          },
+          "value_stats": {
+            "count_sampled": 33057,
+            "min": 0.0,
+            "max": 4175761.719,
+            "mean": 450274.600594,
+            "std": 734760.598221,
+            "skewness": 1.8809,
+            "kurtosis": 3.2483,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 689613.728,
+            "p95": 2070323.347799998,
+            "p99": 3049492.77776,
+            "iqr": 689613.728,
+            "iqr_outlier_rate": 0.018816
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_time_weighted_seconds_total",
+                "count": 1503057
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 477094
+              },
+              {
+                "value": "sdb",
+                "count": 153803
+              },
+              {
+                "value": "md127",
+                "count": 149567
+              },
+              {
+                "value": "md126p2",
+                "count": 113758
+              },
+              {
+                "value": "md126p1",
+                "count": 113758
+              },
+              {
+                "value": "md126",
+                "count": 113758
+              },
+              {
+                "value": "md126p3",
+                "count": 113758
+              },
+              {
+                "value": "md126p5",
+                "count": 113758
+              },
+              {
+                "value": "md126p4",
+                "count": 113758
+              },
+              {
+                "value": "sdc",
+                "count": 35809
+              },
+              {
+                "value": "sr0",
+                "count": 4236
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140162:9100",
+                "count": 8627
+              },
+              {
+                "value": "farm140166:9100",
+                "count": 6476
+              },
+              {
+                "value": "farm140164:9100",
+                "count": 6476
+              },
+              {
+                "value": "farm140215:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140214:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140212:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140211:9100",
+                "count": 6473
+              },
+              {
+                "value": "farm140161:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140160:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140158:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140157:9100",
+                "count": 6467
+              },
+              {
+                "value": "farm140115:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140114:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140118:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140116:9100",
+                "count": 4335
+              },
+              {
+                "value": "farm140218:9100",
+                "count": 4322
+              },
+              {
+                "value": "farm140217:9100",
+                "count": 4322
+              },
+              {
+                "value": "farm140216:9100",
+                "count": 4322
+              },
+              {
+                "value": "farm140163:9100",
+                "count": 4316
+              },
+              {
+                "value": "farm140210:9100",
+                "count": 4314
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 1503057
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/disk_data/node_disk_io_now_2.csv.gz",
+          "file_name": "node_disk_io_now_2.csv.gz",
+          "size_bytes": 12742102,
+          "rows": 1498916,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-21 04:00:00.099000064",
+          "timestamp_max": "2023-05-22 03:59:59.941999872",
+          "cadence": {
+            "median_seconds": 2.186,
+            "p05_seconds": 0.151000064,
+            "p95_seconds": 9.274800153599996
+          },
+          "value_stats": {
+            "count_sampled": 30000,
+            "min": 0.0,
+            "max": 286.0,
+            "mean": 3.5203,
+            "std": 21.362057,
+            "skewness": 6.5901,
+            "kurtosis": 44.1123,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 2.0,
+            "p99": 142.0099999999984,
+            "iqr": 0.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_now",
+                "count": 1498916
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 476620
+              },
+              {
+                "value": "sdb",
+                "count": 152627
+              },
+              {
+                "value": "md127",
+                "count": 148307
+              },
+              {
+                "value": "md126",
+                "count": 113747
+              },
+              {
+                "value": "md126p1",
+                "count": 113747
+              },
+              {
+                "value": "md126p2",
+                "count": 113747
+              },
+              {
+                "value": "md126p3",
+                "count": 113747
+              },
+              {
+                "value": "md126p5",
+                "count": 113747
+              },
+              {
+                "value": "md126p4",
+                "count": 113747
+              },
+              {
+                "value": "sdc",
+                "count": 34560
+              },
+              {
+                "value": "sr0",
+                "count": 4320
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140141:9100",
+                "count": 8638
+              },
+              {
+                "value": "farm140142:9100",
+                "count": 8638
+              },
+              {
+                "value": "farm140144:9100",
+                "count": 8638
+              },
+              {
+                "value": "farm140116:9100",
+                "count": 6485
+              },
+              {
+                "value": "farm140118:9100",
+                "count": 6485
+              },
+              {
+                "value": "farm140115:9100",
+                "count": 6485
+              },
+              {
+                "value": "farm140236:9100",
+                "count": 6484
+              },
+              {
+                "value": "farm140138:9100",
+                "count": 6477
+              },
+              {
+                "value": "farm140140:9100",
+                "count": 6477
+              },
+              {
+                "value": "farm140129:9100",
+                "count": 6476
+              },
+              {
+                "value": "farm140145:9100",
+                "count": 4325
+              },
+              {
+                "value": "farm140136:9100",
+                "count": 4325
+              },
+              {
+                "value": "farm140219:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140217:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140218:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140120:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140119:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140114:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140112:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140111:9100",
+                "count": 4323
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 1498916
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/disk_data/node_disk_io_time_seconds_total_2.csv.gz",
+          "file_name": "node_disk_io_time_seconds_total_2.csv.gz",
+          "size_bytes": 17562956,
+          "rows": 1498916,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-21 04:00:00.099000064",
+          "timestamp_max": "2023-05-22 03:59:59.941999872",
+          "cadence": {
+            "median_seconds": 2.186,
+            "p05_seconds": 0.151000064,
+            "p95_seconds": 9.274800153599996
+          },
+          "value_stats": {
+            "count_sampled": 30000,
+            "min": 0.0,
+            "max": 170966.473,
+            "mean": 18277.13419,
+            "std": 27605.46973,
+            "skewness": 1.8676,
+            "kurtosis": 4.1733,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 34526.784250000004,
+            "p95": 64086.00924999997,
+            "p99": 126228.14812999994,
+            "iqr": 34526.78425,
+            "iqr_outlier_rate": 0.0037
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_time_seconds_total",
+                "count": 1498916
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 476620
+              },
+              {
+                "value": "sdb",
+                "count": 152627
+              },
+              {
+                "value": "md127",
+                "count": 148307
+              },
+              {
+                "value": "md126",
+                "count": 113747
+              },
+              {
+                "value": "md126p1",
+                "count": 113747
+              },
+              {
+                "value": "md126p2",
+                "count": 113747
+              },
+              {
+                "value": "md126p3",
+                "count": 113747
+              },
+              {
+                "value": "md126p5",
+                "count": 113747
+              },
+              {
+                "value": "md126p4",
+                "count": 113747
+              },
+              {
+                "value": "sdc",
+                "count": 34560
+              },
+              {
+                "value": "sr0",
+                "count": 4320
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140141:9100",
+                "count": 8638
+              },
+              {
+                "value": "farm140142:9100",
+                "count": 8638
+              },
+              {
+                "value": "farm140144:9100",
+                "count": 8638
+              },
+              {
+                "value": "farm140116:9100",
+                "count": 6485
+              },
+              {
+                "value": "farm140118:9100",
+                "count": 6485
+              },
+              {
+                "value": "farm140115:9100",
+                "count": 6485
+              },
+              {
+                "value": "farm140236:9100",
+                "count": 6484
+              },
+              {
+                "value": "farm140138:9100",
+                "count": 6477
+              },
+              {
+                "value": "farm140140:9100",
+                "count": 6477
+              },
+              {
+                "value": "farm140129:9100",
+                "count": 6476
+              },
+              {
+                "value": "farm140145:9100",
+                "count": 4325
+              },
+              {
+                "value": "farm140136:9100",
+                "count": 4325
+              },
+              {
+                "value": "farm140219:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140217:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140218:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140120:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140119:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140114:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140112:9100",
+                "count": 4323
+              },
+              {
+                "value": "farm140111:9100",
+                "count": 4323
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 1498916
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/disk_data/node_disk_io_now_1.csv.gz",
+          "file_name": "node_disk_io_now_1.csv.gz",
+          "size_bytes": 12727134,
+          "rows": 1495105,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-20 04:00:00.099000064",
+          "timestamp_max": "2023-05-21 03:59:59.940999936",
+          "cadence": {
+            "median_seconds": 2.11699968,
+            "p05_seconds": 0.161999872,
+            "p95_seconds": 9.129499878399999
+          },
+          "value_stats": {
+            "count_sampled": 30000,
+            "min": 0.0,
+            "max": 300.0,
+            "mean": 3.670567,
+            "std": 21.844156,
+            "skewness": 6.2584,
+            "kurtosis": 38.3929,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 2.0,
+            "p99": 145.0,
+            "iqr": 0.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_now",
+                "count": 1495105
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 475641
+              },
+              {
+                "value": "sdb",
+                "count": 151704
+              },
+              {
+                "value": "md127",
+                "count": 147386
+              },
+              {
+                "value": "md126p2",
+                "count": 113734
+              },
+              {
+                "value": "md126p1",
+                "count": 113734
+              },
+              {
+                "value": "md126",
+                "count": 113734
+              },
+              {
+                "value": "md126p3",
+                "count": 113734
+              },
+              {
+                "value": "md126p5",
+                "count": 113734
+              },
+              {
+                "value": "md126p4",
+                "count": 113734
+              },
+              {
+                "value": "sdc",
+                "count": 33652
+              },
+              {
+                "value": "sr0",
+                "count": 4318
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140140:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140141:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140138:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140136:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140135:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140133:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140131:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140162:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140161:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140129:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140128:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140142:9100",
+                "count": 6508
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 6508
+              },
+              {
+                "value": "farm140166:9100",
+                "count": 6505
+              },
+              {
+                "value": "farm140164:9100",
+                "count": 4339
+              },
+              {
+                "value": "farm140163:9100",
+                "count": 4339
+              },
+              {
+                "value": "farm140158:9100",
+                "count": 4339
+              },
+              {
+                "value": "farm140144:9100",
+                "count": 4338
+              },
+              {
+                "value": "farm140145:9100",
+                "count": 4338
+              },
+              {
+                "value": "farm140151:9100",
+                "count": 4336
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 1495105
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/disk_data/node_disk_io_time_seconds_total_1.csv.gz",
+          "file_name": "node_disk_io_time_seconds_total_1.csv.gz",
+          "size_bytes": 17464378,
+          "rows": 1495105,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-20 04:00:00.099000064",
+          "timestamp_max": "2023-05-21 03:59:59.940999936",
+          "cadence": {
+            "median_seconds": 2.11699968,
+            "p05_seconds": 0.161999872,
+            "p95_seconds": 9.129499878399999
+          },
+          "value_stats": {
+            "count_sampled": 30000,
+            "min": 0.0,
+            "max": 127527.736,
+            "mean": 12416.034122,
+            "std": 18894.130614,
+            "skewness": 2.0024,
+            "kurtosis": 5.1541,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 23305.410750000003,
+            "p95": 44379.80565,
+            "p99": 88489.33830999988,
+            "iqr": 23305.41075,
+            "iqr_outlier_rate": 0.0064
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_time_seconds_total",
+                "count": 1495105
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 475641
+              },
+              {
+                "value": "sdb",
+                "count": 151704
+              },
+              {
+                "value": "md127",
+                "count": 147386
+              },
+              {
+                "value": "md126p2",
+                "count": 113734
+              },
+              {
+                "value": "md126p1",
+                "count": 113734
+              },
+              {
+                "value": "md126",
+                "count": 113734
+              },
+              {
+                "value": "md126p3",
+                "count": 113734
+              },
+              {
+                "value": "md126p5",
+                "count": 113734
+              },
+              {
+                "value": "md126p4",
+                "count": 113734
+              },
+              {
+                "value": "sdc",
+                "count": 33652
+              },
+              {
+                "value": "sr0",
+                "count": 4318
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140140:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140141:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140138:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140136:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140135:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140133:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140131:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140162:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140161:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140129:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140128:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140142:9100",
+                "count": 6508
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 6508
+              },
+              {
+                "value": "farm140166:9100",
+                "count": 6505
+              },
+              {
+                "value": "farm140164:9100",
+                "count": 4339
+              },
+              {
+                "value": "farm140163:9100",
+                "count": 4339
+              },
+              {
+                "value": "farm140158:9100",
+                "count": 4339
+              },
+              {
+                "value": "farm140144:9100",
+                "count": 4338
+              },
+              {
+                "value": "farm140145:9100",
+                "count": 4338
+              },
+              {
+                "value": "farm140151:9100",
+                "count": 4336
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 1495105
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/disk_data/node_disk_io_time_weighted_seconds_total_1.csv.gz",
+          "file_name": "node_disk_io_time_weighted_seconds_total_1.csv.gz",
+          "size_bytes": 18101403,
+          "rows": 1495105,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "device",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "device": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "device": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-20 04:00:00.099000064",
+          "timestamp_max": "2023-05-21 03:59:59.940999936",
+          "cadence": {
+            "median_seconds": 2.11699968,
+            "p05_seconds": 0.161999872,
+            "p95_seconds": 9.129499878399999
+          },
+          "value_stats": {
+            "count_sampled": 30000,
+            "min": 0.0,
+            "max": 4294885.0030000005,
+            "mean": 625453.386854,
+            "std": 938015.865532,
+            "skewness": 1.486,
+            "kurtosis": 1.5176,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 1150931.27975,
+            "p95": 2643264.17425,
+            "p99": 3704692.9194099996,
+            "iqr": 1150931.27975,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_disk_io_time_weighted_seconds_total",
+                "count": 1495105
+              }
+            ],
+            "device": [
+              {
+                "value": "sda",
+                "count": 475641
+              },
+              {
+                "value": "sdb",
+                "count": 151704
+              },
+              {
+                "value": "md127",
+                "count": 147386
+              },
+              {
+                "value": "md126p2",
+                "count": 113734
+              },
+              {
+                "value": "md126p1",
+                "count": 113734
+              },
+              {
+                "value": "md126",
+                "count": 113734
+              },
+              {
+                "value": "md126p3",
+                "count": 113734
+              },
+              {
+                "value": "md126p5",
+                "count": 113734
+              },
+              {
+                "value": "md126p4",
+                "count": 113734
+              },
+              {
+                "value": "sdc",
+                "count": 33652
+              },
+              {
+                "value": "sr0",
+                "count": 4318
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm140140:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140141:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140138:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140136:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140135:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140133:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140131:9100",
+                "count": 8678
+              },
+              {
+                "value": "farm140162:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140161:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140129:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140128:9100",
+                "count": 6509
+              },
+              {
+                "value": "farm140142:9100",
+                "count": 6508
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 6508
+              },
+              {
+                "value": "farm140166:9100",
+                "count": 6505
+              },
+              {
+                "value": "farm140164:9100",
+                "count": 4339
+              },
+              {
+                "value": "farm140163:9100",
+                "count": 4339
+              },
+              {
+                "value": "farm140158:9100",
+                "count": 4339
+              },
+              {
+                "value": "farm140144:9100",
+                "count": 4338
+              },
+              {
+                "value": "farm140145:9100",
+                "count": 4338
+              },
+              {
+                "value": "farm140151:9100",
+                "count": 4336
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 1495105
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "memory_data": {
+      "files_total": 53,
+      "files_scanned": 10,
+      "scans": [
+        {
+          "path": "dataset/memory_data/node_memory_Active_anon_bytes.csv.gz",
+          "file_name": "node_memory_Active_anon_bytes.csv.gz",
+          "size_bytes": 38272933,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 34500608.0,
+            "max": 198819561472.0,
+            "mean": 22891760929.1776,
+            "std": 29758289648.194515,
+            "skewness": 2.3157,
+            "kurtosis": 7.3279,
+            "p01": 74903183.36,
+            "p05": 125870080.0,
+            "p25": 910080000.0,
+            "p50": 12178673664.0,
+            "p75": 35072583680.0,
+            "p95": 81958809804.8,
+            "p99": 158500361093.12003,
+            "iqr": 34162503680.0,
+            "iqr_outlier_rate": 0.013844
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_Active_anon_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/memory_data/node_memory_Active_bytes.csv.gz",
+          "file_name": "node_memory_Active_bytes.csv.gz",
+          "size_bytes": 34142353,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 493543424.0,
+            "max": 234239197184.0,
+            "mean": 34443849002.73493,
+            "std": 37009829403.70669,
+            "skewness": 2.1621,
+            "kurtosis": 6.005,
+            "p01": 994316042.24,
+            "p05": 1950596915.2000003,
+            "p25": 10106562560.0,
+            "p50": 18828998656.0,
+            "p75": 46474379264.0,
+            "p95": 105699102310.39998,
+            "p99": 199130141573.12,
+            "iqr": 36367816704.0,
+            "iqr_outlier_rate": 0.019022
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_Active_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/memory_data/node_memory_Active_file_bytes.csv.gz",
+          "file_name": "node_memory_Active_file_bytes.csv.gz",
+          "size_bytes": 38435951,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 0.0,
+            "max": 131246096384.0,
+            "mean": 11552088073.557333,
+            "std": 11281919987.499063,
+            "skewness": 2.1672,
+            "kurtosis": 6.5816,
+            "p01": 601821143.04,
+            "p05": 906811392.0000001,
+            "p25": 3775162368.0,
+            "p50": 8419944448.0,
+            "p75": 15033996288.0,
+            "p95": 34127154585.599953,
+            "p99": 54630174679.04011,
+            "iqr": 11258833920.0,
+            "iqr_outlier_rate": 0.015889
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_Active_file_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/memory_data/node_memory_AnonHugePages_bytes.csv.gz",
+          "file_name": "node_memory_AnonHugePages_bytes.csv.gz",
+          "size_bytes": 34863022,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 0.0,
+            "max": 139271864320.0,
+            "mean": 3983865002.939734,
+            "std": 10485795627.479017,
+            "skewness": 4.5193,
+            "kurtosis": 25.3253,
+            "p01": 12582912.0,
+            "p05": 48234496.0,
+            "p25": 205520896.0,
+            "p50": 383778816.0,
+            "p75": 1505755136.0,
+            "p95": 23398134579.19998,
+            "p99": 56319079874.56001,
+            "iqr": 1300234240.0,
+            "iqr_outlier_rate": 0.152489
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_AnonHugePages_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/memory_data/node_memory_AnonPages_bytes.csv.gz",
+          "file_name": "node_memory_AnonPages_bytes.csv.gz",
+          "size_bytes": 38241456,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 132317184.0,
+            "max": 199161270272.0,
+            "mean": 25740087077.546665,
+            "std": 31432815471.371338,
+            "skewness": 2.1733,
+            "kurtosis": 6.5643,
+            "p01": 197844828.16,
+            "p05": 358405120.0,
+            "p25": 1447860224.0,
+            "p50": 15492988928.0,
+            "p75": 38245057536.0,
+            "p95": 87194525695.99997,
+            "p99": 166981567774.7206,
+            "iqr": 36797197312.0,
+            "iqr_outlier_rate": 0.012978
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_AnonPages_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/memory_data/node_memory_Bounce_bytes.csv.gz",
+          "file_name": "node_memory_Bounce_bytes.csv.gz",
+          "size_bytes": 20819240,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "std": 0.0,
+            "skewness": 0.0,
+            "kurtosis": 0.0,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "iqr": 0.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_Bounce_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/memory_data/node_memory_Buffers_bytes.csv.gz",
+          "file_name": "node_memory_Buffers_bytes.csv.gz",
+          "size_bytes": 23262177,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 16384.0,
+            "max": 3558227968.0,
+            "mean": 29610136.644267,
+            "std": 148013417.235092,
+            "skewness": 11.9415,
+            "kurtosis": 199.5478,
+            "p01": 2146304.0,
+            "p05": 4358144.0,
+            "p25": 5361664.0,
+            "p50": 5611520.0,
+            "p75": 6049792.0,
+            "p95": 100614758.39999995,
+            "p99": 645742796.8000042,
+            "iqr": 688128.0,
+            "iqr_outlier_rate": 0.098778
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_Buffers_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/memory_data/node_memory_Cached_bytes.csv.gz",
+          "file_name": "node_memory_Cached_bytes.csv.gz",
+          "size_bytes": 33685076,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 14417920.0,
+            "max": 333685428224.0,
+            "mean": 32302556395.292446,
+            "std": 33383894776.482624,
+            "skewness": 2.4617,
+            "kurtosis": 9.008,
+            "p01": 1128047861.76,
+            "p05": 1750046515.2,
+            "p25": 10750038016.0,
+            "p50": 22392889344.0,
+            "p75": 40482585600.0,
+            "p95": 95915498291.2,
+            "p99": 163826493562.88,
+            "iqr": 29732547584.0,
+            "iqr_outlier_rate": 0.020156
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_Cached_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/memory_data/node_memory_CmaFree_bytes.csv.gz",
+          "file_name": "node_memory_CmaFree_bytes.csv.gz",
+          "size_bytes": 20574801,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "std": 0.0,
+            "skewness": 0.0,
+            "kurtosis": 0.0,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "iqr": 0.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_CmaFree_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/memory_data/node_memory_CmaTotal_bytes.csv.gz",
+          "file_name": "node_memory_CmaTotal_bytes.csv.gz",
+          "size_bytes": 20549646,
+          "rows": 2203252,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:00.099000064",
+          "timestamp_max": "2023-05-23 18:59:59.940999936",
+          "cadence": {
+            "median_seconds": 6.243000064,
+            "p05_seconds": 0.4300001152,
+            "p95_seconds": 27.403349798399997
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 0.0,
+            "max": 0.0,
+            "mean": 0.0,
+            "std": 0.0,
+            "skewness": 0.0,
+            "kurtosis": 0.0,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 0.0,
+            "p99": 0.0,
+            "iqr": 0.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "node_memory_CmaTotal_bytes",
+                "count": 2203252
+              }
+            ],
+            "instance": [
+              {
+                "value": "farm1988:9100",
+                "count": 2133
+              },
+              {
+                "value": "farm2315:9100",
+                "count": 2130
+              },
+              {
+                "value": "farm1996:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1995:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1994:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1993:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1992:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1991:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1990:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1989:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1987:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1986:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1985:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1984:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm1983:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180129:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180128:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180127:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm180126:9100",
+                "count": 1514
+              },
+              {
+                "value": "farm140127:9100",
+                "count": 1512
+              }
+            ],
+            "job": [
+              {
+                "value": "node",
+                "count": 2203252
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "slurm_data": {
+      "files_total": 4,
+      "files_scanned": 4,
+      "scans": [
+        {
+          "path": "dataset/slurm_data/slurm_node_cpu_alloc.csv.gz",
+          "file_name": "slurm_node_cpu_alloc.csv.gz",
+          "size_bytes": 16049057,
+          "rows": 2231677,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "node",
+            "status",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "node": 0,
+            "status": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "node": 0.0,
+            "status": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:17.217999872",
+          "timestamp_max": "2023-05-23 18:59:47.217999872",
+          "cadence": {
+            "median_seconds": 60.0,
+            "p05_seconds": 30.0,
+            "p95_seconds": 60.003000064
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 0.0,
+            "max": 256.0,
+            "mean": 53.5608,
+            "std": 54.257663,
+            "skewness": 1.4313,
+            "kurtosis": 2.691,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 2.0,
+            "p50": 42.0,
+            "p75": 80.0,
+            "p95": 128.0,
+            "p99": 256.0,
+            "iqr": 78.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "slurm_node_cpu_alloc",
+                "count": 2231677
+              }
+            ],
+            "instance": [
+              {
+                "value": "enpslurm21:9341",
+                "count": 2231677
+              }
+            ],
+            "job": [
+              {
+                "value": "slurm",
+                "count": 2231677
+              }
+            ],
+            "node": [
+              {
+                "value": "farm180227",
+                "count": 3042
+              },
+              {
+                "value": "farm180242",
+                "count": 3038
+              },
+              {
+                "value": "farm180243",
+                "count": 3035
+              },
+              {
+                "value": "farm180244",
+                "count": 3031
+              },
+              {
+                "value": "farm140233",
+                "count": 2410
+              },
+              {
+                "value": "farm140225",
+                "count": 2400
+              },
+              {
+                "value": "farm140221",
+                "count": 2390
+              },
+              {
+                "value": "farm140235",
+                "count": 2380
+              },
+              {
+                "value": "farm2308",
+                "count": 2349
+              },
+              {
+                "value": "farm160142",
+                "count": 2267
+              },
+              {
+                "value": "farm180245",
+                "count": 2255
+              },
+              {
+                "value": "farm180222",
+                "count": 2255
+              },
+              {
+                "value": "farm180220",
+                "count": 2252
+              },
+              {
+                "value": "farm180241",
+                "count": 2252
+              },
+              {
+                "value": "farm140234",
+                "count": 1658
+              },
+              {
+                "value": "farm140217",
+                "count": 1653
+              },
+              {
+                "value": "farm140230",
+                "count": 1652
+              },
+              {
+                "value": "farm140224",
+                "count": 1628
+              },
+              {
+                "value": "farm140236",
+                "count": 1626
+              },
+              {
+                "value": "farm2325",
+                "count": 1581
+              }
+            ],
+            "status": [
+              {
+                "value": "mixed",
+                "count": 1213951
+              },
+              {
+                "value": "allocated",
+                "count": 486747
+              },
+              {
+                "value": "idle",
+                "count": 455378
+              },
+              {
+                "value": "maint",
+                "count": 19980
+              },
+              {
+                "value": "drained",
+                "count": 14690
+              },
+              {
+                "value": "reserved",
+                "count": 13960
+              },
+              {
+                "value": "draining",
+                "count": 10147
+              },
+              {
+                "value": "completing",
+                "count": 7569
+              },
+              {
+                "value": "down*",
+                "count": 5524
+              },
+              {
+                "value": "down",
+                "count": 3189
+              },
+              {
+                "value": "drained*",
+                "count": 344
+              },
+              {
+                "value": "mixed*",
+                "count": 141
+              },
+              {
+                "value": "completing*",
+                "count": 28
+              },
+              {
+                "value": "draining*",
+                "count": 14
+              },
+              {
+                "value": "allocated*",
+                "count": 8
+              },
+              {
+                "value": "idle*",
+                "count": 7
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/slurm_data/slurm_node_cpu_idle.csv.gz",
+          "file_name": "slurm_node_cpu_idle.csv.gz",
+          "size_bytes": 15736279,
+          "rows": 2231677,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "node",
+            "status",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "node": 0,
+            "status": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "node": 0.0,
+            "status": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:17.217999872",
+          "timestamp_max": "2023-05-23 18:59:47.217999872",
+          "cadence": {
+            "median_seconds": 60.0,
+            "p05_seconds": 30.0,
+            "p95_seconds": 60.003000064
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 0.0,
+            "max": 256.0,
+            "mean": 45.655244,
+            "std": 61.96421,
+            "skewness": 1.7984,
+            "kurtosis": 3.0,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 2.0,
+            "p50": 16.0,
+            "p75": 80.0,
+            "p95": 128.0,
+            "p99": 256.0,
+            "iqr": 78.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "slurm_node_cpu_idle",
+                "count": 2231677
+              }
+            ],
+            "instance": [
+              {
+                "value": "enpslurm21:9341",
+                "count": 2231677
+              }
+            ],
+            "job": [
+              {
+                "value": "slurm",
+                "count": 2231677
+              }
+            ],
+            "node": [
+              {
+                "value": "farm180227",
+                "count": 3042
+              },
+              {
+                "value": "farm180242",
+                "count": 3038
+              },
+              {
+                "value": "farm180243",
+                "count": 3035
+              },
+              {
+                "value": "farm180244",
+                "count": 3031
+              },
+              {
+                "value": "farm140233",
+                "count": 2410
+              },
+              {
+                "value": "farm140225",
+                "count": 2400
+              },
+              {
+                "value": "farm140221",
+                "count": 2390
+              },
+              {
+                "value": "farm140235",
+                "count": 2380
+              },
+              {
+                "value": "farm2308",
+                "count": 2349
+              },
+              {
+                "value": "farm160142",
+                "count": 2267
+              },
+              {
+                "value": "farm180245",
+                "count": 2255
+              },
+              {
+                "value": "farm180222",
+                "count": 2255
+              },
+              {
+                "value": "farm180220",
+                "count": 2252
+              },
+              {
+                "value": "farm180241",
+                "count": 2252
+              },
+              {
+                "value": "farm140234",
+                "count": 1658
+              },
+              {
+                "value": "farm140217",
+                "count": 1653
+              },
+              {
+                "value": "farm140230",
+                "count": 1652
+              },
+              {
+                "value": "farm140224",
+                "count": 1628
+              },
+              {
+                "value": "farm140236",
+                "count": 1626
+              },
+              {
+                "value": "farm2325",
+                "count": 1581
+              }
+            ],
+            "status": [
+              {
+                "value": "mixed",
+                "count": 1213951
+              },
+              {
+                "value": "allocated",
+                "count": 486747
+              },
+              {
+                "value": "idle",
+                "count": 455378
+              },
+              {
+                "value": "maint",
+                "count": 19980
+              },
+              {
+                "value": "drained",
+                "count": 14690
+              },
+              {
+                "value": "reserved",
+                "count": 13960
+              },
+              {
+                "value": "draining",
+                "count": 10147
+              },
+              {
+                "value": "completing",
+                "count": 7569
+              },
+              {
+                "value": "down*",
+                "count": 5524
+              },
+              {
+                "value": "down",
+                "count": 3189
+              },
+              {
+                "value": "drained*",
+                "count": 344
+              },
+              {
+                "value": "mixed*",
+                "count": 141
+              },
+              {
+                "value": "completing*",
+                "count": 28
+              },
+              {
+                "value": "draining*",
+                "count": 14
+              },
+              {
+                "value": "allocated*",
+                "count": 8
+              },
+              {
+                "value": "idle*",
+                "count": 7
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/slurm_data/slurm_node_cpu_other.csv.gz",
+          "file_name": "slurm_node_cpu_other.csv.gz",
+          "size_bytes": 13833829,
+          "rows": 2231677,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "node",
+            "status",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "node": 0,
+            "status": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "node": 0.0,
+            "status": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:17.217999872",
+          "timestamp_max": "2023-05-23 18:59:47.217999872",
+          "cadence": {
+            "median_seconds": 60.0,
+            "p05_seconds": 30.0,
+            "p95_seconds": 60.003000064
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 0.0,
+            "max": 256.0,
+            "mean": 1.5468,
+            "std": 16.151922,
+            "skewness": 13.208,
+            "kurtosis": 191.5854,
+            "p01": 0.0,
+            "p05": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p95": 0.0,
+            "p99": 72.0,
+            "iqr": 0.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "slurm_node_cpu_other",
+                "count": 2231677
+              }
+            ],
+            "instance": [
+              {
+                "value": "enpslurm21:9341",
+                "count": 2231677
+              }
+            ],
+            "job": [
+              {
+                "value": "slurm",
+                "count": 2231677
+              }
+            ],
+            "node": [
+              {
+                "value": "farm180227",
+                "count": 3042
+              },
+              {
+                "value": "farm180242",
+                "count": 3038
+              },
+              {
+                "value": "farm180243",
+                "count": 3035
+              },
+              {
+                "value": "farm180244",
+                "count": 3031
+              },
+              {
+                "value": "farm140233",
+                "count": 2410
+              },
+              {
+                "value": "farm140225",
+                "count": 2400
+              },
+              {
+                "value": "farm140221",
+                "count": 2390
+              },
+              {
+                "value": "farm140235",
+                "count": 2380
+              },
+              {
+                "value": "farm2308",
+                "count": 2349
+              },
+              {
+                "value": "farm160142",
+                "count": 2267
+              },
+              {
+                "value": "farm180245",
+                "count": 2255
+              },
+              {
+                "value": "farm180222",
+                "count": 2255
+              },
+              {
+                "value": "farm180220",
+                "count": 2252
+              },
+              {
+                "value": "farm180241",
+                "count": 2252
+              },
+              {
+                "value": "farm140234",
+                "count": 1658
+              },
+              {
+                "value": "farm140217",
+                "count": 1653
+              },
+              {
+                "value": "farm140230",
+                "count": 1652
+              },
+              {
+                "value": "farm140224",
+                "count": 1628
+              },
+              {
+                "value": "farm140236",
+                "count": 1626
+              },
+              {
+                "value": "farm2325",
+                "count": 1581
+              }
+            ],
+            "status": [
+              {
+                "value": "mixed",
+                "count": 1213951
+              },
+              {
+                "value": "allocated",
+                "count": 486747
+              },
+              {
+                "value": "idle",
+                "count": 455378
+              },
+              {
+                "value": "maint",
+                "count": 19980
+              },
+              {
+                "value": "drained",
+                "count": 14690
+              },
+              {
+                "value": "reserved",
+                "count": 13960
+              },
+              {
+                "value": "draining",
+                "count": 10147
+              },
+              {
+                "value": "completing",
+                "count": 7569
+              },
+              {
+                "value": "down*",
+                "count": 5524
+              },
+              {
+                "value": "down",
+                "count": 3189
+              },
+              {
+                "value": "drained*",
+                "count": 344
+              },
+              {
+                "value": "mixed*",
+                "count": 141
+              },
+              {
+                "value": "completing*",
+                "count": 28
+              },
+              {
+                "value": "draining*",
+                "count": 14
+              },
+              {
+                "value": "allocated*",
+                "count": 8
+              },
+              {
+                "value": "idle*",
+                "count": 7
+              }
+            ]
+          }
+        },
+        {
+          "path": "dataset/slurm_data/slurm_node_cpu_total.csv.gz",
+          "file_name": "slurm_node_cpu_total.csv.gz",
+          "size_bytes": 14687898,
+          "rows": 2231677,
+          "duplicate_row_count": 0,
+          "duplicate_rate": 0.0,
+          "columns": [
+            "__name__",
+            "instance",
+            "job",
+            "node",
+            "status",
+            "timestamp",
+            "value"
+          ],
+          "time_col": "timestamp",
+          "value_col": "value",
+          "missing_by_col": {
+            "__name__": 0,
+            "instance": 0,
+            "job": 0,
+            "node": 0,
+            "status": 0,
+            "timestamp": 0,
+            "value": 0
+          },
+          "missing_rate": {
+            "__name__": 0.0,
+            "instance": 0.0,
+            "job": 0.0,
+            "node": 0.0,
+            "status": 0.0,
+            "timestamp": 0.0,
+            "value": 0.0
+          },
+          "timestamp_min": "2023-05-19 04:00:17.217999872",
+          "timestamp_max": "2023-05-23 18:59:47.217999872",
+          "cadence": {
+            "median_seconds": 60.0,
+            "p05_seconds": 30.0,
+            "p95_seconds": 60.003000064
+          },
+          "value_stats": {
+            "count_sampled": 45000,
+            "min": 48.0,
+            "max": 256.0,
+            "mean": 100.762844,
+            "std": 54.340294,
+            "skewness": 1.5995,
+            "kurtosis": 2.3903,
+            "p01": 48.0,
+            "p05": 48.0,
+            "p25": 72.0,
+            "p50": 80.0,
+            "p75": 128.0,
+            "p95": 256.0,
+            "p99": 256.0,
+            "iqr": 56.0,
+            "iqr_outlier_rate": 0.0
+          },
+          "categorical_top": {
+            "__name__": [
+              {
+                "value": "slurm_node_cpu_total",
+                "count": 2231677
+              }
+            ],
+            "instance": [
+              {
+                "value": "enpslurm21:9341",
+                "count": 2231677
+              }
+            ],
+            "job": [
+              {
+                "value": "slurm",
+                "count": 2231677
+              }
+            ],
+            "node": [
+              {
+                "value": "farm180227",
+                "count": 3042
+              },
+              {
+                "value": "farm180242",
+                "count": 3038
+              },
+              {
+                "value": "farm180243",
+                "count": 3035
+              },
+              {
+                "value": "farm180244",
+                "count": 3031
+              },
+              {
+                "value": "farm140233",
+                "count": 2410
+              },
+              {
+                "value": "farm140225",
+                "count": 2400
+              },
+              {
+                "value": "farm140221",
+                "count": 2390
+              },
+              {
+                "value": "farm140235",
+                "count": 2380
+              },
+              {
+                "value": "farm2308",
+                "count": 2349
+              },
+              {
+                "value": "farm160142",
+                "count": 2267
+              },
+              {
+                "value": "farm180245",
+                "count": 2255
+              },
+              {
+                "value": "farm180222",
+                "count": 2255
+              },
+              {
+                "value": "farm180220",
+                "count": 2252
+              },
+              {
+                "value": "farm180241",
+                "count": 2252
+              },
+              {
+                "value": "farm140234",
+                "count": 1658
+              },
+              {
+                "value": "farm140217",
+                "count": 1653
+              },
+              {
+                "value": "farm140230",
+                "count": 1652
+              },
+              {
+                "value": "farm140224",
+                "count": 1628
+              },
+              {
+                "value": "farm140236",
+                "count": 1626
+              },
+              {
+                "value": "farm2325",
+                "count": 1581
+              }
+            ],
+            "status": [
+              {
+                "value": "mixed",
+                "count": 1213951
+              },
+              {
+                "value": "allocated",
+                "count": 486747
+              },
+              {
+                "value": "idle",
+                "count": 455378
+              },
+              {
+                "value": "maint",
+                "count": 19980
+              },
+              {
+                "value": "drained",
+                "count": 14690
+              },
+              {
+                "value": "reserved",
+                "count": 13960
+              },
+              {
+                "value": "draining",
+                "count": 10147
+              },
+              {
+                "value": "completing",
+                "count": 7569
+              },
+              {
+                "value": "down*",
+                "count": 5524
+              },
+              {
+                "value": "down",
+                "count": 3189
+              },
+              {
+                "value": "drained*",
+                "count": 344
+              },
+              {
+                "value": "mixed*",
+                "count": 141
+              },
+              {
+                "value": "completing*",
+                "count": 28
+              },
+              {
+                "value": "draining*",
+                "count": 14
+              },
+              {
+                "value": "allocated*",
+                "count": 8
+              },
+              {
+                "value": "idle*",
+                "count": 7
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "config": {
+    "chunksize": 250000,
+    "sample_rows": 200000,
+    "categorical_topk": 20,
+    "parse_timestamps": true,
+    "max_files_per_folder": 10
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "generated_at": "2026-04-10T11:26:27",
+  "split_policy": {
+    "type": "binary_chronological_anomaly_detection",
+    "train": "2023-05-19 00:00 -> 2023-05-22 23:59  (normal behaviour)",
+    "test": "2023-05-23 00:00 -> 2023-05-23 23:59  (anomalous JLab event)",
+    "val": "NONE \u2014 unsupervised pipeline, no labels",
+    "constraint": "Train MUST contain ONLY normal data. All anomaly signal is in test."
+  },
+  "exclusions": {
+    "cpu_data": "EXCLUDED \u2014 zero May23 coverage (84% gap in Prometheus scraping)",
+    "disk_data": "EXCLUDED \u2014 zero May23 coverage"
+  },
+  "hw_config_key": "first 6 chars of instance[:6] (memory) or node[:6] (slurm)",
+  "hw_configs": [
+    "farm14",
+    "farm16",
+    "farm18",
+    "farm19",
+    "farm23"
+  ],
+  "modalities": {
+    "memory_data": {
+      "modality": "memory_data",
+      "resample_freq": "1min",
+      "ffill_limit": 3,
+      "source_files": [
+        "node_memory_Active_anon_bytes.parquet",
+        "node_memory_Active_bytes.parquet"
+      ],
+      "raw_total_rows": 4406504,
+      "train": {
+        "rows": 3654542,
+        "shape": [
+          3654542,
+          5
+        ],
+        "pct_of_eligible": 82.87,
+        "time_start": "2023-05-19 04:00:00",
+        "time_end": "2023-05-22 23:59:00",
+        "unique_instances": 332,
+        "unique_metrics": 2,
+        "hw_config_counts": {
+          "farm19": 1179830,
+          "farm18": 916320,
+          "farm14": 872160,
+          "farm16": 419516,
+          "farm23": 266716
+        }
+      },
+      "test": {
+        "rows": 755320,
+        "shape": [
+          755320,
+          5
+        ],
+        "pct_of_eligible": 17.13,
+        "time_start": "2023-05-23 00:00:00",
+        "time_end": "2023-05-23 18:59:00",
+        "unique_instances": 332,
+        "unique_metrics": 2,
+        "hw_config_counts": {
+          "farm19": 243258,
+          "farm18": 189240,
+          "farm14": 179708,
+          "farm16": 86118,
+          "farm23": 56996
+        }
+      },
+      "zero_temporal_overlap": true
+    },
+    "slurm_data": {
+      "modality": "slurm_data",
+      "resample_freq": "none",
+      "ffill_limit": 0,
+      "source_files": [
+        "slurm_node_cpu_alloc.parquet",
+        "slurm_node_cpu_idle.parquet"
+      ],
+      "raw_total_rows": 4463354,
+      "train": {
+        "rows": 3709122,
+        "shape": [
+          3709122,
+          8
+        ],
+        "pct_of_eligible": 83.1,
+        "time_start": "2023-05-19 04:00:17.217999872",
+        "time_end": "2023-05-22 23:59:47.217999872",
+        "unique_nodes": 329,
+        "hw_config_counts": {
+          "farm19": 1206278,
+          "farm18": 936018,
+          "farm14": 855368,
+          "farm16": 428620,
+          "farm23": 282838
+        }
+      },
+      "test": {
+        "rows": 754232,
+        "shape": [
+          754232,
+          8
+        ],
+        "pct_of_eligible": 16.9,
+        "time_start": "2023-05-23 00:00:47.217999872",
+        "time_end": "2023-05-23 18:59:47.217999872",
+        "unique_nodes": 329,
+        "hw_config_counts": {
+          "farm19": 244850,
+          "farm18": 190794,
+          "farm14": 173960,
+          "farm16": 87528,
+          "farm23": 57100
+        }
+      },
+      "zero_temporal_overlap": true
+    }
+  }
+}

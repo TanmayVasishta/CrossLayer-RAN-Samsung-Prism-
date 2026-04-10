@@ -1,0 +1,76 @@
+
+
+[2026-03-17] Prompt: "now cross verify data splitting preperatioa and eda done by me and see if there was any other efficient method Also handle the data cleaning part..."
+
+What was added/changed in the project:
+- Cross-verified EDA and Splitting. Found gaps: no outlier detection, no skewness/kurtosis, duplicate rows not checked, Unnamed:0 leakage, and splits lacked global synchronization.
+- Enhanced \eda/lib.py\: added skewness, kurtosis, duplicate count, and IQR outlier rate to chunk scanning.
+- Created new \eda/clean.py\: a chunk-safe data cleaning pipeline that drops junk columns, drops NaT timestamps and NaN values, deduplicates rows, flags outliers (IQRx3), and writes cleaned data to Parquet.
+- Enhanced \eda/make_splits.py\: created a Global Unified Split boundary across all folders for joining, changed splits format to ISO strings, and added gap detection warnings.
+- Rewrote \eda/build_eda.py\ and its HTML report: added cross-folder Data Quality summary table, skewness metrics, outlier rates, and distribution charts.
+- Updated \eda/eda_app.py\ (Streamlit): Added Global Overview tab, Splits timeline tab, and Data Quality analysis tab.
+- Created tests: \\tests/test_clean_and_lib.py\ validated the new logic synthetically.
+
+Generated artifacts (outputs):
+- Updated \\reports/eda_report.html\ with the comprehensive dark-themed tabbed report.
+- Updated \\artifacts/splits/time_splits.json\ containing the global ISO splits.
+
+Problems faced:
+- \\build_eda.py\ hit an \AttributeError\ when parsing the old string-based format of \\time_splits.json\ after it was updated to expect a dict. Fixed by deleting the stale artifact and regenerating.
+- \pytest\ was missing from the environment and encountered import path issues. Fixed by installing pytest and running it using \python -c "import sys; sys.path.insert..."\.
+
+---
+
+[2026-04-10] Prompt: "redo data splitting correctly for unsupervised anomaly detection pipeline..."
+
+CRITICAL BUG FIXED: Previous 70/15/15 chronological split was WRONG for anomaly detection.
+The old split mixed anomalous May 23 data into val/test sets and had a val split which is
+meaningless for unsupervised pipelines. cpu_data was collapsed to only 12 training points
+due to incorrect uniform resampling.
+
+What was changed:
+- REWROTE eda/make_splits.py: New binary TRAIN/TEST split.
+    Train = May 19 00:00 to May 22 23:59 (normal cluster behaviour ONLY)
+    Test  = May 23 00:00 to May 23 23:59 (real anomalous JLab event)
+    No validation split (unsupervised — no labels available)
+- FIXED per-modality resampling:
+    cpu_data:    5T (5-minute) — was incorrectly resampled globally
+    disk_data:   5T (5-minute)
+    memory_data: 1T (1-minute) — higher-frequency signals preserved
+    slurm_data:  No resampling (event-driven scheduler data)
+- ADDED hw_config column: inferred from node/instance label patterns (5 JLab hardware configs).
+  All 4 modalities tagged 'generic' (no explicit node naming pattern in this dataset subset).
+- ADDED split_manifest.json: records row counts, time ranges, NaN drop counts, resample freq.
+- UPDATED eda/compute_train_stats.py: Fixed train boundary to May 22 23:59:59 (was wrong).
+- UPDATED eda/apply_stats.py: Now reads binary {modality}_train/test parquets (no val split).
+- REWROTE eda/build_eda.py: Dark-themed HTML report with sidebar nav, split design section,
+  resample policy table, pipeline dataflow diagram.
+- REWROTE eda/ts_analysis.py: Correct fixed train window + per-modality resample frequencies.
+
+Generated artifacts (outputs):
+- artifacts/splits/cpu_data_train.parquet      (5,976 rows after 5T resample)
+- artifacts/splits/cpu_data_test.parquet       (0 rows — cpu collection gap on May 23)
+- artifacts/splits/disk_data_train.parquet     (190,643 rows after 5T resample)
+- artifacts/splits/disk_data_test.parquet      (0 rows — disk collection gap on May 23)
+- artifacts/splits/memory_data_train.parquet   (1,827,271 rows — 82.9% of eligible)
+- artifacts/splits/memory_data_test.parquet    (377,660 rows — 17.1% of eligible)
+- artifacts/splits/slurm_data_train.parquet    (3,709,122 rows — 83.1% of eligible)
+- artifacts/splits/slurm_data_test.parquet     (754,232 rows — 16.9% of eligible)
+- artifacts/splits/split_manifest.json         (full provenance record)
+- artifacts/eda/train_stats.json               (IQR + mean/std on normal data ONLY)
+
+Sanity checks passed:
+- memory_data: zero temporal overlap confirmed (max_train < min_test)
+- slurm_data:  zero temporal overlap confirmed (max_train < min_test)
+- cpu_data & disk_data: 0 test rows — real collection gap, not a code error
+
+Known data issue (pre-existing, not fixable in code):
+- cpu_data has an 84% temporal gap (Prometheus scraper likely stopped for cpu metrics near May 23).
+- disk_data similarly has no May 23 coverage.
+- Only memory_data and slurm_data have test split coverage (the anomalous day).
+  Recommend focusing anomaly detection on memory + slurm modalities.
+
+Next steps:
+- Run eda.apply_stats to enrich cleaned_data/ with is_outlier and value_norm columns.
+- Focus anomaly model training on memory_data and slurm_data (only modalities with test coverage).
+- Consider joining memory + slurm on (node, timestamp) for multivariate anomaly detection.

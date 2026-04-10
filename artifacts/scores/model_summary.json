@@ -1,0 +1,293 @@
+{
+  "generated_at": "2026-04-10T11:41:16",
+  "models": {
+    "memory_isolation_forest": {
+      "model": "isolation_forest",
+      "modality": "memory_data",
+      "use_pca": true,
+      "contamination": 0.05,
+      "hw_config_results": {
+        "farm14": {
+          "train_rows": 436080,
+          "test_rows": 89854,
+          "pca_components": 7,
+          "train_flagged_pct": 5.0,
+          "test_flagged_pct": 4.619
+        },
+        "farm16": {
+          "train_rows": 209758,
+          "test_rows": 43059,
+          "pca_components": 6,
+          "train_flagged_pct": 5.0,
+          "test_flagged_pct": 6.194
+        },
+        "farm18": {
+          "train_rows": 458160,
+          "test_rows": 94620,
+          "pca_components": 6,
+          "train_flagged_pct": 5.0,
+          "test_flagged_pct": 5.162
+        },
+        "farm19": {
+          "train_rows": 589915,
+          "test_rows": 121629,
+          "pca_components": 6,
+          "train_flagged_pct": 4.998,
+          "test_flagged_pct": 1.387
+        },
+        "farm23": {
+          "train_rows": 133358,
+          "test_rows": 28498,
+          "pca_components": 5,
+          "train_flagged_pct": 5.0,
+          "test_flagged_pct": 0.175
+        }
+      }
+    },
+    "memory_autoencoder": {
+      "model": "autoencoder",
+      "modality": "memory_data",
+      "architecture": "input->64->16->64->input (ReLU, MSE)",
+      "anomaly_threshold_sigma": 3.0,
+      "hw_config_results": {
+        "farm14": {
+          "train_rows": 436080,
+          "test_rows": 89854,
+          "train_recon_mean": 0.026214,
+          "train_recon_std": 0.046033,
+          "anomaly_threshold": 0.164313,
+          "train_flagged_pct": 1.645,
+          "test_flagged_pct": 1.156
+        },
+        "farm16": {
+          "train_rows": 209758,
+          "test_rows": 43059,
+          "train_recon_mean": 0.019287,
+          "train_recon_std": 0.046247,
+          "anomaly_threshold": 0.158027,
+          "train_flagged_pct": 0.923,
+          "test_flagged_pct": 1.059
+        },
+        "farm18": {
+          "train_rows": 458160,
+          "test_rows": 94620,
+          "train_recon_mean": 0.015451,
+          "train_recon_std": 0.028961,
+          "anomaly_threshold": 0.102334,
+          "train_flagged_pct": 1.858,
+          "test_flagged_pct": 1.178
+        },
+        "farm19": {
+          "train_rows": 589915,
+          "test_rows": 121629,
+          "train_recon_mean": 0.012759,
+          "train_recon_std": 0.02675,
+          "anomaly_threshold": 0.093008,
+          "train_flagged_pct": 1.762,
+          "test_flagged_pct": 0.193
+        },
+        "farm23": {
+          "train_rows": 133358,
+          "test_rows": 28498,
+          "train_recon_mean": 0.008346,
+          "train_recon_std": 0.026128,
+          "anomaly_threshold": 0.08673,
+          "train_flagged_pct": 1.252,
+          "test_flagged_pct": 0.049
+        }
+      }
+    },
+    "slurm_isolation_forest": {
+      "model": "isolation_forest",
+      "modality": "slurm_data",
+      "use_pca": false,
+      "contamination": 0.05,
+      "hw_config_results": {
+        "farm14": {
+          "train_rows": 427684,
+          "test_rows": 86980,
+          "pca_components": null,
+          "train_flagged_pct": 2.892,
+          "test_flagged_pct": 1.232
+        },
+        "farm16": {
+          "train_rows": 214310,
+          "test_rows": 43764,
+          "pca_components": null,
+          "train_flagged_pct": 4.618,
+          "test_flagged_pct": 4.426
+        },
+        "farm18": {
+          "train_rows": 468009,
+          "test_rows": 95397,
+          "pca_components": null,
+          "train_flagged_pct": 4.998,
+          "test_flagged_pct": 8.952
+        },
+        "farm19": {
+          "train_rows": 603139,
+          "test_rows": 122425,
+          "pca_components": null,
+          "train_flagged_pct": 4.939,
+          "test_flagged_pct": 4.698
+        },
+        "farm23": {
+          "train_rows": 141419,
+          "test_rows": 28550,
+          "pca_components": null,
+          "train_flagged_pct": 4.513,
+          "test_flagged_pct": 1.471
+        }
+      }
+    },
+    "slurm_autoencoder": {
+      "model": "autoencoder",
+      "modality": "slurm_data",
+      "architecture": "input->64->16->64->input (ReLU, MSE)",
+      "anomaly_threshold_sigma": 3.0,
+      "hw_config_results": {
+        "farm14": {
+          "train_rows": 427684,
+          "test_rows": 86980,
+          "train_recon_mean": 0.00041,
+          "train_recon_std": 0.010252,
+          "anomaly_threshold": 0.031167,
+          "train_flagged_pct": 0.258,
+          "test_flagged_pct": 2.111
+        },
+        "farm16": {
+          "train_rows": 214310,
+          "test_rows": 43764,
+          "train_recon_mean": 0.001234,
+          "train_recon_std": 0.018808,
+          "anomaly_threshold": 0.057658,
+          "train_flagged_pct": 0.486,
+          "test_flagged_pct": 1.243
+        },
+        "farm18": {
+          "train_rows": 468009,
+          "test_rows": 95397,
+          "train_recon_mean": 0.000826,
+          "train_recon_std": 0.043981,
+          "anomaly_threshold": 0.132767,
+          "train_flagged_pct": 0.083,
+          "test_flagged_pct": 0.132
+        },
+        "farm19": {
+          "train_rows": 603139,
+          "test_rows": 122425,
+          "train_recon_mean": 0.000377,
+          "train_recon_std": 0.00651,
+          "anomaly_threshold": 0.019906,
+          "train_flagged_pct": 0.56,
+          "test_flagged_pct": 0.354
+        },
+        "farm23": {
+          "train_rows": 141419,
+          "test_rows": 28550,
+          "train_recon_mean": 0.000453,
+          "train_recon_std": 0.005214,
+          "anomaly_threshold": 0.016096,
+          "train_flagged_pct": 0.46,
+          "test_flagged_pct": 0.301
+        }
+      }
+    }
+  },
+  "cross_validations": {
+    "memory_IF_hw_cluster": {
+      "total_test_rows": 377660,
+      "flagged_rows": 13438,
+      "hw_config_flagged_distribution_pct": {
+        "farm18": 36.34,
+        "farm14": 30.88,
+        "farm16": 19.85,
+        "farm19": 12.55,
+        "farm23": 0.37
+      },
+      "hw_config_flag_rate_pct": {
+        "farm19": 1.39,
+        "farm18": 5.16,
+        "farm14": 4.62,
+        "farm16": 6.19,
+        "farm23": 0.18
+      },
+      "most_affected_hw_config": "farm16"
+    },
+    "memory_AE_hw_cluster": {
+      "total_test_rows": 377660,
+      "flagged_rows": 2859,
+      "hw_config_flagged_distribution_pct": {
+        "farm18": 39.0,
+        "farm14": 36.34,
+        "farm16": 15.95,
+        "farm19": 8.22,
+        "farm23": 0.49
+      },
+      "hw_config_flag_rate_pct": {
+        "farm19": 0.19,
+        "farm18": 1.18,
+        "farm14": 1.16,
+        "farm16": 1.06,
+        "farm23": 0.05
+      },
+      "most_affected_hw_config": "farm18"
+    },
+    "slurm_IF_distress_overlap": {
+      "total_test_rows": 377116,
+      "flagged_rows": 17720,
+      "flagged_pct": 4.7,
+      "distress_overlap_pct": 14.11,
+      "top_flagged_nodes": {
+        "farm180102": 1140,
+        "farm19101": 1134,
+        "farm180213": 154,
+        "farm180121": 154,
+        "farm180124": 154,
+        "farm180117": 147,
+        "farm180128": 142,
+        "farm160122": 140,
+        "farm180130": 140,
+        "farm180227": 140,
+        "farm180127": 138,
+        "farm180122": 138,
+        "farm180204": 138,
+        "farm180129": 138,
+        "farm180230": 137,
+        "farm180131": 137,
+        "farm180134": 136,
+        "farm180120": 135,
+        "farm180212": 134,
+        "farm180228": 134
+      }
+    },
+    "slurm_AE_distress_overlap": {
+      "total_test_rows": 377116,
+      "flagged_rows": 3025,
+      "flagged_pct": 0.8,
+      "distress_overlap_pct": 45.09,
+      "top_flagged_nodes": {
+        "farm19101": 350,
+        "farm140120": 196,
+        "farm140163": 135,
+        "farm140108": 130,
+        "farm140214": 127,
+        "farm140110": 118,
+        "farm140213": 107,
+        "farm140105": 104,
+        "farm140116": 100,
+        "farm140212": 98,
+        "farm140128": 94,
+        "farm140124": 92,
+        "farm140160": 80,
+        "farm140138": 66,
+        "farm160138": 50,
+        "farm160126": 50,
+        "farm160122": 45,
+        "farm140144": 42,
+        "farm140111": 37,
+        "farm160119": 36
+      }
+    }
+  }
+}

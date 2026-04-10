@@ -1,0 +1,40 @@
+{
+  "cpu_data": {
+    "representative_file": "node_cpu_seconds_total_0.parquet",
+    "resample_freq": "5min",
+    "train_points": 12,
+    "stationarity_adf": {
+      "error": "Too few samples for ADF"
+    }
+  },
+  "disk_data": {
+    "representative_file": "node_disk_io_now_0.parquet",
+    "resample_freq": "5min",
+    "train_points": 288,
+    "stationarity_adf": {
+      "adf_statistic": -2.5923,
+      "p_value": 0.094597,
+      "critical_values": {
+        "1%": -3.4538,
+        "5%": -2.8718,
+        "10%": -2.5723
+      },
+      "is_stationary_95": false
+    }
+  },
+  "memory_data": {
+    "representative_file": "node_memory_Active_anon_bytes.parquet",
+    "resample_freq": "5min",
+    "train_points": 933,
+    "stationarity_adf": {
+      "adf_statistic": -2.4524,
+      "p_value": 0.127488,
+      "critical_values": {
+        "1%": -3.4375,
+        "5%": -2.8647,
+        "10%": -2.5685
+      },
+      "is_stationary_95": false
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "split_type": "binary_anomaly_detection",
+  "train_end_boundary": "2023-05-22 23:59:59.999999999",
+  "note": "Statistics computed STRICTLY on normal-behaviour data (May 19-22). Anomalous May 23 data is exclusively in the test split. No data leakage into normalisation or IQR bounds.",
+  "folders": {
+    "cpu_data": {
+      "node_cpu_seconds_total_0.parquet": {
+        "file": "node_cpu_seconds_total_0.parquet",
+        "train_rows_used": 15966720,
+        "train_end": "2023-05-22 23:59:59.999999999",
+        "q1": 0.0,
+        "q3": 10287.5575,
+        "iqr": 10287.5575,
+        "mean": 26286.211621,
+        "std": 48699.11427
+      },
+      "node_cpu_seconds_total_1.parquet": {
+        "file": "node_cpu_seconds_total_1.parquet",
+        "train_rows_used": 6750000,
+        "train_end": "2023-05-22 23:59:59.999999999",
+        "q1": 0.0,
+        "q3": 10347.18,
+        "iqr": 10347.18,
+        "mean": 26606.462883,
+        "std": 49169.846887
+      }
+    },
+    "disk_data": {
+      "node_disk_io_now_0.parquet": {
+        "file": "node_disk_io_now_0.parquet",
+        "train_rows_used": 1503057,
+        "train_end": "2023-05-22 23:59:59.999999999",
+        "q1": 0.0,
+        "q3": 0.0,
+        "iqr": 0.0,
+        "mean": 1.770271,
+        "std": 15.020031
+      },
+      "node_disk_io_now_1.parquet": {
+        "file": "node_disk_io_now_1.parquet",
+        "train_rows_used": 1495105,
+        "train_end": "2023-05-22 23:59:59.999999999",
+        "q1": 0.0,
+        "q3": 0.0,
+        "iqr": 0.0,
+        "mean": 3.534839,
+        "std": 21.378729
+      }
+    },
+    "memory_data": {
+      "node_memory_Active_anon_bytes.parquet": {
+        "file": "node_memory_Active_anon_bytes.parquet",
+        "train_rows_used": 1826802,
+        "train_end": "2023-05-22 23:59:59.999999999",
+        "q1": 1947662336.0,
+        "q3": 37412538368.0,
+        "iqr": 35464876032.0,
+        "mean": 25548336649.200184,
+        "std": 31296240134.798946
+      },
+      "node_memory_Active_bytes.parquet": {
+        "file": "node_memory_Active_bytes.parquet",
+        "train_rows_used": 1826802,
+        "train_end": "2023-05-22 23:59:59.999999999",
+        "q1": 10993526784.0,
+        "q3": 52241669120.0,
+        "iqr": 41248142336.0,
+        "mean": 37922326373.321686,
+        "std": 39198980313.48974
+      }
+    },
+    "slurm_data": {
+      "slurm_node_cpu_alloc.parquet": {
+        "file": "slurm_node_cpu_alloc.parquet",
+        "train_rows_used": 1854561,
+        "train_end": "2023-05-22 23:59:59.999999999",
+        "q1": 16.0,
+        "q3": 80.0,
+        "iqr": 64.0,
+        "mean": 59.582586,
+        "std": 55.73491
+      },
+      "slurm_node_cpu_idle.parquet": {
+        "file": "slurm_node_cpu_idle.parquet",
+        "train_rows_used": 1854561,
+        "train_end": "2023-05-22 23:59:59.999999999",
+        "q1": 0.0,
+        "q3": 56.0,
+        "iqr": 56.0,
+        "mean": 39.275203,
+        "std": 57.959438
+      }
+    }
+  }
+}

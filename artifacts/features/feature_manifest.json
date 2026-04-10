@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-04-10T11:30:34",
+  "nan_drop_threshold": 0.3,
+  "memory_windows": [
+    "5min",
+    "15min",
+    "60min"
+  ],
+  "memory_agg_funcs": [
+    "mean",
+    "std",
+    "min",
+    "max"
+  ],
+  "slurm_status_transition_window": "15min",
+  "distress_states": [
+    "down",
+    "down*",
+    "drain",
+    "drained",
+    "drained*",
+    "draining",
+    "fail",
+    "failing",
+    "failing*"
+  ],
+  "modalities": {
+    "memory_data": {
+      "train_input_shape": [
+        3654542,
+        5
+      ],
+      "test_input_shape": [
+        755320,
+        5
+      ],
+      "train_output_shape": [
+        1827271,
+        29
+      ],
+      "test_output_shape": [
+        377660,
+        29
+      ],
+      "n_features": 26,
+      "feature_names": [
+        "Active_anon_bytes_15m_max",
+        "Active_anon_bytes_15m_mean",
+        "Active_anon_bytes_15m_min",
+        "Active_anon_bytes_15m_std",
+        "Active_anon_bytes_5m_max",
+        "Active_anon_bytes_5m_mean",
+        "Active_anon_bytes_5m_min",
+        "Active_anon_bytes_5m_std",
+        "Active_anon_bytes_60m_max",
+        "Active_anon_bytes_60m_mean",
+        "Active_anon_bytes_60m_min",
+        "Active_anon_bytes_60m_std",
+        "Active_anon_bytes_lag1_diff",
+        "Active_bytes_15m_max",
+        "Active_bytes_15m_mean",
+        "Active_bytes_15m_min",
+        "Active_bytes_15m_std",
+        "Active_bytes_5m_max",
+        "Active_bytes_5m_mean",
+        "Active_bytes_5m_min",
+        "Active_bytes_5m_std",
+        "Active_bytes_60m_max",
+        "Active_bytes_60m_mean",
+        "Active_bytes_60m_min",
+        "Active_bytes_60m_std",
+        "Active_bytes_lag1_diff"
+      ],
+      "rolling_windows": [
+        "5min",
+        "15min",
+        "60min"
+      ],
+      "agg_funcs": [
+        "mean",
+        "std",
+        "min",
+        "max"
+      ],
+      "lag_diff_included": true
+    },
+    "slurm_data": {
+      "train_input_shape": [
+        3709122,
+        8
+      ],
+      "test_input_shape": [
+        754232,
+        8
+      ],
+      "train_output_shape": [
+        1854561,
+        18
+      ],
+      "test_output_shape": [
+        377116,
+        18
+      ],
+      "n_features": 14,
+      "feature_names": [
+        "cpu_alloc",
+        "cpu_idle",
+        "is_distress_status",
+        "status_mixed",
+        "status_allocated",
+        "status_idle",
+        "status_maint",
+        "status_drained",
+        "status_reserved",
+        "status_draining",
+        "status_completing",
+        "status_down_star",
+        "status_down",
+        "status_transition_rate_15min"
+      ],
+      "is_distress_status_included": true,
+      "distress_states": [
+        "down",
+        "down*",
+        "drain",
+        "drained",
+        "drained*",
+        "draining",
+        "fail",
+        "failing",
+        "failing*"
+      ]
+    }
+  }
+}

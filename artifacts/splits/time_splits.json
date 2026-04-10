@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-03-24T10:07:52",
+  "based_on_summary": "artifacts/eda/summary.json",
+  "policy": {
+    "type": "chronological_temporal_split",
+    "train_frac": 0.7,
+    "val_frac": 0.15,
+    "test_frac": 0.15,
+    "note": "CRITICAL: Chronological bounds. Data inside bounds MUST NOT be randomly shuffled across splits. Temporal autocorrelation is maintained."
+  },
+  "global": {
+    "timestamp_min": "2023-05-19T04:00:00.099000064",
+    "timestamp_max": "2023-05-23T18:59:59.940999936",
+    "span_hours": 111.0,
+    "note": "Single unified time-series split covering all folders. Use this when joining modalities on (node, timestamp) to strictly prevent future-data leakage.",
+    "splits": {
+      "train": {
+        "start": "2023-05-19T04:00:00.099000064",
+        "end": "2023-05-22T09:41:59.988399364",
+        "label": "[2023-05-19 \u2192 2023-05-22)"
+      },
+      "val": {
+        "start": "2023-05-22T09:41:59.988399364",
+        "end": "2023-05-23T02:20:59.964699214",
+        "label": "[2023-05-22 \u2192 2023-05-23)"
+      },
+      "test": {
+        "start": "2023-05-23T02:20:59.964699214",
+        "end": "2023-05-23T18:59:59.940999936",
+        "label": "[2023-05-23 \u2192 2023-05-23]"
+      }
+    }
+  },
+  "folders": {
+    "cpu_data": {
+      "timestamp_min": "2023-05-19T04:00:00.099000064",
+      "timestamp_max": "2023-05-23T14:59:59.943000064",
+      "span_hours": 107.0,
+      "largest_gap_seconds": 324000.0,
+      "gap_fraction": 0.8411,
+      "gap_warning": "Largest gap (324000s = 84.1% of span) exceeds threshold \u2014 split boundary may land in a data gap.",
+      "splits": {
+        "train": {
+          "start": "2023-05-19T04:00:00.099000064",
+          "end": "2023-05-22T06:53:59.989800064",
+          "label": "[2023-05-19 \u2192 2023-05-22)"
+        },
+        "val": {
+          "start": "2023-05-22T06:53:59.989800064",
+          "end": "2023-05-22T22:56:59.966400064",
+          "label": "[2023-05-22 \u2192 2023-05-22)"
+        },
+        "test": {
+          "start": "2023-05-22T22:56:59.966400064",
+          "end": "2023-05-23T14:59:59.943000064",
+          "label": "[2023-05-22 \u2192 2023-05-23]"
+        }
+      }
+    },
+    "disk_data": {
+      "timestamp_min": "2023-05-19T04:00:00.099000064",
+      "timestamp_max": "2023-05-23T18:59:59.940999936",
+      "span_hours": 111.0,
+      "largest_gap_seconds": 86400.0,
+      "gap_fraction": 0.2162,
+      "gap_warning": "Largest gap (86400s = 21.6% of span) exceeds threshold \u2014 split boundary may land in a data gap.",
+      "splits": {
+        "train": {
+          "start": "2023-05-19T04:00:00.099000064",
+          "end": "2023-05-22T09:41:59.988399364",
+          "label": "[2023-05-19 \u2192 2023-05-22)"
+        },
+        "val": {
+          "start": "2023-05-22T09:41:59.988399364",
+          "end": "2023-05-23T02:20:59.964699214",
+          "label": "[2023-05-22 \u2192 2023-05-23)"
+        },
+        "test": {
+          "start": "2023-05-23T02:20:59.964699214",
+          "end": "2023-05-23T18:59:59.940999936",
+          "label": "[2023-05-23 \u2192 2023-05-23]"
+        }
+      }
+    },
+    "memory_data": {
+      "timestamp_min": "2023-05-19T04:00:00.099000064",
+      "timestamp_max": "2023-05-23T18:59:59.940999936",
+      "span_hours": 111.0,
+      "largest_gap_seconds": null,
+      "gap_fraction": null,
+      "gap_warning": null,
+      "splits": {
+        "train": {
+          "start": "2023-05-19T04:00:00.099000064",
+          "end": "2023-05-22T09:41:59.988399364",
+          "label": "[2023-05-19 \u2192 2023-05-22)"
+        },
+        "val": {
+          "start": "2023-05-22T09:41:59.988399364",
+          "end": "2023-05-23T02:20:59.964699214",
+          "label": "[2023-05-22 \u2192 2023-05-23)"
+        },
+        "test": {
+          "start": "2023-05-23T02:20:59.964699214",
+          "end": "2023-05-23T18:59:59.940999936",
+          "label": "[2023-05-23 \u2192 2023-05-23]"
+        }
+      }
+    },
+    "slurm_data": {
+      "timestamp_min": "2023-05-19T04:00:17.217999872",
+      "timestamp_max": "2023-05-23T18:59:47.217999872",
+      "span_hours": 110.99,
+      "largest_gap_seconds": null,
+      "gap_fraction": null,
+      "gap_warning": null,
+      "splits": {
+        "train": {
+          "start": "2023-05-19T04:00:17.217999872",
+          "end": "2023-05-22T09:41:56.217999872",
+          "label": "[2023-05-19 \u2192 2023-05-22)"
+        },
+        "val": {
+          "start": "2023-05-22T09:41:56.217999872",
+          "end": "2023-05-23T02:20:51.717999872",
+          "label": "[2023-05-22 \u2192 2023-05-23)"
+        },
+        "test": {
+          "start": "2023-05-23T02:20:51.717999872",
+          "end": "2023-05-23T18:59:47.217999872",
+          "label": "[2023-05-23 \u2192 2023-05-23]"
+        }
+      }
+    }
+  }
+}
