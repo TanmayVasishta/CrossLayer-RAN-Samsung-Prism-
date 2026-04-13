@@ -365,15 +365,21 @@ def _plot_time_coverage(scans: List[Dict[str, Any]], title: str) -> str:
             hovertemplate="%{text}<br>end=%{x}<extra></extra>",
         ))
         # Mark May 23 boundary
-        fig.add_vline(x="2023-05-23 00:00:00", line_color="#d29922",
-                      line_dash="dash", annotation_text="Test boundary (May 23)",
-                      annotation_font_color="#d29922")
+        fig.add_shape(
+            type="line", x0="2023-05-23 00:00:00", x1="2023-05-23 00:00:00",
+            y0=0, y1=1, yref="paper", line=dict(color="#d29922", dash="dash")
+        )
+        fig.add_annotation(
+            x="2023-05-23 00:00:00", y=1, yref="paper", text="Test boundary (May 23)",
+            showarrow=False, font=dict(color="#d29922"), yshift=10
+        )
 
     fig.update_layout(
         height=320, title=title,
         margin=dict(l=10, r=10, t=36, b=10),
         paper_bgcolor="#21262d", plot_bgcolor="#21262d",
         font=dict(color="#c9d1d9"),
+        xaxis=dict(type="date"),
         yaxis=dict(visible=False),
         legend=dict(orientation="h", y=-0.1),
     )
