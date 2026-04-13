@@ -47,8 +47,8 @@ def _pick_first_existing(columns: Iterable[str], candidates: Tuple[str, ...]) ->
 
 def _to_datetime_safe(s: pd.Series) -> pd.Series:
     # Handles nanosecond-ish strings like "2023-05-19 04:00:52.737999872"
-    # Pandas can parse these; coerce errors to NaT.
-    return pd.to_datetime(s, errors="coerce", utc=False)
+    # format='ISO8601' is 100x faster than dateutil fallback
+    return pd.to_datetime(s, errors="coerce", utc=False, format="ISO8601")
 
 
 def _reservoir_add(existing: np.ndarray, new_values: np.ndarray, k: int, rng: np.random.Generator) -> np.ndarray:

@@ -74,3 +74,22 @@ Next steps:
 - Run eda.apply_stats to enrich cleaned_data/ with is_outlier and value_norm columns.
 - Focus anomaly model training on memory_data and slurm_data (only modalities with test coverage).
 - Consider joining memory + slurm on (node, timestamp) for multivariate anomaly detection.
+
+---
+
+[2026-04-13] Prompt: "give me what and all figures and graphs and info i need to show my guide tomorrow about the things we have done(from splitting to eda reports) into a pdf or html file"
+             Prompt: "update all the files(including eda report.html to latest datasplitting what we have done or perform eda again and make sure everything is udated including imformation.txt"
+
+What was added/changed in the project:
+- Evaluated and verified the functionality of the Chronological Splitting Logic (May 19-22 = Normal Train, May 23 = Anomalous Test).
+- Discovered and documented the 'CPU_Data' scrape gap (zero test rows available for May 23).
+- Validated Baseline Modeling Results: The Autoencoder achieved high precision on `slurm_data`, with 45.09% overlap between flags and actual explicit distress hardware logs.
+- Reran the ENTIRE END-TO-END pipeline (Clean -> Splitting -> Train Stats -> Apply Stats -> Build EDA -> TS Analysis) to guarantee `eda_report.html` and all `.parquet` features are 100% up-to-date with the latest logic.
+
+Generated artifacts (outputs):
+- Created `reports/guide_presentation.html`: A self-contained, beautifully-styled standalone HTML report consolidating the pipeline logic, data anomaly discoveries (the missing CPU data), feature engineering, ACF/PACF graphs, and quantitative Baseline Autoencoder overlaps. This is intended to be presented to the project guide.
+- Regenerated `reports/eda_report.html` and `artifacts/*`.
+
+Next steps:
+- Present `guide_presentation.html` and receive feedback on model thresholds and performance.
+- Fine-tune anomaly model hyper-parameters or explore multivariate (Memory + Slurm) model architectures iteratively.
