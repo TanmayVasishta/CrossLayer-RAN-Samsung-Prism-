@@ -1,0 +1,1109 @@
+{
+  "generated_at": "2026-07-30T16:43:21",
+  "modalities": [
+    "memory_slurm",
+    "cpu",
+    "disk"
+  ],
+  "note": "v7: AE_Adaptive + Ens_Adaptive + LOF for CPU and Disk",
+  "by_modality": {
+    "memory_slurm": {
+      "farm14": {
+        "IsolationForest": {
+          "precision": 0.054541142992648804,
+          "recall": 0.45544554455445546,
+          "f1_score": 0.09741634900465904,
+          "latency_ms_per_row": 0.004291343510779332,
+          "robust_recall": 0.5405940594059406
+        },
+        "LOF": {
+          "precision": 0.007356275507633395,
+          "recall": 0.5782178217821782,
+          "f1_score": 0.014527724570262942,
+          "latency_ms_per_row": 0.24523427305158343,
+          "robust_recall": 0.5782178217821782
+        },
+        "Autoencoder": {
+          "precision": 0.06852879944482998,
+          "recall": 0.7821782178217822,
+          "f1_score": 0.1260169085978625,
+          "latency_ms_per_row": 0.02092062310660414,
+          "robust_recall": 0.7821782178217822
+        },
+        "Ensemble": {
+          "precision": 0.07102387697288547,
+          "recall": 0.695049504950495,
+          "f1_score": 0.12887828162291168,
+          "latency_ms_per_row": 0.2704462396689669,
+          "robust_recall": 0.700990099009901
+        }
+      },
+      "farm16": {
+        "IsolationForest": {
+          "precision": 0.08795478629459555,
+          "recall": 0.7124463519313304,
+          "f1_score": 0.15657915422103444,
+          "latency_ms_per_row": 0.0043364532261523725,
+          "robust_recall": 0.759656652360515
+        },
+        "LOF": {
+          "precision": 0.03052448643108596,
+          "recall": 0.9799713876967096,
+          "f1_score": 0.059204840103716516,
+          "latency_ms_per_row": 0.11018641284767368,
+          "robust_recall": 0.9799713876967096
+        },
+        "Autoencoder": {
+          "precision": 0.07544800821823992,
+          "recall": 0.9456366237482118,
+          "f1_score": 0.13974630021141649,
+          "latency_ms_per_row": 0.02292342409463934,
+          "robust_recall": 0.9470672389127325
+        },
+        "Ensemble": {
+          "precision": 0.08848125168599946,
+          "recall": 0.9384835479256081,
+          "f1_score": 0.1617157648218908,
+          "latency_ms_per_row": 0.13744629016846538,
+          "robust_recall": 0.9413447782546495
+        }
+      },
+      "farm18": {
+        "IsolationForest": {
+          "precision": 0.0032399907428835918,
+          "recall": 0.32558139534883723,
+          "f1_score": 0.006416131989000916,
+          "latency_ms_per_row": 0.0042899318639432315,
+          "robust_recall": 0.32558139534883723
+        },
+        "LOF": {
+          "precision": 0.000836981715168684,
+          "recall": 0.9069767441860465,
+          "f1_score": 0.0016724200776174446,
+          "latency_ms_per_row": 0.26252075472283226,
+          "robust_recall": 0.9069767441860465
+        },
+        "Autoencoder": {
+          "precision": 0.009392747924858016,
+          "recall": 1.0,
+          "f1_score": 0.018610690326769097,
+          "latency_ms_per_row": 0.022555544068460054,
+          "robust_recall": 1.0
+        },
+        "Ensemble": {
+          "precision": 0.010279388508170796,
+          "recall": 0.9069767441860465,
+          "f1_score": 0.020328381548084442,
+          "latency_ms_per_row": 0.28936623065523553,
+          "robust_recall": 0.9069767441860465
+        }
+      },
+      "farm19": {
+        "IsolationForest": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "latency_ms_per_row": 0.003653432673073166,
+          "robust_recall": 0.0
+        },
+        "LOF": {
+          "precision": 0.007856573540219652,
+          "recall": 0.9211165048543689,
+          "f1_score": 0.015580256797117959,
+          "latency_ms_per_row": 0.2997517762169089,
+          "robust_recall": 0.9211165048543689
+        },
+        "Autoencoder": {
+          "precision": 0.006274509803921568,
+          "recall": 0.05825242718446602,
+          "f1_score": 0.011328770356384235,
+          "latency_ms_per_row": 0.02291853672201713,
+          "robust_recall": 0.05946601941747573
+        },
+        "Ensemble": {
+          "precision": 0.0231980115990058,
+          "recall": 0.03398058252427184,
+          "f1_score": 0.027572624322993598,
+          "latency_ms_per_row": 0.3263237456119992,
+          "robust_recall": 0.03398058252427184
+        }
+      },
+      "farm23": {
+        "IsolationForest": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "latency_ms_per_row": 0.004011689570912144,
+          "robust_recall": null
+        },
+        "LOF": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "latency_ms_per_row": 0.08185051198591266,
+          "robust_recall": null
+        },
+        "Autoencoder": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "latency_ms_per_row": 0.01879631009018212,
+          "robust_recall": null
+        },
+        "Ensemble": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "latency_ms_per_row": 0.10465851164700692,
+          "robust_recall": null
+        }
+      }
+    },
+    "cpu": {
+      "farm14": {
+        "IsolationForest": {
+          "precision": 0.017257,
+          "recall": 0.35654,
+          "f1_score": 0.032921,
+          "false_positive_rate": 0.094144,
+          "robust_recall": 0.362869,
+          "latency_ms_per_row": 1e-05
+        },
+        "Autoencoder": {
+          "precision": 0.021379,
+          "recall": 0.438819,
+          "f1_score": 0.040772,
+          "false_positive_rate": 0.093137,
+          "robust_recall": 0.453586,
+          "latency_ms_per_row": 0.009353
+        },
+        "Ensemble": {
+          "precision": 0.018278,
+          "recall": 0.443038,
+          "f1_score": 0.035108,
+          "false_positive_rate": 0.110334,
+          "robust_recall": 0.362869,
+          "latency_ms_per_row": 0.043391
+        },
+        "AE_Adaptive": {
+          "precision": 0.022181,
+          "recall": 0.407173,
+          "f1_score": 0.04207,
+          "false_positive_rate": 0.083227,
+          "robust_recall": 0.453586,
+          "latency_ms_per_row": 0.0
+        },
+        "Ens_Adaptive": {
+          "precision": 0.018563,
+          "recall": 0.424051,
+          "f1_score": 0.035569,
+          "false_positive_rate": 0.103956,
+          "robust_recall": 0.362869,
+          "latency_ms_per_row": 1e-05
+        },
+        "LOF": {
+          "precision": 0.00724,
+          "recall": 0.691983,
+          "f1_score": 0.01433,
+          "false_positive_rate": 0.439957,
+          "robust_recall": 0.154008,
+          "latency_ms_per_row": 0.0
+        }
+      },
+      "farm16": {
+        "IsolationForest": {
+          "precision": 0.071516,
+          "recall": 0.710801,
+          "f1_score": 0.129957,
+          "false_positive_rate": 0.109501,
+          "robust_recall": 0.660279,
+          "latency_ms_per_row": 2e-05
+        },
+        "Autoencoder": {
+          "precision": 0.072158,
+          "recall": 0.763066,
+          "f1_score": 0.131848,
+          "false_positive_rate": 0.116426,
+          "robust_recall": 0.655052,
+          "latency_ms_per_row": 0.008877
+        },
+        "Ensemble": {
+          "precision": 0.066181,
+          "recall": 0.775261,
+          "f1_score": 0.121951,
+          "false_positive_rate": 0.129801,
+          "robust_recall": 0.660279,
+          "latency_ms_per_row": 0.039295
+        },
+        "AE_Adaptive": {
+          "precision": 0.074739,
+          "recall": 0.761324,
+          "f1_score": 0.136116,
+          "false_positive_rate": 0.111837,
+          "robust_recall": 0.655052,
+          "latency_ms_per_row": 0.0
+        },
+        "Ens_Adaptive": {
+          "precision": 0.06796,
+          "recall": 0.775261,
+          "f1_score": 0.124965,
+          "false_positive_rate": 0.126163,
+          "robust_recall": 0.655052,
+          "latency_ms_per_row": 2e-05
+        },
+        "LOF": {
+          "precision": 0.02282,
+          "recall": 0.897213,
+          "f1_score": 0.044508,
+          "false_positive_rate": 0.455885,
+          "robust_recall": 0.487805,
+          "latency_ms_per_row": 0.0
+        }
+      },
+      "farm18": {
+        "IsolationForest": {
+          "precision": 0.001184,
+          "recall": 0.380952,
+          "f1_score": 0.002361,
+          "false_positive_rate": 0.124626,
+          "robust_recall": 0.357143,
+          "latency_ms_per_row": 9e-06
+        },
+        "Autoencoder": {
+          "precision": 0.001825,
+          "recall": 0.285714,
+          "f1_score": 0.003627,
+          "false_positive_rate": 0.060627,
+          "robust_recall": 0.309524,
+          "latency_ms_per_row": 0.007323
+        },
+        "Ensemble": {
+          "precision": 0.001166,
+          "recall": 0.380952,
+          "f1_score": 0.002325,
+          "false_positive_rate": 0.126649,
+          "robust_recall": 0.357143,
+          "latency_ms_per_row": 0.032955
+        },
+        "AE_Adaptive": {
+          "precision": 0.001862,
+          "recall": 0.285714,
+          "f1_score": 0.0037,
+          "false_positive_rate": 0.059408,
+          "robust_recall": 0.309524,
+          "latency_ms_per_row": 0.0
+        },
+        "Ens_Adaptive": {
+          "precision": 0.001169,
+          "recall": 0.380952,
+          "f1_score": 0.002331,
+          "false_positive_rate": 0.126224,
+          "robust_recall": 0.357143,
+          "latency_ms_per_row": 9e-06
+        },
+        "LOF": {
+          "precision": 0.000847,
+          "recall": 0.690476,
+          "f1_score": 0.001692,
+          "false_positive_rate": 0.316141,
+          "robust_recall": 0.285714,
+          "latency_ms_per_row": 0.0
+        }
+      },
+      "farm19": {
+        "IsolationForest": {
+          "precision": 0.077569,
+          "recall": 0.960526,
+          "f1_score": 0.143546,
+          "false_positive_rate": 0.06277,
+          "robust_recall": 0.961842,
+          "latency_ms_per_row": 7e-06
+        },
+        "Autoencoder": {
+          "precision": 0.008208,
+          "recall": 0.089474,
+          "f1_score": 0.015037,
+          "false_positive_rate": 0.059415,
+          "robust_recall": 0.128947,
+          "latency_ms_per_row": 0.00782
+        },
+        "Ensemble": {
+          "precision": 0.068311,
+          "recall": 0.961842,
+          "f1_score": 0.127562,
+          "false_positive_rate": 0.07209,
+          "robust_recall": 0.961842,
+          "latency_ms_per_row": 0.031995
+        },
+        "AE_Adaptive": {
+          "precision": 0.008117,
+          "recall": 0.089474,
+          "f1_score": 0.014884,
+          "false_positive_rate": 0.06008,
+          "robust_recall": 0.128947,
+          "latency_ms_per_row": 0.0
+        },
+        "Ens_Adaptive": {
+          "precision": 0.067874,
+          "recall": 0.961842,
+          "f1_score": 0.1268,
+          "false_positive_rate": 0.072589,
+          "robust_recall": 0.961842,
+          "latency_ms_per_row": 7e-06
+        },
+        "LOF": {
+          "precision": 0.007499,
+          "recall": 0.2,
+          "f1_score": 0.014456,
+          "false_positive_rate": 0.145467,
+          "robust_recall": 0.109211,
+          "latency_ms_per_row": 0.0
+        }
+      },
+      "farm23": {
+        "IsolationForest": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.057157,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 3.1e-05
+        },
+        "Autoencoder": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.079756,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 0.007282
+        },
+        "Ensemble": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.081197,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 0.031411
+        },
+        "AE_Adaptive": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.115663,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 3e-06
+        },
+        "Ens_Adaptive": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.115755,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 3.1e-05
+        },
+        "LOF": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.161321,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 0.0
+        }
+      }
+    },
+    "disk": {
+      "farm14": {
+        "IsolationForest": {
+          "precision": 0.056733,
+          "recall": 0.390144,
+          "f1_score": 0.099061,
+          "false_positive_rate": 0.035485,
+          "robust_recall": 0.542094,
+          "latency_ms_per_row": 1.1e-05
+        },
+        "Autoencoder": {
+          "precision": 0.14574,
+          "recall": 0.13347,
+          "f1_score": 0.139335,
+          "false_positive_rate": 0.00428,
+          "robust_recall": 0.579055,
+          "latency_ms_per_row": 0.007851
+        },
+        "Ensemble": {
+          "precision": 0.056733,
+          "recall": 0.390144,
+          "f1_score": 0.099061,
+          "false_positive_rate": 0.035485,
+          "robust_recall": 0.542094,
+          "latency_ms_per_row": 0.09773
+        },
+        "AE_Adaptive": {
+          "precision": 0.083976,
+          "recall": 0.379877,
+          "f1_score": 0.137546,
+          "false_positive_rate": 0.022668,
+          "robust_recall": 0.579055,
+          "latency_ms_per_row": 0.0
+        },
+        "Ens_Adaptive": {
+          "precision": 0.056497,
+          "recall": 0.390144,
+          "f1_score": 0.098701,
+          "false_positive_rate": 0.035642,
+          "robust_recall": 0.554415,
+          "latency_ms_per_row": 1.1e-05
+        },
+        "LOF": {
+          "precision": 0.009375,
+          "recall": 0.377823,
+          "f1_score": 0.018296,
+          "false_positive_rate": 0.218393,
+          "robust_recall": 0.184805,
+          "latency_ms_per_row": 0.0
+        }
+      },
+      "farm16": {
+        "IsolationForest": {
+          "precision": 0.070531,
+          "recall": 0.741117,
+          "f1_score": 0.128804,
+          "false_positive_rate": 0.137393,
+          "robust_recall": 0.700508,
+          "latency_ms_per_row": 2.3e-05
+        },
+        "Autoencoder": {
+          "precision": 0.089204,
+          "recall": 0.756345,
+          "f1_score": 0.159586,
+          "false_positive_rate": 0.108638,
+          "robust_recall": 0.717428,
+          "latency_ms_per_row": 0.008053
+        },
+        "Ensemble": {
+          "precision": 0.068344,
+          "recall": 0.763113,
+          "f1_score": 0.125453,
+          "false_positive_rate": 0.146343,
+          "robust_recall": 0.700508,
+          "latency_ms_per_row": 0.031783
+        },
+        "AE_Adaptive": {
+          "precision": 0.092285,
+          "recall": 0.742809,
+          "f1_score": 0.164173,
+          "false_positive_rate": 0.102783,
+          "robust_recall": 0.717428,
+          "latency_ms_per_row": 0.0
+        },
+        "Ens_Adaptive": {
+          "precision": 0.068422,
+          "recall": 0.756345,
+          "f1_score": 0.125492,
+          "false_positive_rate": 0.144867,
+          "robust_recall": 0.71066,
+          "latency_ms_per_row": 2.3e-05
+        },
+        "LOF": {
+          "precision": 0.049395,
+          "recall": 0.898477,
+          "f1_score": 0.093642,
+          "false_positive_rate": 0.243246,
+          "robust_recall": 0.690355,
+          "latency_ms_per_row": 0.0
+        }
+      },
+      "farm18": {
+        "IsolationForest": {
+          "precision": 0.00196,
+          "recall": 0.452381,
+          "f1_score": 0.003903,
+          "false_positive_rate": 0.102492,
+          "robust_recall": 0.452381,
+          "latency_ms_per_row": 1.1e-05
+        },
+        "Autoencoder": {
+          "precision": 0.00988,
+          "recall": 0.333333,
+          "f1_score": 0.019191,
+          "false_positive_rate": 0.014861,
+          "robust_recall": 0.452381,
+          "latency_ms_per_row": 0.007839
+        },
+        "Ensemble": {
+          "precision": 0.00196,
+          "recall": 0.452381,
+          "f1_score": 0.003903,
+          "false_positive_rate": 0.102492,
+          "robust_recall": 0.452381,
+          "latency_ms_per_row": 0.032112
+        },
+        "AE_Adaptive": {
+          "precision": 0.003875,
+          "recall": 0.380952,
+          "f1_score": 0.007672,
+          "false_positive_rate": 0.043567,
+          "robust_recall": 0.452381,
+          "latency_ms_per_row": 0.0
+        },
+        "Ens_Adaptive": {
+          "precision": 0.001951,
+          "recall": 0.452381,
+          "f1_score": 0.003885,
+          "false_positive_rate": 0.102948,
+          "robust_recall": 0.452381,
+          "latency_ms_per_row": 1.1e-05
+        },
+        "LOF": {
+          "precision": 0.001426,
+          "recall": 0.404762,
+          "f1_score": 0.002842,
+          "false_positive_rate": 0.126114,
+          "robust_recall": 0.380952,
+          "latency_ms_per_row": 0.0
+        }
+      },
+      "farm19": {
+        "IsolationForest": {
+          "precision": 0.001306,
+          "recall": 0.007282,
+          "f1_score": 0.002215,
+          "false_positive_rate": 0.038036,
+          "robust_recall": 0.010922,
+          "latency_ms_per_row": 8e-06
+        },
+        "Autoencoder": {
+          "precision": 0.003997,
+          "recall": 0.007282,
+          "f1_score": 0.005161,
+          "false_positive_rate": 0.012397,
+          "robust_recall": 0.010922,
+          "latency_ms_per_row": 0.005978
+        },
+        "Ensemble": {
+          "precision": 0.001306,
+          "recall": 0.007282,
+          "f1_score": 0.002215,
+          "false_positive_rate": 0.038036,
+          "robust_recall": 0.010922,
+          "latency_ms_per_row": 0.029914
+        },
+        "AE_Adaptive": {
+          "precision": 0.002179,
+          "recall": 0.008495,
+          "f1_score": 0.003468,
+          "false_positive_rate": 0.026584,
+          "robust_recall": 0.010922,
+          "latency_ms_per_row": 0.0
+        },
+        "Ens_Adaptive": {
+          "precision": 0.001487,
+          "recall": 0.008495,
+          "f1_score": 0.002531,
+          "false_positive_rate": 0.038981,
+          "robust_recall": 0.010922,
+          "latency_ms_per_row": 8e-06
+        },
+        "LOF": {
+          "precision": 0.005321,
+          "recall": 0.074029,
+          "f1_score": 0.009928,
+          "false_positive_rate": 0.094546,
+          "robust_recall": 0.083738,
+          "latency_ms_per_row": 0.0
+        }
+      },
+      "farm23": {
+        "IsolationForest": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.004461,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 3.5e-05
+        },
+        "Autoencoder": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 7e-05,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 0.006108
+        },
+        "Ensemble": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.004461,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 0.02849
+        },
+        "AE_Adaptive": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.019496,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 4e-06
+        },
+        "Ens_Adaptive": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.019496,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 3.5e-05
+        },
+        "LOF": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1_score": 0.0,
+          "false_positive_rate": 0.108227,
+          "robust_recall": 0.0,
+          "latency_ms_per_row": 0.0
+        }
+      }
+    }
+  },
+  "combined_per_farm": {
+    "farm14": {
+      "IsolationForest": {
+        "precision": 0.054541142992648804,
+        "recall": 0.45544554455445546,
+        "f1_score": 0.09741634900465904,
+        "latency_ms_per_row": 0.004291343510779332,
+        "robust_recall": 0.5405940594059406,
+        "modality": "memory_slurm"
+      },
+      "LOF": {
+        "precision": 0.007356275507633395,
+        "recall": 0.5782178217821782,
+        "f1_score": 0.014527724570262942,
+        "latency_ms_per_row": 0.24523427305158343,
+        "robust_recall": 0.5782178217821782,
+        "modality": "memory_slurm"
+      },
+      "Autoencoder": {
+        "precision": 0.06852879944482998,
+        "recall": 0.7821782178217822,
+        "f1_score": 0.1260169085978625,
+        "latency_ms_per_row": 0.02092062310660414,
+        "robust_recall": 0.7821782178217822,
+        "modality": "memory_slurm"
+      },
+      "Ensemble": {
+        "precision": 0.07102387697288547,
+        "recall": 0.695049504950495,
+        "f1_score": 0.12887828162291168,
+        "latency_ms_per_row": 0.2704462396689669,
+        "robust_recall": 0.700990099009901,
+        "modality": "memory_slurm"
+      },
+      "IsolationForest_cpu": {
+        "precision": 0.017257,
+        "recall": 0.35654,
+        "f1_score": 0.032921,
+        "false_positive_rate": 0.094144,
+        "robust_recall": 0.362869,
+        "latency_ms_per_row": 0.034037,
+        "modality": "cpu"
+      },
+      "Autoencoder_cpu": {
+        "precision": 0.021379,
+        "recall": 0.438819,
+        "f1_score": 0.040772,
+        "false_positive_rate": 0.093137,
+        "robust_recall": 0.453586,
+        "latency_ms_per_row": 0.009353,
+        "modality": "cpu"
+      },
+      "Ensemble_cpu": {
+        "precision": 0.018278,
+        "recall": 0.443038,
+        "f1_score": 0.035108,
+        "false_positive_rate": 0.110334,
+        "robust_recall": 0.362869,
+        "latency_ms_per_row": 0.043391,
+        "modality": "cpu"
+      },
+      "IsolationForest_disk": {
+        "precision": 0.056733,
+        "recall": 0.390144,
+        "f1_score": 0.099061,
+        "false_positive_rate": 0.035485,
+        "robust_recall": 0.542094,
+        "latency_ms_per_row": 0.089879,
+        "modality": "disk"
+      },
+      "Autoencoder_disk": {
+        "precision": 0.14574,
+        "recall": 0.13347,
+        "f1_score": 0.139335,
+        "false_positive_rate": 0.00428,
+        "robust_recall": 0.579055,
+        "latency_ms_per_row": 0.007851,
+        "modality": "disk"
+      },
+      "Ensemble_disk": {
+        "precision": 0.056733,
+        "recall": 0.390144,
+        "f1_score": 0.099061,
+        "false_positive_rate": 0.035485,
+        "robust_recall": 0.542094,
+        "latency_ms_per_row": 0.09773,
+        "modality": "disk"
+      }
+    },
+    "farm16": {
+      "IsolationForest": {
+        "precision": 0.08795478629459555,
+        "recall": 0.7124463519313304,
+        "f1_score": 0.15657915422103444,
+        "latency_ms_per_row": 0.0043364532261523725,
+        "robust_recall": 0.759656652360515,
+        "modality": "memory_slurm"
+      },
+      "LOF": {
+        "precision": 0.03052448643108596,
+        "recall": 0.9799713876967096,
+        "f1_score": 0.059204840103716516,
+        "latency_ms_per_row": 0.11018641284767368,
+        "robust_recall": 0.9799713876967096,
+        "modality": "memory_slurm"
+      },
+      "Autoencoder": {
+        "precision": 0.07544800821823992,
+        "recall": 0.9456366237482118,
+        "f1_score": 0.13974630021141649,
+        "latency_ms_per_row": 0.02292342409463934,
+        "robust_recall": 0.9470672389127325,
+        "modality": "memory_slurm"
+      },
+      "Ensemble": {
+        "precision": 0.08848125168599946,
+        "recall": 0.9384835479256081,
+        "f1_score": 0.1617157648218908,
+        "latency_ms_per_row": 0.13744629016846538,
+        "robust_recall": 0.9413447782546495,
+        "modality": "memory_slurm"
+      },
+      "IsolationForest_cpu": {
+        "precision": 0.071516,
+        "recall": 0.710801,
+        "f1_score": 0.129957,
+        "false_positive_rate": 0.109501,
+        "robust_recall": 0.660279,
+        "latency_ms_per_row": 0.030418,
+        "modality": "cpu"
+      },
+      "Autoencoder_cpu": {
+        "precision": 0.072158,
+        "recall": 0.763066,
+        "f1_score": 0.131848,
+        "false_positive_rate": 0.116426,
+        "robust_recall": 0.655052,
+        "latency_ms_per_row": 0.008877,
+        "modality": "cpu"
+      },
+      "Ensemble_cpu": {
+        "precision": 0.066181,
+        "recall": 0.775261,
+        "f1_score": 0.121951,
+        "false_positive_rate": 0.129801,
+        "robust_recall": 0.660279,
+        "latency_ms_per_row": 0.039295,
+        "modality": "cpu"
+      },
+      "IsolationForest_disk": {
+        "precision": 0.070531,
+        "recall": 0.741117,
+        "f1_score": 0.128804,
+        "false_positive_rate": 0.137393,
+        "robust_recall": 0.700508,
+        "latency_ms_per_row": 0.02373,
+        "modality": "disk"
+      },
+      "Autoencoder_disk": {
+        "precision": 0.089204,
+        "recall": 0.756345,
+        "f1_score": 0.159586,
+        "false_positive_rate": 0.108638,
+        "robust_recall": 0.717428,
+        "latency_ms_per_row": 0.008053,
+        "modality": "disk"
+      },
+      "Ensemble_disk": {
+        "precision": 0.068344,
+        "recall": 0.763113,
+        "f1_score": 0.125453,
+        "false_positive_rate": 0.146343,
+        "robust_recall": 0.700508,
+        "latency_ms_per_row": 0.031783,
+        "modality": "disk"
+      }
+    },
+    "farm18": {
+      "IsolationForest": {
+        "precision": 0.0032399907428835918,
+        "recall": 0.32558139534883723,
+        "f1_score": 0.006416131989000916,
+        "latency_ms_per_row": 0.0042899318639432315,
+        "robust_recall": 0.32558139534883723,
+        "modality": "memory_slurm"
+      },
+      "LOF": {
+        "precision": 0.000836981715168684,
+        "recall": 0.9069767441860465,
+        "f1_score": 0.0016724200776174446,
+        "latency_ms_per_row": 0.26252075472283226,
+        "robust_recall": 0.9069767441860465,
+        "modality": "memory_slurm"
+      },
+      "Autoencoder": {
+        "precision": 0.009392747924858016,
+        "recall": 1.0,
+        "f1_score": 0.018610690326769097,
+        "latency_ms_per_row": 0.022555544068460054,
+        "robust_recall": 1.0,
+        "modality": "memory_slurm"
+      },
+      "Ensemble": {
+        "precision": 0.010279388508170796,
+        "recall": 0.9069767441860465,
+        "f1_score": 0.020328381548084442,
+        "latency_ms_per_row": 0.28936623065523553,
+        "robust_recall": 0.9069767441860465,
+        "modality": "memory_slurm"
+      },
+      "IsolationForest_cpu": {
+        "precision": 0.001184,
+        "recall": 0.380952,
+        "f1_score": 0.002361,
+        "false_positive_rate": 0.124626,
+        "robust_recall": 0.357143,
+        "latency_ms_per_row": 0.025631,
+        "modality": "cpu"
+      },
+      "Autoencoder_cpu": {
+        "precision": 0.001825,
+        "recall": 0.285714,
+        "f1_score": 0.003627,
+        "false_positive_rate": 0.060627,
+        "robust_recall": 0.309524,
+        "latency_ms_per_row": 0.007323,
+        "modality": "cpu"
+      },
+      "Ensemble_cpu": {
+        "precision": 0.001166,
+        "recall": 0.380952,
+        "f1_score": 0.002325,
+        "false_positive_rate": 0.126649,
+        "robust_recall": 0.357143,
+        "latency_ms_per_row": 0.032955,
+        "modality": "cpu"
+      },
+      "IsolationForest_disk": {
+        "precision": 0.00196,
+        "recall": 0.452381,
+        "f1_score": 0.003903,
+        "false_positive_rate": 0.102492,
+        "robust_recall": 0.452381,
+        "latency_ms_per_row": 0.024274,
+        "modality": "disk"
+      },
+      "Autoencoder_disk": {
+        "precision": 0.00988,
+        "recall": 0.333333,
+        "f1_score": 0.019191,
+        "false_positive_rate": 0.014861,
+        "robust_recall": 0.452381,
+        "latency_ms_per_row": 0.007839,
+        "modality": "disk"
+      },
+      "Ensemble_disk": {
+        "precision": 0.00196,
+        "recall": 0.452381,
+        "f1_score": 0.003903,
+        "false_positive_rate": 0.102492,
+        "robust_recall": 0.452381,
+        "latency_ms_per_row": 0.032112,
+        "modality": "disk"
+      }
+    },
+    "farm19": {
+      "IsolationForest": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "latency_ms_per_row": 0.003653432673073166,
+        "robust_recall": 0.0,
+        "modality": "memory_slurm"
+      },
+      "LOF": {
+        "precision": 0.007856573540219652,
+        "recall": 0.9211165048543689,
+        "f1_score": 0.015580256797117959,
+        "latency_ms_per_row": 0.2997517762169089,
+        "robust_recall": 0.9211165048543689,
+        "modality": "memory_slurm"
+      },
+      "Autoencoder": {
+        "precision": 0.006274509803921568,
+        "recall": 0.05825242718446602,
+        "f1_score": 0.011328770356384235,
+        "latency_ms_per_row": 0.02291853672201713,
+        "robust_recall": 0.05946601941747573,
+        "modality": "memory_slurm"
+      },
+      "Ensemble": {
+        "precision": 0.0231980115990058,
+        "recall": 0.03398058252427184,
+        "f1_score": 0.027572624322993598,
+        "latency_ms_per_row": 0.3263237456119992,
+        "robust_recall": 0.03398058252427184,
+        "modality": "memory_slurm"
+      },
+      "IsolationForest_cpu": {
+        "precision": 0.077569,
+        "recall": 0.960526,
+        "f1_score": 0.143546,
+        "false_positive_rate": 0.06277,
+        "robust_recall": 0.961842,
+        "latency_ms_per_row": 0.024175,
+        "modality": "cpu"
+      },
+      "Autoencoder_cpu": {
+        "precision": 0.008208,
+        "recall": 0.089474,
+        "f1_score": 0.015037,
+        "false_positive_rate": 0.059415,
+        "robust_recall": 0.128947,
+        "latency_ms_per_row": 0.00782,
+        "modality": "cpu"
+      },
+      "Ensemble_cpu": {
+        "precision": 0.068311,
+        "recall": 0.961842,
+        "f1_score": 0.127562,
+        "false_positive_rate": 0.07209,
+        "robust_recall": 0.961842,
+        "latency_ms_per_row": 0.031995,
+        "modality": "cpu"
+      },
+      "IsolationForest_disk": {
+        "precision": 0.001306,
+        "recall": 0.007282,
+        "f1_score": 0.002215,
+        "false_positive_rate": 0.038036,
+        "robust_recall": 0.010922,
+        "latency_ms_per_row": 0.023936,
+        "modality": "disk"
+      },
+      "Autoencoder_disk": {
+        "precision": 0.003997,
+        "recall": 0.007282,
+        "f1_score": 0.005161,
+        "false_positive_rate": 0.012397,
+        "robust_recall": 0.010922,
+        "latency_ms_per_row": 0.005978,
+        "modality": "disk"
+      },
+      "Ensemble_disk": {
+        "precision": 0.001306,
+        "recall": 0.007282,
+        "f1_score": 0.002215,
+        "false_positive_rate": 0.038036,
+        "robust_recall": 0.010922,
+        "latency_ms_per_row": 0.029914,
+        "modality": "disk"
+      }
+    },
+    "farm23": {
+      "IsolationForest": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "latency_ms_per_row": 0.004011689570912144,
+        "robust_recall": null,
+        "modality": "memory_slurm"
+      },
+      "LOF": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "latency_ms_per_row": 0.08185051198591266,
+        "robust_recall": null,
+        "modality": "memory_slurm"
+      },
+      "Autoencoder": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "latency_ms_per_row": 0.01879631009018212,
+        "robust_recall": null,
+        "modality": "memory_slurm"
+      },
+      "Ensemble": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "latency_ms_per_row": 0.10465851164700692,
+        "robust_recall": null,
+        "modality": "memory_slurm"
+      },
+      "IsolationForest_cpu": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "false_positive_rate": 0.057157,
+        "robust_recall": 0.0,
+        "latency_ms_per_row": 0.024129,
+        "modality": "cpu"
+      },
+      "Autoencoder_cpu": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "false_positive_rate": 0.079756,
+        "robust_recall": 0.0,
+        "latency_ms_per_row": 0.007282,
+        "modality": "cpu"
+      },
+      "Ensemble_cpu": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "false_positive_rate": 0.081197,
+        "robust_recall": 0.0,
+        "latency_ms_per_row": 0.031411,
+        "modality": "cpu"
+      },
+      "IsolationForest_disk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "false_positive_rate": 0.004461,
+        "robust_recall": 0.0,
+        "latency_ms_per_row": 0.022381,
+        "modality": "disk"
+      },
+      "Autoencoder_disk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "false_positive_rate": 7e-05,
+        "robust_recall": 0.0,
+        "latency_ms_per_row": 0.006108,
+        "modality": "disk"
+      },
+      "Ensemble_disk": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "false_positive_rate": 0.004461,
+        "robust_recall": 0.0,
+        "latency_ms_per_row": 0.02849,
+        "modality": "disk"
+      }
+    }
+  }
+}
