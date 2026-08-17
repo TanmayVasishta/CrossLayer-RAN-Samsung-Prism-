@@ -1,0 +1,37 @@
+{
+  "farm14": {
+    "percentile": 99,
+    "threshold": 0.1281643419327553,
+    "train_mean_error": 0.025788103771756356,
+    "train_std_error": 1.48502164695567,
+    "train_rows": 436080
+  },
+  "farm16": {
+    "percentile": 99,
+    "threshold": 0.07114576727363602,
+    "train_mean_error": 0.013661357391045846,
+    "train_std_error": 0.8157663403242844,
+    "train_rows": 209760
+  },
+  "farm18": {
+    "percentile": 99,
+    "threshold": 0.12676091362620265,
+    "train_mean_error": 0.02148507746104422,
+    "train_std_error": 1.5594149467193816,
+    "train_rows": 458160
+  },
+  "farm19": {
+    "percentile": 85,
+    "threshold": 0.038224037925276996,
+    "train_mean_error": 0.03443802000110605,
+    "train_std_error": 2.772856439197157,
+    "train_rows": 589977
+  },
+  "farm23": {
+    "percentile": 99,
+    "threshold": 0.1145080169792985,
+    "train_mean_error": 0.018494990062328243,
+    "train_std_error": 0.9588376051426615,
+    "train_rows": 133364
+  }
+}

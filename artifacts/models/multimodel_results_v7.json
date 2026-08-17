@@ -1,0 +1,442 @@
+{
+  "generated_at": "2026-07-30T16:43:21",
+  "modalities": [
+    "memory_slurm",
+    "cpu",
+    "disk"
+  ],
+  "by_modality": {
+    "memory_slurm": {
+      "farm14": {
+        "status": "success",
+        "train_rows": 436080,
+        "test_rows": 89916,
+        "test_distress_rows": 505,
+        "models": {
+          "IsolationForest": {
+            "test_anomalies": 4217,
+            "caught_distress": 230
+          },
+          "LOF": {
+            "test_anomalies": 39694,
+            "caught_distress": 292
+          },
+          "Autoencoder": {
+            "test_anomalies": 5764,
+            "caught_distress": 395
+          },
+          "Ensemble": {
+            "test_anomalies": 4942,
+            "caught_distress": 351
+          }
+        }
+      },
+      "farm16": {
+        "status": "success",
+        "train_rows": 209760,
+        "test_rows": 43184,
+        "test_distress_rows": 699,
+        "models": {
+          "IsolationForest": {
+            "test_anomalies": 5662,
+            "caught_distress": 498
+          },
+          "LOF": {
+            "test_anomalies": 22441,
+            "caught_distress": 685
+          },
+          "Autoencoder": {
+            "test_anomalies": 8761,
+            "caught_distress": 661
+          },
+          "Ensemble": {
+            "test_anomalies": 7414,
+            "caught_distress": 656
+          }
+        }
+      },
+      "farm18": {
+        "status": "success",
+        "train_rows": 458160,
+        "test_rows": 94620,
+        "test_distress_rows": 43,
+        "models": {
+          "IsolationForest": {
+            "test_anomalies": 4321,
+            "caught_distress": 14
+          },
+          "LOF": {
+            "test_anomalies": 46596,
+            "caught_distress": 39
+          },
+          "Autoencoder": {
+            "test_anomalies": 4578,
+            "caught_distress": 43
+          },
+          "Ensemble": {
+            "test_anomalies": 3794,
+            "caught_distress": 39
+          }
+        }
+      },
+      "farm19": {
+        "status": "success",
+        "train_rows": 589977,
+        "test_rows": 121632,
+        "test_distress_rows": 824,
+        "models": {
+          "IsolationForest": {
+            "test_anomalies": 1157,
+            "caught_distress": 0
+          },
+          "LOF": {
+            "test_anomalies": 96607,
+            "caught_distress": 759
+          },
+          "Autoencoder": {
+            "test_anomalies": 7650,
+            "caught_distress": 48
+          },
+          "Ensemble": {
+            "test_anomalies": 1207,
+            "caught_distress": 28
+          }
+        }
+      },
+      "farm23": {
+        "status": "success",
+        "train_rows": 133364,
+        "test_rows": 28500,
+        "test_distress_rows": 0,
+        "models": {
+          "IsolationForest": {
+            "test_anomalies": 47,
+            "caught_distress": 0
+          },
+          "LOF": {
+            "test_anomalies": 19542,
+            "caught_distress": 0
+          },
+          "Autoencoder": {
+            "test_anomalies": 1571,
+            "caught_distress": 0
+          },
+          "Ensemble": {
+            "test_anomalies": 466,
+            "caught_distress": 0
+          }
+        }
+      }
+    },
+    "cpu": {
+      "farm14": {
+        "status": "success",
+        "modality": "cpu",
+        "test_rows": 102700,
+        "test_distress_rows": 474,
+        "models": {},
+        "IsolationForest": {
+          "test_anomalies": 9793,
+          "caught_distress": 169
+        },
+        "Autoencoder": {
+          "test_anomalies": 9729,
+          "caught_distress": 208
+        },
+        "Ensemble": {
+          "test_anomalies": 11489,
+          "caught_distress": 210
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 8701,
+          "caught_distress": 193
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 10828,
+          "caught_distress": 201
+        },
+        "LOF": {
+          "test_anomalies": 45303,
+          "caught_distress": 328
+        }
+      },
+      "farm16": {
+        "status": "success",
+        "modality": "cpu",
+        "test_rows": 48948,
+        "test_distress_rows": 574,
+        "models": {},
+        "IsolationForest": {
+          "test_anomalies": 5705,
+          "caught_distress": 408
+        },
+        "Autoencoder": {
+          "test_anomalies": 6070,
+          "caught_distress": 438
+        },
+        "Ensemble": {
+          "test_anomalies": 6724,
+          "caught_distress": 445
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 5847,
+          "caught_distress": 437
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 6548,
+          "caught_distress": 445
+        },
+        "LOF": {
+          "test_anomalies": 22568,
+          "caught_distress": 515
+        }
+      },
+      "farm18": {
+        "status": "success",
+        "modality": "cpu",
+        "test_rows": 108310,
+        "test_distress_rows": 42,
+        "models": {},
+        "IsolationForest": {
+          "test_anomalies": 13509,
+          "caught_distress": 16
+        },
+        "Autoencoder": {
+          "test_anomalies": 6576,
+          "caught_distress": 12
+        },
+        "Ensemble": {
+          "test_anomalies": 13728,
+          "caught_distress": 16
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 6444,
+          "caught_distress": 12
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 13682,
+          "caught_distress": 16
+        },
+        "LOF": {
+          "test_anomalies": 34257,
+          "caught_distress": 29
+        }
+      },
+      "farm19": {
+        "status": "success",
+        "modality": "cpu",
+        "test_rows": 139059,
+        "test_distress_rows": 760,
+        "models": {},
+        "IsolationForest": {
+          "test_anomalies": 9411,
+          "caught_distress": 730
+        },
+        "Autoencoder": {
+          "test_anomalies": 8285,
+          "caught_distress": 68
+        },
+        "Ensemble": {
+          "test_anomalies": 10701,
+          "caught_distress": 731
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 8377,
+          "caught_distress": 68
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 10770,
+          "caught_distress": 731
+        },
+        "LOF": {
+          "test_anomalies": 20270,
+          "caught_distress": 152
+        }
+      },
+      "farm23": {
+        "status": "success",
+        "modality": "cpu",
+        "test_rows": 32612,
+        "test_distress_rows": 0,
+        "models": {},
+        "IsolationForest": {
+          "test_anomalies": 1864,
+          "caught_distress": 0
+        },
+        "Autoencoder": {
+          "test_anomalies": 2601,
+          "caught_distress": 0
+        },
+        "Ensemble": {
+          "test_anomalies": 2648,
+          "caught_distress": 0
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 3772,
+          "caught_distress": 0
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 3775,
+          "caught_distress": 0
+        },
+        "LOF": {
+          "test_anomalies": 5261,
+          "caught_distress": 0
+        }
+      }
+    },
+    "disk": {
+      "farm14": {
+        "status": "success",
+        "modality": "disk",
+        "test_rows": 89510,
+        "test_distress_rows": 487,
+        "IsolationForest": {
+          "test_anomalies": 3349,
+          "caught_distress": 190
+        },
+        "Autoencoder": {
+          "test_anomalies": 446,
+          "caught_distress": 65
+        },
+        "Ensemble": {
+          "test_anomalies": 3349,
+          "caught_distress": 190
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 2203,
+          "caught_distress": 185
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 3363,
+          "caught_distress": 190
+        },
+        "LOF": {
+          "test_anomalies": 19626,
+          "caught_distress": 184
+        }
+      },
+      "farm16": {
+        "status": "success",
+        "modality": "disk",
+        "test_rows": 42602,
+        "test_distress_rows": 591,
+        "IsolationForest": {
+          "test_anomalies": 6210,
+          "caught_distress": 438
+        },
+        "Autoencoder": {
+          "test_anomalies": 5011,
+          "caught_distress": 447
+        },
+        "Ensemble": {
+          "test_anomalies": 6599,
+          "caught_distress": 451
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 4757,
+          "caught_distress": 439
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 6533,
+          "caught_distress": 447
+        },
+        "LOF": {
+          "test_anomalies": 10750,
+          "caught_distress": 531
+        }
+      },
+      "farm18": {
+        "status": "success",
+        "modality": "disk",
+        "test_rows": 94449,
+        "test_distress_rows": 42,
+        "IsolationForest": {
+          "test_anomalies": 9695,
+          "caught_distress": 19
+        },
+        "Autoencoder": {
+          "test_anomalies": 1417,
+          "caught_distress": 14
+        },
+        "Ensemble": {
+          "test_anomalies": 9695,
+          "caught_distress": 19
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 4129,
+          "caught_distress": 16
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 9738,
+          "caught_distress": 19
+        },
+        "LOF": {
+          "test_anomalies": 11923,
+          "caught_distress": 17
+        }
+      },
+      "farm19": {
+        "status": "success",
+        "modality": "disk",
+        "test_rows": 121421,
+        "test_distress_rows": 824,
+        "IsolationForest": {
+          "test_anomalies": 4593,
+          "caught_distress": 6
+        },
+        "Autoencoder": {
+          "test_anomalies": 1501,
+          "caught_distress": 6
+        },
+        "Ensemble": {
+          "test_anomalies": 4593,
+          "caught_distress": 6
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 3213,
+          "caught_distress": 7
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 4708,
+          "caught_distress": 7
+        },
+        "LOF": {
+          "test_anomalies": 11463,
+          "caught_distress": 61
+        }
+      },
+      "farm23": {
+        "status": "success",
+        "modality": "disk",
+        "test_rows": 28468,
+        "test_distress_rows": 0,
+        "IsolationForest": {
+          "test_anomalies": 127,
+          "caught_distress": 0
+        },
+        "Autoencoder": {
+          "test_anomalies": 2,
+          "caught_distress": 0
+        },
+        "Ensemble": {
+          "test_anomalies": 127,
+          "caught_distress": 0
+        },
+        "AE_Adaptive": {
+          "test_anomalies": 555,
+          "caught_distress": 0
+        },
+        "Ens_Adaptive": {
+          "test_anomalies": 555,
+          "caught_distress": 0
+        },
+        "LOF": {
+          "test_anomalies": 3081,
+          "caught_distress": 0
+        }
+      }
+    }
+  },
+  "note": "v7: AE_Adaptive + Ens_Adaptive + LOF for CPU and Disk"
+}
