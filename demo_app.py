@@ -74,7 +74,7 @@ def load_models(cluster, modality="memory_slurm"):
     return ae, sc, iso
 
 # ── Load per-row anomaly score parquet for a modality ─────────────────────────
-@st.cache_data
+@st.cache_data(ttl=3600)  # 1-hour TTL so stale None results expire after redeploy
 def load_score_ts(cluster, modality="memory_slurm"):
     # v6 unified score files per modality
     candidates = {
@@ -431,9 +431,14 @@ elif page == "📈 Time-Series Scores":
     score_df = load_score_ts(cluster_ts, mod_ts)
 
     if score_df is None:
+        expected = {
+            "memory_slurm": f"`anomaly_scores_{cluster_ts}.parquet`",
+            "cpu":          "`cpu_anomaly_scores.parquet`",
+            "disk":         "`disk_anomaly_scores.parquet`",
+        }.get(mod_ts, "score parquet")
         st.warning(
             f"No per-row score file found for **{cluster_ts}** / **{mod_ts}**.\n\n"
-            "Score parquets: `cpu_anomaly_scores.parquet`, `disk_anomaly_scores.parquet`."
+            f"Expected file: {expected} in the models directory."
         )
     else:
         score_df["timestamp"] = pd.to_datetime(score_df["timestamp"])
