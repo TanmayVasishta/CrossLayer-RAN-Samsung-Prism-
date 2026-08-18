@@ -14,28 +14,32 @@
           "recall": 0.45544554455445546,
           "f1_score": 0.09741634900465904,
           "latency_ms_per_row": 0.004291343510779332,
-          "robust_recall": 0.5405940594059406
+          "robust_recall": 0.5405940594059406,
+          "false_positive_rate": 0.04459182874590375
         },
         "LOF": {
           "precision": 0.007356275507633395,
           "recall": 0.5782178217821782,
           "f1_score": 0.014527724570262942,
           "latency_ms_per_row": 0.24523427305158343,
-          "robust_recall": 0.5782178217821782
+          "robust_recall": 0.5782178217821782,
+          "false_positive_rate": 0.44068403216606455
         },
         "Autoencoder": {
           "precision": 0.06852879944482998,
           "recall": 0.7821782178217822,
           "f1_score": 0.1260169085978625,
           "latency_ms_per_row": 0.02092062310660414,
-          "robust_recall": 0.7821782178217822
+          "robust_recall": 0.7821782178217822,
+          "false_positive_rate": 0.060048539888827995
         },
         "Ensemble": {
           "precision": 0.07102387697288547,
           "recall": 0.695049504950495,
           "f1_score": 0.12887828162291168,
           "latency_ms_per_row": 0.2704462396689669,
-          "robust_recall": 0.700990099009901
+          "robust_recall": 0.700990099009901,
+          "false_positive_rate": 0.051347149679569624
         }
       },
       "farm16": {
@@ -44,28 +48,32 @@
           "recall": 0.7124463519313304,
           "f1_score": 0.15657915422103444,
           "latency_ms_per_row": 0.0043364532261523725,
-          "robust_recall": 0.759656652360515
+          "robust_recall": 0.759656652360515,
+          "false_positive_rate": 0.12154878192303166
         },
         "LOF": {
           "precision": 0.03052448643108596,
           "recall": 0.9799713876967096,
           "f1_score": 0.059204840103716516,
           "latency_ms_per_row": 0.11018641284767368,
-          "robust_recall": 0.9799713876967096
+          "robust_recall": 0.9799713876967096,
+          "false_positive_rate": 0.5120866188066376
         },
         "Autoencoder": {
           "precision": 0.07544800821823992,
           "recall": 0.9456366237482118,
           "f1_score": 0.13974630021141649,
           "latency_ms_per_row": 0.02292342409463934,
-          "robust_recall": 0.9470672389127325
+          "robust_recall": 0.9470672389127325,
+          "false_positive_rate": 0.19065552547958103
         },
         "Ensemble": {
           "precision": 0.08848125168599946,
           "recall": 0.9384835479256081,
           "f1_score": 0.1617157648218908,
           "latency_ms_per_row": 0.13744629016846538,
-          "robust_recall": 0.9413447782546495
+          "robust_recall": 0.9413447782546495,
+          "false_positive_rate": 0.1590679063198776
         }
       },
       "farm18": {
@@ -74,28 +82,32 @@
           "recall": 0.32558139534883723,
           "f1_score": 0.006416131989000916,
           "latency_ms_per_row": 0.0042899318639432315,
-          "robust_recall": 0.32558139534883723
+          "robust_recall": 0.32558139534883723,
+          "false_positive_rate": 0.045539613225202745
         },
         "LOF": {
           "precision": 0.000836981715168684,
           "recall": 0.9069767441860465,
           "f1_score": 0.0016724200776174446,
           "latency_ms_per_row": 0.26252075472283226,
-          "robust_recall": 0.9069767441860465
+          "robust_recall": 0.9069767441860465,
+          "false_positive_rate": 0.49226556139441935
         },
         "Autoencoder": {
           "precision": 0.009392747924858016,
           "recall": 1.0,
           "f1_score": 0.018610690326769097,
           "latency_ms_per_row": 0.022555544068460054,
-          "robust_recall": 1.0
+          "robust_recall": 1.0,
+          "false_positive_rate": 0.047950347336033074
         },
         "Ensemble": {
           "precision": 0.010279388508170796,
           "recall": 0.9069767441860465,
           "f1_score": 0.020328381548084442,
           "latency_ms_per_row": 0.28936623065523553,
-          "robust_recall": 0.9069767441860465
+          "robust_recall": 0.9069767441860465,
+          "false_positive_rate": 0.03970309906213984
         }
       },
       "farm19": {
@@ -104,28 +116,32 @@
           "recall": 0.0,
           "f1_score": 0.0,
           "latency_ms_per_row": 0.003653432673073166,
-          "robust_recall": 0.0
+          "robust_recall": 0.0,
+          "false_positive_rate": 0.00957718031918416
         },
         "LOF": {
           "precision": 0.007856573540219652,
           "recall": 0.9211165048543689,
           "f1_score": 0.015580256797117959,
           "latency_ms_per_row": 0.2997517762169089,
-          "robust_recall": 0.9211165048543689
+          "robust_recall": 0.9211165048543689,
+          "false_positive_rate": 0.7933911661479373
         },
         "Autoencoder": {
           "precision": 0.006274509803921568,
           "recall": 0.05825242718446602,
           "f1_score": 0.011328770356384235,
           "latency_ms_per_row": 0.02291853672201713,
-          "robust_recall": 0.05946601941747573
+          "robust_recall": 0.05946601941747573,
+          "false_positive_rate": 0.06292629627177009
         },
         "Ensemble": {
           "precision": 0.0231980115990058,
           "recall": 0.03398058252427184,
           "f1_score": 0.027572624322993598,
           "latency_ms_per_row": 0.3263237456119992,
-          "robust_recall": 0.03398058252427184
+          "robust_recall": 0.03398058252427184,
+          "false_positive_rate": 0.009759287464406331
         }
       },
       "farm23": {
@@ -134,28 +150,32 @@
           "recall": 0.0,
           "f1_score": 0.0,
           "latency_ms_per_row": 0.004011689570912144,
-          "robust_recall": null
+          "robust_recall": null,
+          "false_positive_rate": 0.0016491228070175438
         },
         "LOF": {
           "precision": 0.0,
           "recall": 0.0,
           "f1_score": 0.0,
           "latency_ms_per_row": 0.08185051198591266,
-          "robust_recall": null
+          "robust_recall": null,
+          "false_positive_rate": 0.6856842105263158
         },
         "Autoencoder": {
           "precision": 0.0,
           "recall": 0.0,
           "f1_score": 0.0,
           "latency_ms_per_row": 0.01879631009018212,
-          "robust_recall": null
+          "robust_recall": null,
+          "false_positive_rate": 0.05512280701754386
         },
         "Ensemble": {
           "precision": 0.0,
           "recall": 0.0,
           "f1_score": 0.0,
           "latency_ms_per_row": 0.10465851164700692,
-          "robust_recall": null
+          "robust_recall": null,
+          "false_positive_rate": 0.016350877192982456
         }
       }
     },

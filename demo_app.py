@@ -231,14 +231,14 @@ if page == "📊 Results Dashboard":
             precision = f"{safe_div(caught, flagged)*100:.1f}%" if flagged > 0 else "N/A"
             fm = farm_metrics.get(c, {}).get(model, {})
             f1_val  = fm.get("f1_score") or 0
-            fpr_val = fm.get("false_positive_rate") or 0
+            fpr_raw = fm.get("false_positive_rate")
             rr_val  = fm.get("robust_recall") or 0
             table_rows.append({
                 "Farm": c, "Model": model,
                 "Distress Rows": nd, "Caught": caught,
                 "Recall": recall, "Precision": precision,
                 "F1": f"{f1_val*100:.2f}%",
-                "FPR": f"{fpr_val*100:.2f}%",
+                "FPR": f"{fpr_raw*100:.2f}%" if fpr_raw is not None else "N/A",
                 "Robust Recall": f"{rr_val*100:.1f}%",
             })
     df_table = pd.DataFrame(table_rows)
@@ -525,8 +525,15 @@ elif page == "📈 Time-Series Scores":
 
         # Raw score table
         with st.expander("Show raw score data"):
-            display_cols = [c for c in [node_col, "instance", "timestamp", ae_col, "ae_flag",
-                                        "if_score", "if_flag"] if c and c in score_df.columns]
+            # Build ordered column list, deduplicating (node_col may equal 'instance')
+            _raw_candidates = [node_col, "instance", "timestamp", ae_col, "ae_flag",
+                               "if_score", "if_flag"]
+            _seen = set()
+            display_cols = []
+            for _c in _raw_candidates:
+                if _c and _c in score_df.columns and _c not in _seen:
+                    display_cols.append(_c)
+                    _seen.add(_c)
             st.dataframe(score_df[display_cols].head(500), use_container_width=True)
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -628,8 +635,9 @@ else:
 
                 # ── Inject faults into core feature signatures ────────────────
                 # Each slider targets only the PRIMARY features of that fault type.
-                # INJECT_SCALE=1.5 ensures that the anomaly threshold is crossed
-                # when the slider hits ~1.5 - 2.0, providing the expected UX sensitivity.
+                # For memory_slurm: inject in SCALED space (+N sigma) so the
+                # magnitude is always comparable regardless of raw feature scale.
+                # For CPU/Disk (ReconAE): shift in AE's own sigma space.
                 INJECT_SCALE = 1.5
 
                 fault_row = normal_raw.copy()
@@ -646,14 +654,19 @@ else:
                     slurm_core_pg = np.array([i for i, n in enumerate(fnames_pg)
                         if n.startswith("status_") or n == "transition_rate_15min"])
 
+                    # Inject in SCALED space to avoid raw-unit magnitude blowup.
+                    # We scale the fault_row, add N-sigma perturbation, then invert.
+                    scaled_fault = sc.transform(normal_raw)
                     if mem_leak > 0 and len(mem_core_pg) > 0:
-                        fault_row[0, mem_core_pg]  += sc.scale_[mem_core_pg]  * mem_leak  * INJECT_SCALE
+                        scaled_fault[0, mem_core_pg]   += mem_leak  * INJECT_SCALE
                     if io_thrash > 0 and len(io_core_pg) > 0:
-                        fault_row[0, io_core_pg]   += sc.scale_[io_core_pg]   * io_thrash * INJECT_SCALE
+                        scaled_fault[0, io_core_pg]    += io_thrash * INJECT_SCALE
                     if cpu_spike > 0 and len(cpu_core_pg) > 0:
-                        fault_row[0, cpu_core_pg]  += sc.scale_[cpu_core_pg]  * cpu_spike * INJECT_SCALE
+                        scaled_fault[0, cpu_core_pg]   += cpu_spike * INJECT_SCALE
                     if job_flood > 0 and len(slurm_core_pg) > 0:
-                        fault_row[0, slurm_core_pg]+= sc.scale_[slurm_core_pg]* job_flood * INJECT_SCALE
+                        scaled_fault[0, slurm_core_pg] += job_flood * INJECT_SCALE
+                    # Convert back to raw space for the rest of the pipeline
+                    fault_row = sc.inverse_transform(scaled_fault)
                 else:
                     # CPU / Disk (ReconAE): shift in AE's own sigma space
                     combined = (cpu_spike + mem_leak + io_thrash + job_flood) / 4.0
@@ -708,7 +721,16 @@ else:
                             "Using 5× heuristic for a meaningful playground display."
                         )
 
-                iso_result = iso.predict(scaled_fault)[0]
+                # IsolationForest for CPU/Disk was trained on PCA-reduced features.
+                # Load PCA if available and apply it before predict().
+                _pca_path = MODELS_DIR / f"{prefix_pg}pca_{cluster_pg}.joblib"
+                if _pca_path.exists():
+                    import joblib as _jl
+                    _pca = _jl.load(_pca_path)
+                    _iso_input = _pca.transform(scaled_fault)
+                else:
+                    _iso_input = scaled_fault
+                iso_result = iso.predict(_iso_input)[0]
                 iso_label  = "🚨 ANOMALY" if iso_result == -1 else "✅ NORMAL"
 
             # ── Display Results ────────────────────────────────────────────────
