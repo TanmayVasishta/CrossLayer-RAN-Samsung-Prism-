@@ -220,6 +220,10 @@ if page == "📊 Results Dashboard":
     else:
         model_keys = []
 
+    # FPR is available in metrics JSON for cpu/disk but not for memory_slurm.
+    # Show it only when it's meaningful.
+    _show_fpr = selected_modality in ("cpu", "disk")
+
     for c in clusters:
         nd = farm_results[c].get("test_distress_rows", 0)
         mdata = _get_model_data(farm_results[c])
@@ -233,14 +237,16 @@ if page == "📊 Results Dashboard":
             f1_val  = fm.get("f1_score") or 0
             fpr_raw = fm.get("false_positive_rate")
             rr_val  = fm.get("robust_recall") or 0
-            table_rows.append({
+            row = {
                 "Farm": c, "Model": model,
                 "Distress Rows": nd, "Caught": caught,
                 "Recall": recall, "Precision": precision,
                 "F1": f"{f1_val*100:.2f}%",
-                "FPR": f"{fpr_raw*100:.2f}%" if fpr_raw is not None else "N/A",
                 "Robust Recall": f"{rr_val*100:.1f}%",
-            })
+            }
+            if _show_fpr:
+                row["FPR"] = f"{fpr_raw*100:.2f}%" if fpr_raw is not None else "N/A"
+            table_rows.append(row)
     df_table = pd.DataFrame(table_rows)
     st.dataframe(df_table, use_container_width=True, hide_index=True)
 
@@ -722,9 +728,10 @@ else:
                         )
 
                 # IsolationForest for CPU/Disk was trained on PCA-reduced features.
-                # Load PCA if available and apply it before predict().
+                # memory_slurm IsoForest was trained on the full 629-dim scaled features
+                # (no PCA in that pipeline), so we only apply PCA for cpu/disk.
                 _pca_path = MODELS_DIR / f"{prefix_pg}pca_{cluster_pg}.joblib"
-                if _pca_path.exists():
+                if _pca_path.exists() and mod_pg in ("cpu", "disk"):
                     import joblib as _jl
                     _pca = _jl.load(_pca_path)
                     _iso_input = _pca.transform(scaled_fault)
