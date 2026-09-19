@@ -252,7 +252,7 @@ if page == "📊 Results Dashboard":
                 row["FPR"] = f"{fpr_raw*100:.2f}%" if fpr_raw is not None else "N/A"
             table_rows.append(row)
     df_table = pd.DataFrame(table_rows)
-    st.dataframe(df_table, use_container_width=True, hide_index=True)
+    st.dataframe(df_table, width='stretch', hide_index=True)
 
     # ── Bar chart: Recall per farm (all models) ───────────────────────────────
     st.subheader("Recall per Farm — All Models")
@@ -278,7 +278,7 @@ if page == "📊 Results Dashboard":
                 "Ens_Adaptive":   "#8c564b",
             },
         )
-        st.plotly_chart(fig_recall, use_container_width=True)
+        st.plotly_chart(fig_recall, width='stretch')
 
     # ── Precision vs Recall scatter (Plotly) ──────────────────────────────────
     st.subheader("Precision vs Recall — All Models & Farms")
@@ -322,7 +322,7 @@ if page == "📊 Results Dashboard":
         )
         fig_pr.add_shape(type="line", x0=0, y0=0, x1=105, y1=105,
                          line=dict(color="gray", dash="dot"))
-        st.plotly_chart(fig_pr, use_container_width=True)
+        st.plotly_chart(fig_pr, width='stretch')
 
     # ── Cross-modality comparison (v6 only) ───────────────────────────────────
     if IS_V6 and len(AVAIL_MODALITIES) > 1:
@@ -359,7 +359,7 @@ if page == "📊 Results Dashboard":
                     MODALITY_LABELS["disk"]: "#00cc96",
                 }
             )
-            st.plotly_chart(fig_cross, use_container_width=True)
+            st.plotly_chart(fig_cross, width='stretch')
 
     # ── Latency & Robustness ──────────────────────────────────────────────────
     col1, col2 = st.columns(2)
@@ -377,7 +377,7 @@ if page == "📊 Results Dashboard":
             fig_lat = px.bar(lat_df, x="Farm", y="Latency", color="Model",
                              barmode="group", log_y=True,
                              labels={"Latency": "ms/row (log scale)"})
-            st.plotly_chart(fig_lat, use_container_width=True)
+            st.plotly_chart(fig_lat, width='stretch')
     with col2:
         st.subheader("Robust Recall (Top-10% Scores)")
         rob_rows = []
@@ -392,7 +392,7 @@ if page == "📊 Results Dashboard":
             rob_df = pd.DataFrame(rob_rows)
             fig_rob = px.bar(rob_df, x="Farm", y="Robust Recall (%)",
                              color="Model", barmode="group")
-            st.plotly_chart(fig_rob, use_container_width=True)
+            st.plotly_chart(fig_rob, width='stretch')
 
     # ── Per-farm deep dive ────────────────────────────────────────────────────
     st.markdown("---")
@@ -489,7 +489,7 @@ elif page == "📈 Time-Series Scores":
             xaxis_title="Time", yaxis_title="AE Reconstruction Error",
             height=400, hovermode="x unified"
         )
-        st.plotly_chart(fig_ts, use_container_width=True)
+        st.plotly_chart(fig_ts, width='stretch')
 
         # Node-level heatmap (top 30 nodes by max AE score)
         st.subheader("Node-Level Anomaly Heatmap (May 23 only)")
@@ -529,7 +529,7 @@ elif page == "📈 Time-Series Scores":
                 height=550,
                 coloraxis_colorbar=dict(tickvals=tick_vals, ticktext=tick_text, title="AE Error"),
             )
-            st.plotly_chart(fig_heat, use_container_width=True)
+            st.plotly_chart(fig_heat, width='stretch')
             st.caption(
                 f"Color is on a log scale so subtle node-level anomalies stay visible "
                 f"even when a single node spikes (max AE error today: **{vmax_raw:,.2f}**). "
@@ -549,7 +549,7 @@ elif page == "📈 Time-Series Scores":
                 if _c and _c in score_df.columns and _c not in _seen:
                     display_cols.append(_c)
                     _seen.add(_c)
-            st.dataframe(score_df[display_cols].head(500), use_container_width=True)
+            st.dataframe(score_df[display_cols].head(500), width='stretch')
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  PAGE 3: LIVE ANOMALY PLAYGROUND
@@ -583,15 +583,25 @@ else:
         )
         st.stop()
 
-    # Real threshold from JSON (if available)
-    real_threshold = thresholds_data.get(cluster_pg, {}).get("threshold", None)
-    train_mean_err = thresholds_data.get(cluster_pg, {}).get("train_mean_error", None)
-    threshold_pct  = thresholds_data.get(cluster_pg, {}).get("percentile", 99)
+    # Real threshold for the SELECTED modality.
+    # thresholds.json only ever held memory+SLURM thresholds — CPU/Disk each use a
+    # ReconAE (models/autoencoder.py) whose own .thr/.mu/.sd (mean + 3σ over its own
+    # training error, computed by .fit()) are already saved on the model object, so
+    # we read those directly instead of misapplying the memory+SLURM value to them.
+    if mod_pg == "memory_slurm":
+        real_threshold = thresholds_data.get(cluster_pg, {}).get("threshold", None)
+        train_mean_err = thresholds_data.get(cluster_pg, {}).get("train_mean_error", None)
+        threshold_pct  = thresholds_data.get(cluster_pg, {}).get("percentile", 99)
+    else:
+        _ae_thr_probe, _, _ = load_models(cluster_pg, mod_pg)
+        real_threshold = getattr(_ae_thr_probe, "thr", None)
+        train_mean_err = getattr(_ae_thr_probe, "mu", None)
+        threshold_pct  = None  # ReconAE uses mean + 3σ, not a percentile cutoff
 
     # Warn if threshold percentile is unusually low (farm tuned for high recall, low precision)
     if real_threshold and train_mean_err:
         headroom_pct = (real_threshold - train_mean_err) / real_threshold * 100
-        if threshold_pct < 99:
+        if threshold_pct is not None and threshold_pct < 99:
             st.warning(
                 f"⚠️ **{cluster_pg}** uses an aggressive **{threshold_pct}th-percentile** threshold "
                 f"(headroom: {headroom_pct:.1f}% above training mean). "
@@ -599,14 +609,16 @@ else:
                 "Switch to another farm for a more gradual playground experience."
             )
         else:
+            basis = f"{threshold_pct}th percentile of training error" if threshold_pct is not None \
+                else "trained mean + 3σ of reconstruction error"
             st.success(
-                f"Using **real trained threshold** for {cluster_pg}: "
-                f"{real_threshold:.6f} ({threshold_pct}th percentile of training error)"
+                f"Using **real trained threshold** for {cluster_pg} ({MODALITY_LABELS.get(mod_pg, mod_pg)}): "
+                f"{real_threshold:.6f} ({basis})"
             )
     else:
         st.warning(
-            "Real threshold not available — using 5× severity heuristic. "
-            "Run `save_thresholds.py` to fix this."
+            f"Real threshold not available for {cluster_pg} ({MODALITY_LABELS.get(mod_pg, mod_pg)}) — "
+            "using 5× severity heuristic instead."
         )
 
     st.markdown("---")
@@ -616,6 +628,13 @@ else:
         st.subheader("⚙️ Control Panel")
         st.markdown("### Inject Hardware Faults")
         st.markdown("*Drag sliders to simulate failures. 0 = perfectly normal.*")
+        if mod_pg != "memory_slurm":
+            st.caption(
+                f"ℹ️ {MODALITY_LABELS.get(mod_pg, mod_pg)} features aren't individually named in "
+                "this pipeline's saved artifacts, so the four sliders below combine into one "
+                "blended severity shift rather than each targeting a distinct fault signature "
+                "(unlike Memory+SLURM, where each slider hits its own named feature group)."
+            )
 
         cpu_spike      = st.slider("🔥 CPU Spike (×σ above mean)",      0.0, 15.0, 0.0, 0.5,
                                    help="Simulates CPU overload — all nodes pegged at 100%")
@@ -627,7 +646,7 @@ else:
                                    help="Too many SLURM jobs submitted at once")
         gaussian_noise = st.slider("📡 Sensor Noise (std)",               0.0, 0.5,  0.0, 0.01,
                                    help="Background measurement jitter")
-        run_btn = st.button("▶ Run Inference", type="primary", use_container_width=True)
+        run_btn = st.button("▶ Run Inference", type="primary", width='stretch')
 
     with col_result:
         st.subheader("📈 Live Model Output")
@@ -636,6 +655,14 @@ else:
             with st.spinner("Loading model and running inference..."):
                 ae, sc, iso = load_models(cluster_pg, mod_pg)
                 n_features  = sc.n_features_in_
+
+                def _named(arr, scaler):
+                    """Wrap a raw array with the scaler's fitted column names, when it has
+                    any — avoids sklearn's harmless 'X does not have valid feature names'
+                    warning on every inference run without changing any values."""
+                    if hasattr(scaler, "feature_names_in_"):
+                        return pd.DataFrame(arr, columns=scaler.feature_names_in_)
+                    return arr
 
                 # ── Build a true "normal" baseline ────────────────────────────
                 # For ReconAE (CPU/Disk): use the AE's own internal scaler mean
@@ -671,7 +698,7 @@ else:
 
                     # Inject in SCALED space to avoid raw-unit magnitude blowup.
                     # We scale the fault_row, add N-sigma perturbation, then invert.
-                    scaled_fault = sc.transform(normal_raw)
+                    scaled_fault = sc.transform(_named(normal_raw, sc))
                     if mem_leak > 0 and len(mem_core_pg) > 0:
                         scaled_fault[0, mem_core_pg]   += mem_leak  * INJECT_SCALE
                     if io_thrash > 0 and len(io_core_pg) > 0:
@@ -694,8 +721,8 @@ else:
 
 
 
-                scaled_normal = sc.transform(normal_raw)
-                scaled_fault  = sc.transform(fault_row)
+                scaled_normal = sc.transform(_named(normal_raw, sc))
+                scaled_fault  = sc.transform(_named(fault_row, sc))
 
                 # ── Reconstruction error ──────────────────────────────────────
                 # ReconAE (cpu/disk) is uniquely identified by its internal 'sc' scaler.
@@ -721,9 +748,10 @@ else:
                     real_threshold is not None and
                     err_normal < real_threshold  # baseline must be below threshold
                 )
+                _thr_basis = f"{threshold_pct}th-pct" if threshold_pct is not None else "mean+3σ"
                 if _use_real_thr:
                     is_anomaly = err_fault > real_threshold
-                    threshold_label = f"Trained {threshold_pct}th-pct threshold ({real_threshold:.5f})"
+                    threshold_label = f"Trained {_thr_basis} threshold ({real_threshold:.5f})"
                 else:
                     severity   = err_fault / max(err_normal, 1e-9)
                     is_anomaly = severity > 5.0
@@ -731,7 +759,7 @@ else:
                     if real_threshold is not None:
                         # Explain why we fell back
                         st.info(
-                            f"ℹ️ **{cluster_pg}** threshold ({real_threshold:.5f}, {threshold_pct}th pct) "
+                            f"ℹ️ **{cluster_pg}** threshold ({real_threshold:.5f}, {_thr_basis}) "
                             f"is tighter than the computed baseline error ({err_normal:.5f}). "
                             "Using 5× heuristic for a meaningful playground display."
                         )
@@ -821,7 +849,7 @@ else:
                     "Train Mean Error": "blue"
                 }
             )
-            st.plotly_chart(fig_bar, use_container_width=True)
+            st.plotly_chart(fig_bar, width='stretch')
 
         else:
             st.markdown("""
