@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrossLayerAI-RAN — Samsung PRISM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="badges">
+      <span class="badge">Samsung PRISM · 26NCOAM02BMS</span>
+      <span class="badge">Unsupervised ML</span>
+      <span class="badge">180GB+ HPC Telemetry</span>
+    </div>
+    <h1>📡 CrossLayerAI-RAN</h1>
+    <p class="subtitle">Cross-layer, infrastructure-aware AI for proactive RAN / HPC anomaly
+      detection — trained on Jefferson Lab telemetry (CPU, Memory, Disk, SLURM) to catch
+      hardware distress events with no ground-truth labels.</p>
+  </header>
+
+  <section>
+    <h2>Headline results (v7)</h2>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value good">100%</div><div class="stat-label">farm18 recall (Autoencoder, Memory+SLURM)</div></div>
+      <div class="stat-card"><div class="stat-value good">98.0%</div><div class="stat-label">farm16 recall (LOF, Memory+SLURM)</div></div>
+      <div class="stat-card"><div class="stat-value good">96.2%</div><div class="stat-label">farm19 recall (Ensemble, CPU)</div></div>
+      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">hardware farms evaluated</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Best model per farm</h2>
+    <div class="table-scroll">
+    <table>
+      <thead>
+        <tr><th>Farm</th><th>Best model</th><th>Modality</th><th>Recall</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>farm18</td><td>Autoencoder</td><td>Memory+SLURM</td><td class="num best">100.0%</td></tr>
+        <tr><td>farm16</td><td>LOF</td><td>Memory+SLURM</td><td class="num best">98.0%</td></tr>
+        <tr><td>farm19</td><td>Ensemble</td><td>CPU</td><td class="num best">96.2%</td></tr>
+        <tr><td>farm14</td><td>Autoencoder</td><td>Memory+SLURM</td><td class="num">78.2%</td></tr>
+        <tr><td>farm23</td><td>—</td><td>—</td><td class="num">no distress events in test window</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="note">Precision is low across the board (single-digit percent in most cases) —
+      expected for an unsupervised detector evaluated against one 24-hour labeled event, and
+      the project's main open problem rather than a bug. Full per-model breakdown and reasoning
+      in <a href="https://github.com/TanmayVasishta/CrossLayer-RAN-Samsung-Prism-/blob/main/PROJECT_STATUS.md">PROJECT_STATUS.md</a>.</p>
+  </section>
+
+  <section>
+    <h2>Explore further</h2>
+    <div class="links">
+      <a class="link-card" href="eda_report.html">
+        <div class="title">📊 EDA Report</div>
+        <div class="desc">Full exploratory data analysis — distributions, outlier rates, data quality</div>
+      </a>
+      <a class="link-card" href="guide_presentation.html">
+        <div class="title">🎓 Guide Presentation</div>
+        <div class="desc">Self-contained walkthrough built for project review</div>
+      </a>
+      <a class="link-card" href="https://github.com/TanmayVasishta/CrossLayer-RAN-Samsung-Prism-">
+        <div class="title">💻 Source code</div>
+        <div class="desc">Full pipeline, models, and the interactive Streamlit demo</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Want the interactive version?</h2>
+    <p>This page is a static, always-on snapshot — no server to wake up. For the full
+      interactive experience (live anomaly injection, per-farm time-series drill-down),
+      run <code>streamlit run demo_app.py</code> locally or see the README for the hosted
+      Streamlit app link.</p>
+  </section>
+
+  <footer>
+    CrossLayerAI-RAN · SRIB-PRISM Program · B.M.S. College of Engineering
+  </footer>
+
+</div>
+</body>
+</html>

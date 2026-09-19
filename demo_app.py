@@ -5,7 +5,15 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import warnings
 from pathlib import Path
+from sklearn.exceptions import InconsistentVersionWarning
+
+# The CPU/disk models were trained under scikit-learn 1.6.1, the memory+SLURM
+# models under 1.7.1 (pinned in requirements.txt). Verified both load and
+# score correctly under 1.7.1 — this only silences the resulting harmless
+# cross-version notice so it doesn't spam the server log on every rerun.
+warnings.filterwarnings("ignore", category=InconsistentVersionWarning)
 
 # ── Page Config ───────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -15,10 +23,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# ── Paths — check D:/ (original training machine) then fall back to relative ──
-_d_drive = Path("D:/CrossLayer-RAN-Samsung-Prism--master/artifacts/models")
-_local   = Path(__file__).parent / "artifacts" / "models"
-MODELS_DIR  = _d_drive if _d_drive.exists() else _local
+# ── Paths — model artifacts bundled alongside this file ────────────────────────
+MODELS_DIR  = Path(__file__).parent / "artifacts" / "models"
 SCORES_DIR  = MODELS_DIR  # per-cluster anomaly score parquets saved alongside models
 
 # ── Load static JSON results ──────────────────────────────────────────────────
@@ -110,10 +116,8 @@ AVAIL_MODALITIES = list(results["by_modality"].keys()) if IS_V6 else ["memory_sl
 MODALITY_LABELS  = {"memory_slurm": "🧠 Memory + SLURM", "cpu": "⚡ CPU", "disk": "💾 Disk"}
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
-st.sidebar.image(
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Samsung_Logo.svg/1920px-Samsung_Logo.svg.png",
-    width=140
-)
+st.sidebar.markdown("### 📡 CrossLayerAI-RAN")
+st.sidebar.caption("Samsung PRISM · 26NCOAM02BMS")
 st.sidebar.markdown("## Navigation")
 page = st.sidebar.radio(
     "Go to",

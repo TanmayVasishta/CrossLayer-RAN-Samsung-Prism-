@@ -18,7 +18,6 @@ import numpy as np
 import pandas as pd
 
 from models.autoencoder import ReconAE  # noqa — for disk autoencoder unpickling
-from eda.cpu_pipeline_v3 import ReconAE  # noqa — fallback
 
 MODELS_DIR   = Path("artifacts/models")
 FEATURES_DIR = Path("artifacts/features")

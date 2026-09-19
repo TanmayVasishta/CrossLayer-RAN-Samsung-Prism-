@@ -25,7 +25,7 @@ from typing import Any, Dict
 import joblib
 import numpy as np
 import pandas as pd
-from eda.cpu_pipeline_v3 import ReconAE  # needed for joblib unpickling of autoencoder
+from models.autoencoder import ReconAE  # noqa: F401 — needed for joblib unpickling of autoencoder
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
 MODELS_DIR   = Path("artifacts/models")

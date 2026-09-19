@@ -62,30 +62,7 @@ Thumbs.db
 # ─── Temp / scratch ───────────────────────────────────────────────────────────
 *.tmp
 inspect_schema.py
-# ─── Temporary evaluation scripts ────────────────────────────────────────────
-eval_farm19.py
-eval_farm19_v3.py
-scratch_eval_metrics.py
-
-# ─── Large Model Files ────────────────────────────────────────────────────────
-*.joblib
-
-# ─── Large anomaly score parquets (reproducible from pipeline) ────────────────
-artifacts/models/*.parquet
-
-# ─── PowerPoint / Office build artifacts ─────────────────────────────────────
-*.pptx
-*.pptm
-~$*
-
-# ─── Node / pptxgenjs (used only to build the PPT, not project source) ───────
-node_modules/
-package.json
-package-lock.json
-create_pptx.js
-
-# ─── Editor / agent local data ───────────────────────────────────────────────
-.claude/
-
-# ─── Training run wrapper (machine-specific paths) ───────────────────────────
-_run_train.py
+*_log.txt
+*_files.txt
+*.bat
+scratch_*.py

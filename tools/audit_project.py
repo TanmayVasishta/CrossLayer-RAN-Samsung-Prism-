@@ -3,8 +3,7 @@ import pandas as pd
 import numpy as np
 import json
 import joblib
-from models.autoencoder import ReconAE  # noqa: F401 — required for CPU autoencoder unpickling
-from eda.cpu_pipeline_v3 import ReconAE  # noqa: F811 — fallback for old pickles
+from models.autoencoder import ReconAE  # noqa: F401 — required for CPU/disk autoencoder unpickling
 import time
 from pathlib import Path
 
