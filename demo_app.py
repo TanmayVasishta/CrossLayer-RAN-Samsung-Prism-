@@ -675,12 +675,56 @@ else:
                 else:
                     normal_raw = sc.inverse_transform(np.zeros((1, n_features)))
 
-                # ── Inject faults into core feature signatures ────────────────
-                # Each slider targets only the PRIMARY features of that fault type.
-                # For memory_slurm: inject in SCALED space (+N sigma) so the
-                # magnitude is always comparable regardless of raw feature scale.
-                # For CPU/Disk (ReconAE): shift in AE's own sigma space.
-                INJECT_SCALE = 1.5
+                # Scalar reconstruction-error helpers, shared by calibration below
+                # and the final scoring step, so both use identical math.
+                if hasattr(ae, "sc"):   # ReconAE — cpu / disk: score() takes raw input
+                    def _err(raw_row):
+                        e, _ = ae.score(raw_row.reshape(1, -1))
+                        return float(np.mean(e))
+                    scaled_normal = sc.transform(_named(normal_raw, sc))
+                else:                   # sklearn MLPRegressor — memory_slurm: needs scaled input
+                    def _err(scaled_row):
+                        pred = ae.predict(scaled_row.reshape(1, -1))
+                        return float(np.mean(np.square(scaled_row.reshape(1, -1) - pred)))
+                    scaled_normal = sc.transform(_named(normal_raw, sc))
+
+                err_normal = _err(normal_raw[0] if hasattr(ae, "sc") else scaled_normal[0])
+
+                # Threshold to calibrate fault severity against — same fallback rule
+                # used for the final verdict below, computed early so both agree.
+                _use_real_thr = real_threshold is not None and err_normal < real_threshold
+                _calib_threshold = real_threshold if _use_real_thr else err_normal * 5.0
+
+                def _bisect_multiplier(direction, target, hi=3.0, iters=24):
+                    """Find m such that _err(base + m*direction) ~= target.
+                    Reconstruction error rises monotonically as input moves further
+                    from the learned 'normal' manifold, so bisection is safe here."""
+                    base = normal_raw[0] if hasattr(ae, "sc") else scaled_normal[0]
+                    if not np.any(direction):
+                        return 0.0
+                    tries = 0
+                    while _err(base + hi * direction) < target and tries < 12:
+                        hi *= 2.0
+                        tries += 1
+                    lo = 0.0
+                    for _ in range(iters):
+                        mid = (lo + hi) / 2.0
+                        if _err(base + mid * direction) < target:
+                            lo = mid
+                        else:
+                            hi = mid
+                    return hi
+
+                # Calibrate injection strength per model: pushing a slider to
+                # REF_UNITS (out of its 0-15 range) should land comfortably past
+                # the threshold, so the playground is a believable, satisfying
+                # demo for every farm/modality instead of requiring maxed-out
+                # sliders on some and barely moving the needle on others.
+                REF_UNITS  = 10.0
+                target_err = max(
+                    err_normal + 2.5 * max(_calib_threshold - err_normal, 1e-9),
+                    err_normal * 3.0,
+                )
 
                 fault_row = normal_raw.copy()
 
@@ -696,58 +740,51 @@ else:
                     slurm_core_pg = np.array([i for i, n in enumerate(fnames_pg)
                         if n.startswith("status_") or n == "transition_rate_15min"])
 
-                    # Inject in SCALED space to avoid raw-unit magnitude blowup.
-                    # We scale the fault_row, add N-sigma perturbation, then invert.
-                    scaled_fault = sc.transform(_named(normal_raw, sc))
+                    n_scaled = scaled_normal.shape[1]
+
+                    def _mask_direction(idx):
+                        d = np.zeros(n_scaled)
+                        if len(idx) > 0:
+                            d[idx] = 1.0
+                        return d
+
+                    # Each slider gets its own calibrated sigma-per-unit, so any one
+                    # of them alone reliably crosses the threshold around slider=10.
+                    sigma_per_unit = {
+                        "mem":   _bisect_multiplier(_mask_direction(mem_core_pg),   target_err) / REF_UNITS,
+                        "io":    _bisect_multiplier(_mask_direction(io_core_pg),    target_err) / REF_UNITS,
+                        "cpu":   _bisect_multiplier(_mask_direction(cpu_core_pg),   target_err) / REF_UNITS,
+                        "slurm": _bisect_multiplier(_mask_direction(slurm_core_pg), target_err) / REF_UNITS,
+                    }
+
+                    scaled_fault_vec = scaled_normal[0].copy()
                     if mem_leak > 0 and len(mem_core_pg) > 0:
-                        scaled_fault[0, mem_core_pg]   += mem_leak  * INJECT_SCALE
+                        scaled_fault_vec[mem_core_pg]   += mem_leak  * sigma_per_unit["mem"]
                     if io_thrash > 0 and len(io_core_pg) > 0:
-                        scaled_fault[0, io_core_pg]    += io_thrash * INJECT_SCALE
+                        scaled_fault_vec[io_core_pg]    += io_thrash * sigma_per_unit["io"]
                     if cpu_spike > 0 and len(cpu_core_pg) > 0:
-                        scaled_fault[0, cpu_core_pg]   += cpu_spike * INJECT_SCALE
+                        scaled_fault_vec[cpu_core_pg]   += cpu_spike * sigma_per_unit["cpu"]
                     if job_flood > 0 and len(slurm_core_pg) > 0:
-                        scaled_fault[0, slurm_core_pg] += job_flood * INJECT_SCALE
-                    # Convert back to raw space for the rest of the pipeline
-                    fault_row = sc.inverse_transform(scaled_fault)
+                        scaled_fault_vec[slurm_core_pg] += job_flood * sigma_per_unit["slurm"]
+                    fault_row = sc.inverse_transform(scaled_fault_vec.reshape(1, -1))
                 else:
-                    # CPU / Disk (ReconAE): shift in AE's own sigma space
-                    combined = (cpu_spike + mem_leak + io_thrash + job_flood) / 4.0
+                    # CPU / Disk (ReconAE): one blended direction (no named features
+                    # survive to this stage of the pipeline — see caption above).
+                    # max() instead of averaging the 4 sliders so moving ANY single
+                    # one to a meaningful value gives its full calibrated effect,
+                    # rather than being diluted by the other three sitting at 0.
+                    combined = max(cpu_spike, mem_leak, io_thrash, job_flood)
                     if combined > 0 and hasattr(ae, "sc"):
-                        fault_row += ae.sc.scale_ * combined * INJECT_SCALE
+                        direction = ae.sc.scale_
+                        sigma_per_unit = _bisect_multiplier(direction, target_err) / REF_UNITS
+                        fault_row = normal_raw + direction * combined * sigma_per_unit
 
                 if gaussian_noise > 0:
                     fault_row += np.random.normal(0, gaussian_noise, fault_row.shape) * fault_row
 
+                scaled_fault = sc.transform(_named(fault_row, sc))
 
-
-
-                scaled_normal = sc.transform(_named(normal_raw, sc))
-                scaled_fault  = sc.transform(_named(fault_row, sc))
-
-                # ── Reconstruction error ──────────────────────────────────────
-                # ReconAE (cpu/disk) is uniquely identified by its internal 'sc' scaler.
-                # Its score(X_raw) takes unscaled input and returns (errors, flags).
-                # sklearn MLPRegressor (memory_slurm) also has score() but requires
-                # (X, y) — use predict() on pipeline-scaled input instead.
-                if hasattr(ae, "sc"):   # ReconAE — cpu / disk
-                    err_normal_arr, _ = ae.score(normal_raw)
-                    err_fault_arr,  _ = ae.score(fault_row)
-                    err_normal = float(np.mean(err_normal_arr))
-                    err_fault  = float(np.mean(err_fault_arr))
-                else:                   # sklearn MLPRegressor — memory_slurm
-                    pred_normal = ae.predict(scaled_normal)
-                    pred_fault  = ae.predict(scaled_fault)
-                    err_normal = float(np.mean(np.square(scaled_normal - pred_normal)))
-                    err_fault  = float(np.mean(np.square(scaled_fault  - pred_fault)))
-
-                # Use real trained threshold when available, else fall back to 5× heuristic.
-                # Special case: if the normal baseline itself exceeds the threshold (farm19
-                # with 85th-pct threshold), the threshold is too tight for playground use —
-                # fall back to heuristic so baseline is always shown as NORMAL.
-                _use_real_thr = (
-                    real_threshold is not None and
-                    err_normal < real_threshold  # baseline must be below threshold
-                )
+                err_fault = _err(fault_row[0] if hasattr(ae, "sc") else scaled_fault[0])
                 _thr_basis = f"{threshold_pct}th-pct" if threshold_pct is not None else "mean+3σ"
                 if _use_real_thr:
                     is_anomaly = err_fault > real_threshold
