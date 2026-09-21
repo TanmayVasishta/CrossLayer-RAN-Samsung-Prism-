@@ -719,8 +719,9 @@ else:
                 # REF_UNITS (out of its 0-15 range) should land comfortably past
                 # the threshold, so the playground is a believable, satisfying
                 # demo for every farm/modality instead of requiring maxed-out
-                # sliders on some and barely moving the needle on others.
-                REF_UNITS  = 10.0
+                # sliders on some and barely moving the needle on others. Kept
+                # low so even a small, realistic fault push reliably alarms.
+                REF_UNITS  = 4.0
                 target_err = max(
                     err_normal + 2.5 * max(_calib_threshold - err_normal, 1e-9),
                     err_normal * 3.0,
