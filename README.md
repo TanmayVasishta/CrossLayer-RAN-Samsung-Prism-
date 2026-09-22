@@ -7,8 +7,7 @@ detection. An unsupervised multi-model pipeline trained on Jefferson Lab HPC
 telemetry (CPU, Memory, Disk, SLURM) to detect hardware distress events
 without ground-truth labels.
 
-> 🚀 **Live interactive demo:** _deploy your own from this repo — see
-> [Deploying the demo](#deploying-the-demo) below_
+> 🚀 **Live interactive demo:** [samsungcrosslayer.streamlit.app](https://samsungcrosslayer.streamlit.app/)
 >
 > 📊 **Instant static preview:** [`demo/`](demo/), served via GitHub Pages —
 > no cold start, always available
@@ -16,8 +15,20 @@ without ground-truth labels.
 > 📋 **[Full Project Status & Results](PROJECT_STATUS.md)** — detailed
 > per-farm metrics, known limitations, and a prioritized improvement list
 >
+> 📄 **[Formal Project Report](project_report.html)** — full write-up for
+> submission/review ([Word version](project_report.docx))
+>
 > 🏗️ See [`project_overview.html`](project_overview.html) for a full project
 > tour aimed at teammates (problem, dataset, pipeline, models, results)
+
+## Team
+
+| Name | USN |
+|------|-----|
+| Tanmay Vasishta | 1WA23CS012 |
+| Hitha Harish | 1BM23CS115 |
+| Samriddhi Singh | 1BM23CS295 |
+| Sinchana Hemanth | 1BM23CS330 |
 
 ---
 

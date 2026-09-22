@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CrossLayerAI-RAN — Project Report</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff; --ink:#161a2b; --muted:#565d76; --line:#dfe2ec;
+    --navy:#1e2761; --teal:#0891a6; --good:#15803d; --soft:#f4f5f9;
+    --serif:'Source Serif 4',Georgia,serif;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg); color:var(--ink); font-family:var(--sans); margin:0; padding:0 20px 60px; line-height:1.65;}
+  .page{max-width:760px; margin:0 auto;}
+
+  .cover{padding:64px 0 40px; border-bottom:3px solid var(--navy); margin-bottom:40px;}
+  .cover .icon{font-size:2.4rem; margin-bottom:6px;}
+  .cover h1{font-family:var(--serif); font-size:2.3rem; font-weight:700; margin:0 0 6px; color:var(--navy); letter-spacing:-0.01em;}
+  .cover .subtitle{font-size:1.15rem; color:var(--teal); font-weight:600; margin:0 0 18px;}
+  .cover .kicker{font-family:var(--mono); font-size:0.8rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em; margin:0 0 28px;}
+  .metabox{display:grid; grid-template-columns:auto 1fr; gap:6px 18px; font-size:0.92rem; max-width:480px;}
+  .metabox dt{color:var(--muted); font-weight:600;}
+  .metabox dd{margin:0;}
+
+  h2{font-family:var(--serif); font-size:1.5rem; font-weight:700; color:var(--navy); margin:44px 0 14px; padding-bottom:8px; border-bottom:2px solid var(--line);}
+  h3{font-family:var(--serif); font-size:1.15rem; font-weight:600; color:var(--teal); margin:28px 0 10px;}
+  p{margin:0 0 14px; font-size:0.98rem;}
+  em.note{display:block; color:var(--muted); font-size:0.88rem; margin:-6px 0 16px;}
+
+  ul{margin:0 0 16px; padding-left:22px;}
+  li{margin-bottom:8px; font-size:0.98rem;}
+  li strong{color:var(--ink);}
+
+  .links dt{font-family:var(--mono); font-weight:600; color:var(--teal); display:inline-block; min-width:150px;}
+
+  .table-scroll{overflow-x:auto; margin:14px 0 20px;}
+  table{width:100%; min-width:420px; border-collapse:collapse; font-size:0.9rem;}
+  th{text-align:left; background:var(--navy); color:#fff; font-weight:600; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.03em; padding:9px 12px;}
+  td{padding:9px 12px; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums;}
+  tr:nth-child(even) td{background:var(--soft);}
+  td.hi{color:var(--good); font-family:var(--mono); font-weight:700;}
+
+  .callout{background:var(--soft); border-left:3px solid var(--teal); border-radius:6px; padding:14px 16px; margin:16px 0; font-size:0.92rem; color:var(--muted);}
+
+  footer{margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:0.8rem; text-align:center;}
+
+  @media print{
+    body{padding:0;}
+    .cover{padding-top:20px;}
+    h2{page-break-after:avoid;}
+    table{page-break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="cover">
+    <div class="icon">📡</div>
+    <h1>CrossLayerAI-RAN</h1>
+    <p class="subtitle">Infrastructure-Aware AI for Proactive RAN Performance Prediction</p>
+    <p class="kicker">Formal Project Report</p>
+    <dl class="metabox">
+      <dt>Program</dt><dd>SRIB-PRISM (Samsung Research Institute Bangalore)</dd>
+      <dt>Worklet ID</dt><dd>26NCOAM02BMS</dd>
+      <dt>Institution</dt><dd>B.M.S. College of Engineering</dd>
+      <dt>Report Date</dt><dd>September 2026</dd>
+      <dt>Repository</dt><dd>github.ecodesamsung.com/SRIB-PRISM/26NCOAM02BMS_CrossLayerAI-RAN_Infrastructure-Aware_AI_for_Proactive_RAN</dd>
+      <dt>Live Demo</dt><dd>samsungcrosslayer.streamlit.app</dd>
+    </dl>
+  </div>
+
+  <h2>Team</h2>
+  <div class="table-scroll">
+    <table>
+      <tr><th>Name</th><th>USN</th></tr>
+      <tr><td>Tanmay Vasishta</td><td>1WA23CS012</td></tr>
+      <tr><td>Hitha Harish</td><td>1BM23CS115</td></tr>
+      <tr><td>Samriddhi Singh</td><td>1BM23CS295</td></tr>
+      <tr><td>Sinchana Hemanth</td><td>1BM23CS330</td></tr>
+    </table>
+  </div>
+
+  <h2>1. Executive Summary</h2>
+  <p>CrossLayerAI-RAN is an unsupervised anomaly detection system built to proactively identify hardware distress in high-performance computing (HPC) clusters, developed under the Samsung Research Institute Bangalore (SRIB) PRISM program. The system processes over 180GB of real-world Prometheus telemetry collected from a Jefferson Lab HPC cluster, spanning four infrastructure layers — CPU, Memory, Disk, and SLURM job-scheduler data — to learn a model of "normal" cluster behavior without ever being shown a labeled failure. When live infrastructure metrics drift meaningfully from that learned baseline, the system flags the deviation as a likely hardware fault before it escalates into a full outage.</p>
+  <p>Four unsupervised models — Isolation Forest, Local Outlier Factor (LOF), a neural Autoencoder, and a majority-vote Ensemble — are trained independently per hardware farm and per telemetry modality. Evaluated against a single real, IT-confirmed hardware distress event, the system achieved up to 100% recall on the strongest-performing farm/model combination, with several other farm/modality pairs exceeding 90% recall.</p>
+  <p>The project delivers a full reproducible data pipeline, a public results dashboard, and a live interactive Streamlit application that lets a reviewer inject synthetic hardware faults in real time and watch two independently trained models agree on the verdict.</p>
+
+  <h2>2. Problem Statement</h2>
+  <p>Modern HPC and RAN infrastructure clusters generate enormous volumes of low-level telemetry, but hardware failures are rare, expensive to label, and often develop gradually before manifesting as a visible outage. Traditional supervised anomaly detection requires labeled failure examples that, in practice, rarely exist in sufficient quantity or diversity to train a reliable classifier.</p>
+  <p>This project addresses the harder, more operationally realistic version of the problem: can a system learn what "normal" infrastructure behavior looks like directly from unlabeled telemetry, and reliably flag meaningful deviations, with zero labeled failure examples used during training?</p>
+
+  <h2>3. Dataset</h2>
+  <ul>
+    <li><strong>Source:</strong> Jefferson Lab HPC cluster, Prometheus-format telemetry exports</li>
+    <li><strong>Size:</strong> 180GB+ raw, compressed <code>.csv.gz</code> files</li>
+    <li><strong>Time window:</strong> May 19–23, 2023</li>
+    <li><strong>Modalities:</strong> CPU utilization, Memory, Disk I/O, SLURM job-scheduler state</li>
+    <li><strong>Hardware farms:</strong> 5 clusters — farm14, farm16, farm18, farm19, farm23</li>
+    <li><strong>Ground truth:</strong> one real, Jefferson Lab IT-confirmed hardware distress event on May 23, 2023, used exclusively for evaluation, never for training</li>
+    <li><strong>Known coverage gap:</strong> CPU and Disk telemetry has an approximately 84% scraping gap on May 23 due to a Prometheus collection interruption; these two modalities are evaluated via cross-referenced SLURM distress signals rather than direct ground truth on the event day</li>
+  </ul>
+
+  <h2>4. Methodology</h2>
+  <h3>4.1 Chronological Split Design</h3>
+  <p>The train/test split is chronological, not random — a deliberate design choice to prevent the anomalous day from leaking into training:</p>
+  <ul>
+    <li><strong>Train:</strong> May 19 00:00 – May 22 23:59 (normal operation only)</li>
+    <li><strong>Test:</strong> May 23 00:00 – May 23 23:59 (the real anomalous day)</li>
+    <li><strong>Validation:</strong> none — an unsupervised pipeline has no labels to tune a validation split against</li>
+  </ul>
+  <em class="note">An earlier iteration of this pipeline used a random 70/15/15 split, which leaked May 23 anomalous data into both training and validation. This was identified and corrected before any model results were finalized — see Section 8.</em>
+
+  <h3>4.2 Pipeline Stages</h3>
+  <ul>
+    <li><strong>1. Structural Cleaning</strong> — chunk-wise streaming ingestion of raw telemetry, junk-column pruning, timestamp parsing, deduplication.</li>
+    <li><strong>2. Chronological Split</strong> — described in Section 4.1.</li>
+    <li><strong>3. Train-only Normalization</strong> — IQR bounds and z-score statistics computed exclusively on training data, then applied uniformly to avoid leakage.</li>
+    <li><strong>4. Feature Engineering</strong> — rolling-window statistics (5/15/60-minute mean, standard deviation, min, max) and lag-1 differences per node and signal.</li>
+    <li><strong>5. Multimodal Join</strong> — Memory and SLURM telemetry joined on (node, timestamp) to construct cross-layer features.</li>
+    <li><strong>6. Multimodel Training</strong> — Isolation Forest, LOF, Autoencoder, and Ensemble trained independently per hardware farm.</li>
+  </ul>
+
+  <h2>5. Model Architecture</h2>
+  <ul>
+    <li><strong>Isolation Forest</strong> — tree-based ensemble; contamination parameter 0.05; trained on PCA-reduced features (95% explained variance retained) for the CPU and Disk modalities.</li>
+    <li><strong>Local Outlier Factor (LOF)</strong> — density-based detector; flags points that are significantly less dense than their local neighborhood.</li>
+    <li><strong>Autoencoder (ReconAE)</strong> — a compact MLP-based reconstruction network (hidden-layer sizing scaled to input dimensionality, ReLU activation, Adam optimizer, early stopping). Anomaly threshold is set at the 99th percentile of training reconstruction error on most farms — 85th percentile for farm19, deliberately loosened for higher recall.</li>
+    <li><strong>Ensemble</strong> — majority vote (≥ 2 of 3 models) trading peak recall for robustness against any single model's blind spots.</li>
+  </ul>
+
+  <h2>6. Results (v7)</h2>
+  <p>Best-performing model per hardware farm, by modality. Full per-model breakdown is available in the repository's evaluation artifacts.</p>
+
+  <h3>6.1 Memory + SLURM</h3>
+  <div class="table-scroll">
+    <table>
+      <tr><th>Farm</th><th>Best Model</th><th>Recall</th><th>Precision</th></tr>
+      <tr><td>farm18</td><td>Autoencoder</td><td class="hi">100.0%</td><td>0.94%</td></tr>
+      <tr><td>farm16</td><td>LOF</td><td class="hi">98.0%</td><td>3.05%</td></tr>
+      <tr><td>farm19</td><td>LOF</td><td>92.1%</td><td>0.79%</td></tr>
+      <tr><td>farm14</td><td>Autoencoder</td><td>78.2%</td><td>6.85%</td></tr>
+      <tr><td>farm23</td><td>—</td><td>0.0%</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <h3>6.2 CPU</h3>
+  <div class="table-scroll">
+    <table>
+      <tr><th>Farm</th><th>Best Model</th><th>Recall</th><th>Precision</th></tr>
+      <tr><td>farm19</td><td>Ensemble</td><td class="hi">96.2%</td><td>6.83%</td></tr>
+      <tr><td>farm16</td><td>LOF</td><td>89.7%</td><td>2.28%</td></tr>
+      <tr><td>farm14</td><td>LOF</td><td>69.2%</td><td>0.72%</td></tr>
+      <tr><td>farm18</td><td>LOF</td><td>69.1%</td><td>0.08%</td></tr>
+      <tr><td>farm23</td><td>—</td><td>0.0%</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <h3>6.3 Disk</h3>
+  <div class="table-scroll">
+    <table>
+      <tr><th>Farm</th><th>Best Model</th><th>Recall</th><th>Precision</th></tr>
+      <tr><td>farm16</td><td>LOF</td><td class="hi">89.9%</td><td>4.94%</td></tr>
+      <tr><td>farm18</td><td>Isolation Forest</td><td>45.2%</td><td>0.20%</td></tr>
+      <tr><td>farm14</td><td>Isolation Forest</td><td>39.0%</td><td>5.67%</td></tr>
+      <tr><td>farm19</td><td>LOF</td><td>7.4%</td><td>0.53%</td></tr>
+      <tr><td>farm23</td><td>—</td><td>0.0%</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <h3>6.4 Key Observations</h3>
+  <ul>
+    <li>No single model dominates across all farms and modalities — the strongest justification for the ensemble approach.</li>
+    <li>Precision remains in the single digits across most farm/model combinations. This is an expected and explicitly acknowledged consequence of unsupervised evaluation against a single labeled event, with no negative examples available for threshold tuning.</li>
+    <li>Inference latency is sub-millisecond per row for tree- and MLP-based models, indicating real-time deployment feasibility.</li>
+    <li>farm23 records 0% recall across every modality because it has zero real distress events in its test window — an artifact of the data, not a model failure.</li>
+  </ul>
+
+  <h2>7. Live Interactive Demonstration</h2>
+  <p>A three-tab Streamlit application, deployed publicly, provides:</p>
+  <ul>
+    <li><strong>Results Dashboard</strong> — full metrics tables and comparison charts across all farms, models, and modalities.</li>
+    <li><strong>Time-Series Scores</strong> — reconstruction error across the full test window with the trained anomaly threshold overlaid, plus a node-level heatmap of the real May 23 event.</li>
+    <li><strong>Live Anomaly Injection Playground</strong> — lets a reviewer synthetically perturb a "normal" data point along five fault dimensions (CPU spike, memory leak, I/O thrashing, job flood, sensor noise) and observe two independently trained models — the Autoencoder and Isolation Forest — verify the resulting verdict in real time, against each model's own genuinely trained threshold.</li>
+  </ul>
+  <dl class="links">
+    <p><dt>Live demo:</dt> samsungcrosslayer.streamlit.app</p>
+    <p><dt>Static snapshot:</dt> tanmayvasishta.github.io/CrossLayer-RAN-Samsung-Prism-</p>
+    <p><dt>Source repository:</dt> github.ecodesamsung.com/SRIB-PRISM/26NCOAM02BMS_CrossLayerAI-RAN_Infrastructure-Aware_AI_for_Proactive_RAN</p>
+  </dl>
+
+  <h2>8. Engineering Challenges</h2>
+  <ul>
+    <li><strong>Large-scale data processing</strong> — 180GB+ of compressed telemetry required chunk-wise streaming ingestion to avoid memory exhaustion on standard hardware.</li>
+    <li><strong>Data leakage in the initial split</strong> — an early random 70/15/15 split leaked anomalous May 23 data into training and validation, which would have made evaluation results artificially optimistic. This was identified and corrected via a strictly chronological split before any results were finalized.</li>
+    <li><strong>Absence of ground-truth labels</strong> — SLURM distress states were used only as a post-hoc evaluation proxy, never during training, to preserve a genuinely unsupervised setup.</li>
+    <li><strong>CPU/Disk telemetry coverage gap</strong> — an ~84% Prometheus scraping gap on the event day required cross-referencing SLURM distress signals for indirect evaluation of these two modalities.</li>
+    <li><strong>High dimensionality</strong> — rolling-window and lag feature engineering produced 600+ raw features; PCA and per-modality scaling were applied to preserve model reliability, particularly for LOF and Isolation Forest.</li>
+    <li><strong>Per-farm threshold tuning</strong> — farm19 required a looser 85th-percentile threshold (versus 99th elsewhere) to achieve usable recall, illustrating the precision/recall tradeoff inherent to unsupervised thresholding.</li>
+  </ul>
+
+  <h2>9. Limitations</h2>
+  <div class="callout">
+  <ul style="margin-bottom:0;">
+    <li><strong>Low precision</strong> — single digits in most farm/model combinations. This is the primary open problem, a direct consequence of unsupervised evaluation against one labeled event with no negative examples to tune against.</li>
+    <li><strong>No temporal modeling</strong> — each telemetry row is scored independently; the system does not yet model gradual drift over time.</li>
+    <li><strong>Independent per-modality models</strong> — CPU, Memory, and Disk are trained as separate models rather than fused into a single joint model, despite the cross-layer thesis of the project.</li>
+    <li><strong>Single-event evaluation</strong> — generalization to other, different failure modes is not yet empirically validated beyond the one real event in this dataset.</li>
+  </ul>
+  </div>
+
+  <h2>10. Future Work</h2>
+  <ul>
+    <li><strong>Temporal modeling</strong> — an LSTM- or Transformer-based Autoencoder to capture drift over time rather than scoring isolated points.</li>
+    <li><strong>True multivariate fusion</strong> — a single joint model across CPU, Memory, Disk, and SLURM instead of four separate per-modality models.</li>
+    <li><strong>Precision improvements</strong> — per-farm adaptive threshold tuning and temporal smoothing (alerting only on sustained, multi-window anomalies).</li>
+    <li><strong>Node-level aggregation and explainability</strong> — flag anomalous nodes rather than anomalous rows, and surface which features drove a given flag (e.g., SHAP-based attribution).</li>
+    <li><strong>Additional real-world validation</strong> — evaluation against further confirmed anomaly events as they become available.</li>
+    <li><strong>Streaming inference</strong> — deployment as a real-time, online scoring service rather than a batch pipeline.</li>
+  </ul>
+
+  <h2>11. Conclusion</h2>
+  <p>CrossLayerAI-RAN demonstrates that a fully unsupervised, multi-model pipeline can reliably detect real hardware distress events in large-scale HPC telemetry without ever training on a labeled failure — achieving up to 100% recall on the strongest farm/model combination while remaining transparent about its current precision limitations.</p>
+  <p>The project delivers a reproducible data pipeline, a public results dashboard, and a live interactive demo that allows independent verification of the system's behavior under synthetic fault conditions — providing a solid technical foundation for the cross-layer, infrastructure-aware anomaly detection approach central to the SRIB-PRISM worklet objectives.</p>
+
+  <h2>Appendix: Repository &amp; Links</h2>
+  <dl class="links">
+    <p><dt>GitHub:</dt> github.ecodesamsung.com/SRIB-PRISM/26NCOAM02BMS_CrossLayerAI-RAN_Infrastructure-Aware_AI_for_Proactive_RAN</p>
+    <p><dt>Live demo:</dt> samsungcrosslayer.streamlit.app</p>
+    <p><dt>Static snapshot:</dt> tanmayvasishta.github.io/CrossLayer-RAN-Samsung-Prism-</p>
+    <p><dt>Dataset:</dt> zenodo.org/records/10058230</p>
+    <p><dt>Program:</dt> SRIB-PRISM — Worklet 26NCOAM02BMS — B.M.S. College of Engineering</p>
+  </dl>
+
+  <footer>CrossLayerAI-RAN Project Report · Samsung PRISM · 26NCOAM02BMS</footer>
+
+</div>
+</body>
+</html>

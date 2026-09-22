@@ -2,8 +2,19 @@
 
 **Project:** 26NCOAM02BMS — Cross-Layer AI-RAN Infrastructure-Aware AI for Proactive RAN
 **Program:** SRIB-PRISM (Samsung Research Institute Bangalore)
-**Last Updated:** September 20, 2026
-**Live Demo:** interactive Streamlit app (link in [README](README.md)) · instant static preview at [`demo/`](demo/), deployed via GitHub Pages
+**Institution:** B.M.S. College of Engineering
+**Last Updated:** September 23, 2026
+**Live Demo:** [samsungcrosslayer.streamlit.app](https://samsungcrosslayer.streamlit.app/) · instant static preview at [`demo/`](demo/), deployed via GitHub Pages
+**Formal Report:** [project_report.html](project_report.html) / [project_report.docx](project_report.docx)
+
+**Team:**
+
+| Name | USN |
+|------|-----|
+| Tanmay Vasishta | 1WA23CS012 |
+| Hitha Harish | 1BM23CS115 |
+| Samriddhi Singh | 1BM23CS295 |
+| Sinchana Hemanth | 1BM23CS330 |
 
 ---
 
